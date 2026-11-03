@@ -1,0 +1,729 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#FAF9F6"><title>Design · LY.Fung — Identities, culture &amp; communication</title><meta name="description" content="14 design projects by LY.Fung, spanning visual identity, cultural design, graphic communication, packaging and exhibition concepts."><meta property="og:type" content="website"><meta property="og:title" content="Design · LY.Fung — Identities, culture &amp; communication"><meta property="og:description" content="14 design projects by LY.Fung, spanning visual identity, cultural design, graphic communication, packaging and exhibition concepts."><meta property="og:image" content="/assets/design-01-0-1280.webp"><meta property="og:image:alt" content="LY.Fung — Bashu cultural scarf design"><link rel="icon" href="/assets/favicon.png" type="image/png"><link rel="alternate" hreflang="en" href="/design/"><link rel="alternate" hreflang="zh-Hant" href="/zh-hant/design/"><link rel="stylesheet" href="/assets/fonts/faces.css"><link rel="preload" href="/assets/fonts/instrument-serif-05103e2a779c.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/assets/fonts/dm-sans-713ca32c3c8b.woff2" as="font" type="font/woff2" crossorigin><style>:root{--cream:#faf9f6;--paper:#fbf9f4;--ink:#282824;--muted:#69665f;--line:#d9d5cc;--red:#d01c1f;--logo-red:#d01c1f;--gutter:clamp(32px,4.5vw,80px);--nav-height:76px;--category-height:64px;--space-chapter:160px;--space-project:144px;--font-legacy:'Helvetica Neue',Helvetica,Arial,'PingFang TC','Microsoft JhengHei',sans-serif;--font:var(--font-body)}
+/* Shared editorial hierarchy; gallery artwork, Home cards and Footer keep their own rules. */
+:root{
+ --type-page-title:clamp(88px,8.4vw,120px);--type-photo-title:clamp(72px,7.6vw,112px);--type-chapter-title:clamp(32px,4.4vw,56px);
+ --type-micro:12px;--line-micro:1.5;--type-interface:14px;--type-body:16px;
+ --gap-intro-label:24px;--gap-intro-copy:32px;--gap-caption:12px;--gap-section-line:24px;
+}
+
+/* Entry-card colours and the original wordmark remain separate brand rules. */
+.doorways{--cream:#f5f1e8;--paper:#fbf9f4;--ink:#282824;--muted:#69665f;--line:#d9d5cc;--red:#bd302b}
+.brand{font-family:var(--font-legacy)}
+
+#explore{scroll-margin-top:0;scroll-padding-top:0}
+html:has(#explore){scroll-padding-top:calc(var(--nav-height) + 24px)}
+#explore:focus{outline:none}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-height) + var(--category-height) + 24px)}body{margin:0;padding-top:var(--nav-height);background:var(--cream);color:var(--ink);font:var(--type-body)/1.65 var(--font);-webkit-font-smoothing:antialiased}body.modal-open{overflow:hidden}a{color:inherit;text-decoration:none}button{color:inherit;font:inherit;cursor:pointer}a,button{-webkit-tap-highlight-color:transparent}button{border:0}a:focus-visible,button:focus-visible{outline:2px solid var(--red);outline-offset:5px}::selection{background:#e9c6b9;color:var(--ink)}h1,h2,h3,p,figure{margin:0}h1,h2,h3{font-weight:500;line-height:1.08}ul{list-style:none;padding:0;margin:0}img{max-width:100%;display:block}button:disabled{cursor:default}.wrap{width:calc(100% - var(--gutter)*2);max-width:1440px;margin-inline:auto}.micro{font-size:var(--type-micro);line-height:var(--line-micro);letter-spacing:.075em;font-weight:500}.red-dot{display:inline-block;width:7px;height:7px;background:var(--red);border-radius:50%;flex-shrink:0}.name-dot{color:var(--red)}.skip-link{position:fixed;top:10px;left:10px;z-index:200;background:var(--ink);color:white;padding:12px;transform:translateY(-180%)}.skip-link:focus{transform:none}.brand{display:inline-flex;align-items:center;gap:9px;flex-shrink:0}.brand img{width:34px;height:34px;object-fit:contain}.brand>span{font-size:23px;letter-spacing:-1.2px;font-weight:600}.language-switch{font-size:12px;letter-spacing:.04em;min-height:44px;display:inline-flex;align-items:center;gap:9px}.language-switch span{font-size:15px}
+.site-header{height:var(--nav-height);padding-inline:var(--gutter);display:flex;justify-content:space-between;align-items:center;position:fixed;inset:0 0 auto;z-index:40;background:var(--cream);border-bottom:1px solid var(--line)}.site-header nav{display:flex;align-items:center;gap:30px}.site-header nav>a{font-size:14px;display:inline-flex;align-items:center;min-height:44px;position:relative}.site-header nav>a[aria-current=page]{color:var(--red)}.site-header nav>a[aria-current=page]::after{content:'';height:4px;width:4px;border-radius:50%;background:var(--red);position:absolute;bottom:3px;left:50%}.nav-separator{height:16px;width:1px;background:var(--line);margin-inline:1px}.menu-toggle{display:none;background:none;width:44px;height:44px;padding:12px 7px}.menu-toggle span{height:1px;width:28px;background:var(--ink);display:block;margin-block:6px;transition:transform .2s}
+.picture{display:block;overflow:hidden;background-size:cover;background-position:center;background-color:#eae6de}.picture img{width:100%;height:auto;transition:opacity .2s}.picture.is-loaded{background-image:none!important}.image-button{display:block;padding:0;background:transparent;position:relative;width:100%;text-align:left}.image-enlarge{position:absolute;right:12px;bottom:12px;background:var(--paper);height:32px;width:32px;display:grid;place-items:center;font-size:20px;opacity:0;transition:opacity .2s}.image-button:hover .image-enlarge,.image-button:focus-visible .image-enlarge{opacity:1}.text-link{display:inline-flex;align-items:center;justify-content:space-between;gap:35px;min-height:44px;border-bottom:1px solid var(--ink);font-size:var(--type-interface);font-weight:500;background:transparent;padding:5px 0}.text-link>span{font-size:22px}
+.cover{min-height:100svh;padding:0 var(--gutter);display:flex;flex-direction:column;max-width:1760px;margin:auto}.cover-header{min-height:96px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.cover-main{padding-block:clamp(45px,8vh,100px);flex:1;display:flex;flex-direction:column;justify-content:center}.cover-eyebrow{display:flex;align-items:center;gap:12px}.cover-name{font-size:clamp(100px,21vw,330px);letter-spacing:-.085em;line-height:1.04;font-weight:500;margin-left:-.065em;padding-block:24px 30px;white-space:nowrap}.cover-name .name-dot{margin-left:-.02em}.cover-intro{display:grid;grid-template-columns:1.2fr 1fr;gap:10%;align-items:start;border-top:1px solid var(--line);padding-top:30px}.cover-role{font-size:clamp(23px,2.3vw,36px);line-height:1.4;letter-spacing:-.04em}.cover-secondary{color:var(--muted);font-size:clamp(16px,1.5vw,23px);letter-spacing:-.02em}.cover-note{max-width:420px}.cover-note p{font-size:16px;color:var(--muted);line-height:1.7}.enter-link{margin-top:30px;display:flex;justify-content:space-between;align-items:center;min-height:56px;border-bottom:1px solid var(--red);color:var(--red);font-size:18px}.enter-link span{font-size:30px;transition:transform .2s}.enter-link:hover span{transform:translate(3px,-3px)}.cover-footer{display:flex;justify-content:space-between;gap:20px;padding-block:25px;color:var(--muted)}
+.home-hero{display:block;text-align:center;padding-block:60px 48px}.hero-copy{max-width:920px;margin-inline:auto}.home-hero .eyebrow{justify-content:center;margin-bottom:24px}.home-hero .identity{display:flex;justify-content:center;align-items:baseline;flex-wrap:wrap;gap:0 8px;margin-top:24px}.home-hero .summary{max-width:760px;margin-inline:auto}.home-hero .skill-tags{max-width:820px;justify-content:center;margin-inline:auto}.eyebrow{display:flex;gap:11px;align-items:center;color:var(--muted);margin-bottom:35px}.home-title{font-size:clamp(28px,4vw,48px);letter-spacing:-.045em;line-height:1.2;white-space:nowrap}.identity{margin-top:28px;line-height:1.5}.identity p:first-child{font-size:23px;letter-spacing:-.025em}.identity p:last-child{font-size:23px;color:var(--ink);letter-spacing:-.025em}.summary{max-width:420px;margin-top:22px;color:var(--muted);font-size:16px;line-height:1.8}.skill-tags{display:flex;flex-wrap:wrap;gap:3px 0;margin-block:22px 20px;max-width:430px}.skill-tags li{font-size:12px;line-height:1.8;color:var(--logo-red)}.skill-tags li:not(:last-child)::after{content:'/';margin-inline:9px;color:inherit}.hero-work{align-self:center;margin-top:40px;min-width:0}.hero-work .picture{background-color:#e7e2d8}.hero-work figcaption{display:flex;justify-content:space-between;gap:15px;margin-top:15px;font-size:12px;color:var(--muted)}.doorways{padding-block:0 130px}.section-label{display:flex;justify-content:space-between;padding-top:20px;margin-bottom:28px}.section-label h2{font-size:12px}.portfolio-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;padding-inline:2px}.portfolio-card{min-width:0;border:1px solid #ddd9d1;border-radius:7px;background:var(--paper);padding:18px 18px 22px;transition:transform .2s,border-color .2s;display:flex;flex-direction:column}.card-design{transform:rotate(-1.7deg)}.card-photography{transform:rotate(1.2deg) translateY(9px)}.card-about{transform:rotate(-.9deg) translateY(-3px)}.card-contact{transform:rotate(1.8deg) translateY(7px)}.portfolio-card:hover,.portfolio-card:focus-visible{transform:translateY(-7px) rotate(0);border-color:var(--red)}.card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.card-top>span:last-child{font-size:23px;font-weight:400;line-height:1}.card-media{aspect-ratio:1/1.1;overflow:hidden;display:flex;align-items:center;background:#eeebe4}.card-media .picture{width:100%;height:100%;background-size:contain;background-repeat:no-repeat}.card-media img{width:100%;height:100%;object-fit:contain}.card-photography .card-media img,.card-about .card-media img{object-fit:cover}.card-copy{padding-top:24px}.card-copy h3{font-size:clamp(15px,1.5vw,21px);letter-spacing:-.045em;font-weight:600}.card-copy p{font-size:12px;margin-top:9px;color:var(--muted)}.contact-card-art{height:100%;width:100%;padding:16px;color:var(--red);display:flex;flex-direction:column;justify-content:space-between}.contact-card-art>span{font-size:clamp(23px,3.1vw,46px);line-height:1.05;letter-spacing:-.065em}.contact-card-art img{width:45px;height:45px;object-fit:contain;align-self:flex-end}
+.page-intro{padding-block:76px 58px}.page-intro>.micro{color:var(--muted);margin-bottom:var(--gap-intro-label)}.display{font-size:var(--type-page-title);letter-spacing:0;line-height:1}.intro-bottom{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-top:var(--gap-intro-copy)}.intro-bottom>p:first-child{font-size:22px;line-height:1.45;letter-spacing:-.02em}.intro-bottom>.micro{color:var(--muted);}.about-story{display:grid;grid-template-columns:5fr 6fr;gap:10%;align-items:center;padding-block:10px var(--space-chapter)}.about-photo .picture{max-width:470px}.about-photo figcaption{margin-top:var(--gap-caption);color:var(--muted)}.about-text>.micro{color:var(--muted)}.about-text h2{font-size:clamp(32px,3.3vw,52px);letter-spacing:-.045em;line-height:1.14;margin-block:24px 30px}.about-text>p{font-size:16px;color:var(--muted);margin-bottom:20px;line-height:1.8;max-width:530px}.about-text>.text-link{margin-top:12px}.about-section{padding-bottom:var(--space-chapter)}.section-heading{display:flex;gap:30px;align-items:baseline;padding-block:var(--gap-section-line) 32px;border-top:1px solid var(--line)}.section-heading>.micro{color:var(--red)}.section-heading h2{font-size:32px;letter-spacing:-.045em}.skills-columns{display:grid;grid-template-columns:1fr 1fr;gap:10%;padding-left:70px}.skills-columns h3{font-size:14px;margin-bottom:15px}.skills-columns p{font-size:17px;color:var(--muted);line-height:2}.timeline-item{display:grid;grid-template-columns:1.1fr 2fr 2.1fr;gap:35px;padding-block:28px;border-bottom:1px solid var(--line)}.timeline-item>.micro{color:var(--muted);font-size:12px;padding-top:4px}.timeline-item h3{font-size:19px;letter-spacing:-.02em;line-height:1.4}.organisation{font-size:13px;color:var(--muted);margin-top:7px}.timeline-item>p:last-child{font-size:14px;color:var(--muted);line-height:1.8}.education{padding-bottom:var(--space-chapter)}
+.category-nav{position:sticky;top:var(--nav-height);z-index:30;background:var(--cream);border-block:1px solid var(--line);height:var(--category-height)}.category-inner{display:flex;gap:clamp(20px,3vw,48px);height:100%;align-items:center;overflow-x:auto;scrollbar-width:none}.category-inner::-webkit-scrollbar{display:none}.category-inner>a{flex-shrink:0;min-height:44px;display:flex;align-items:center;position:relative;font-size:var(--type-micro);line-height:var(--line-micro);white-space:nowrap}.category-inner>a[aria-current=location]{color:var(--red)}.category-inner>a[aria-current=location]::after{content:'';height:1px;background:var(--red);position:absolute;bottom:6px;left:0;right:0}.design-chapter{padding-top:var(--space-chapter);scroll-margin-top:0}.chapter-heading{border-top:1px solid var(--line);padding-block:var(--gap-section-line) 55px}.chapter-line{display:flex;justify-content:space-between;color:var(--muted);}.chapter-title{display:flex;justify-content:space-between;align-items:end;gap:35px;margin-top:28px}.chapter-title h2{font-size:var(--type-chapter-title);letter-spacing:0;line-height:1.1}.chapter-title>p{font-size:14px;color:var(--muted);max-width:250px;text-align:right}.project{margin-bottom:var(--space-project);display:grid;grid-template-columns:1.9fr 1fr;gap:7%;align-items:start}.project-media{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;min-width:0}.project-media .image-main{grid-column:1/-1}.project-media.media-count-2 .image-support{grid-column:1/-1}.project-media img{max-height:760px;object-fit:contain;background:var(--paper)}.project-media .picture{background-size:contain;background-repeat:no-repeat;background-color:var(--paper)}.project-copy{padding-top:15px}.project-number{color:var(--red);margin-bottom:16px}.project-copy h3{font-size:clamp(28px,3.2vw,48px);letter-spacing:-.05em;line-height:1.12}.project-subtitle{font-size:14px;color:var(--muted);margin-top:15px}.project-tags{display:flex;flex-wrap:wrap;gap:7px 16px;color:var(--muted);border-top:1px solid var(--line);padding-top:17px;margin-top:26px}.project-description{font-size:16px;color:var(--muted);line-height:1.85;margin-top:24px}.layout-reverse{grid-template-columns:1fr 1.9fr}.layout-reverse .project-media{grid-column:2;grid-row:1}.layout-reverse .project-copy{grid-column:1;grid-row:1}.layout-wide,.layout-double{display:block}.layout-wide .project-media{grid-template-columns:repeat(3,minmax(0,1fr))}.layout-wide .media-count-2 .image-main{grid-column:1/3}.layout-wide .media-count-2 .image-support{grid-column:3;align-self:end}.layout-wide .project-copy,.layout-double .project-copy{display:grid;grid-template-columns:1fr 1.1fr;column-gap:10%;padding-top:30px}.layout-wide .project-number,.layout-double .project-number{grid-column:1}.layout-wide h3,.layout-double h3{grid-column:1}.layout-wide .project-subtitle,.layout-double .project-subtitle{grid-column:1}.layout-wide .project-tags,.layout-double .project-tags{grid-column:1;align-self:start;margin-top:22px}.layout-wide .project-description,.layout-double .project-description{grid-column:2;grid-row:1/5;margin:0}.layout-double .project-media{grid-template-columns:1fr 1fr}.layout-double .image-main{grid-column:auto}.layout-wide .media-count-3 .image-main{grid-column:1;grid-row:1}.layout-wide .media-count-3 .image-support{grid-column:auto}.design-chapter .project:last-child{margin-bottom:0}.design-chapters{padding-bottom:var(--space-chapter)}
+.photography-intro .display{font-size:var(--type-photo-title);letter-spacing:0}.photography-intro .intro-bottom h2{font-size:24px;letter-spacing:-.03em}.photography-intro .intro-bottom p{color:var(--muted);font-size:14px;margin-top:12px}.gallery-section{padding-block:10px 50px}.gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:8px;gap:16px;align-items:stretch}.gallery-item{padding:0;background:none;min-width:0;position:relative;overflow:hidden;grid-row-end:span 18}.gallery-item.landscape{grid-column:span 2}.gallery-item .picture{height:100%;width:100%}.gallery-item img{height:100%;width:100%;object-fit:contain;background:var(--cream)}.gallery-item:hover img{opacity:.88}.gallery-controls{text-align:center;padding-block:48px 25px}.gallery-controls .micro{color:var(--muted);margin-bottom:15px}.gallery-controls .text-link{min-width:180px}#gallery-sentinel{height:1px;margin-top:35px}.gallery-controls #load-more:disabled{border-color:var(--line);color:var(--muted)}
+.contact-page{padding-bottom:100px}.contact-page .page-intro{padding-block:70px 50px}.contact-title{font-size:clamp(64px,8.4vw,130px);letter-spacing:0;line-height:1.02;max-width:1100px}.contact-title span{color:var(--red)}.contact-summary{font-size:17px;line-height:1.8;margin-top:35px;color:var(--muted)}.contact-links{margin-left:32%;padding-top:10px}.contact-links>a,.contact-links>button{display:grid;grid-template-columns:1fr 2fr auto;width:100%;gap:20px;align-items:center;min-height:98px;border-top:1px solid var(--line);text-align:left;background:none;padding:20px 0}.contact-links .micro{color:var(--muted);font-size:12px}.contact-links>a>span:nth-child(2),.contact-links>button>span:nth-child(2){font-size:clamp(17px,2vw,27px);letter-spacing:-.04em}.contact-links>a>span:last-child{font-size:28px}.copy-label{font-size:12px}.copy-label>span{margin-left:8px}#copy-status{font-size:13px;color:var(--muted);min-height:30px;padding-top:10px}
+.site-footer{border-top:1px solid var(--line);padding-block:40px 22px}.footer-top{display:flex;justify-content:space-between;align-items:start;padding-bottom:46px}.footer-top>div>.micro{display:block;color:var(--muted);font-size:12px;margin-bottom:10px}.footer-email{font-size:clamp(19px,2.4vw,32px);letter-spacing:-.04em;display:flex;gap:35px;align-items:center;min-height:44px}.footer-bottom{border-top:1px solid var(--line);padding-top:20px;display:flex;justify-content:space-between;gap:20px;font-size:12px;color:var(--muted)}.footer-bottom>a{min-height:44px;margin-top:-12px;display:flex;align-items:center}
+.lightbox{position:fixed;inset:0;width:100%;height:100%;max-width:none;max-height:none;margin:0;border:0;padding:0;background:#1d1e1b;color:#f5f1e8;overflow:hidden}.lightbox::backdrop{background:#1d1e1b}.lightbox[open]{display:flex;flex-direction:column}.viewer-bar{height:68px;flex-shrink:0;display:flex;justify-content:space-between;align-items:center;padding-inline:28px}.viewer-close{background:none;color:inherit;display:flex;align-items:center;gap:18px;min-height:44px;padding:0 8px;font-size:var(--type-interface)}.viewer-close>span{font-size:30px}.viewer-stage{position:relative;min-height:0;flex:1;display:flex;align-items:center;justify-content:center;margin-inline:76px}.viewer-stage>img{max-width:100%;max-height:100%;height:100%;width:100%;object-fit:contain;user-select:none;touch-action:pan-y pinch-zoom}.viewer-stage>button{position:fixed;top:calc(50% - 26px);width:52px;height:52px;background:transparent;color:inherit;font-size:28px}.viewer-prev{left:12px}.viewer-next{right:12px}.viewer-stage button:hover{background:#34352f}.viewer-caption{flex-shrink:0;padding:20px 76px 26px;text-align:center;font-size:12px;color:#c9c7bf;min-height:60px;max-width:1100px;align-self:center}#viewer-status{position:absolute;font-size:13px;text-align:center;background:#1d1e1bcc;padding:8px;z-index:1}#viewer-status:empty{display:none}
+@media(min-width:1600px){.summary{font-size:16px}.skill-tags li{font-size:12px}}
+@media(max-width:1100px){.site-header nav{gap:22px}.project{gap:5%;grid-template-columns:1.5fr 1fr}.layout-reverse{grid-template-columns:1fr 1.5fr}.layout-wide,.layout-double{display:block}.project-copy h3{font-size:32px}.portfolio-cards{gap:15px}.portfolio-card{padding:14px 14px 18px}.card-copy h3{font-size:16px}.category-inner{gap:25px}.contact-links{margin-left:20%}}
+@media(max-width:1023px){:root{--gutter:32px;--nav-height:64px;--category-height:58px;--space-chapter:128px;--space-project:112px;--type-page-title:80px;--type-photo-title:64px}.site-header{z-index:50}.menu-toggle{display:block}.site-header nav{display:none;position:fixed;top:var(--nav-height);left:0;right:0;bottom:0;background:var(--cream);padding:30px 32px;overflow-y:auto;align-items:stretch;flex-direction:column;gap:0}.site-header.menu-open nav{display:flex}.site-header nav>a{font-size:32px;letter-spacing:-.04em;min-height:78px;border-bottom:1px solid var(--line)}.site-header nav>a[aria-current=page]{color:var(--red)}.site-header nav>a[aria-current=page]::after{display:block;left:auto;right:2px;top:50%;bottom:auto;transform:translateY(-50%)}.site-header nav>.language-switch{font-size:17px;margin-top:20px;border:0}.nav-separator{display:none}.menu-open .menu-toggle span:first-child{transform:translateY(3.5px) rotate(45deg)}.menu-open .menu-toggle span:last-child{transform:translateY(-3.5px) rotate(-45deg)}.home-hero{padding-block:52px 40px}.eyebrow{font-size:12px;margin-bottom:28px}.summary{font-size:16px}.identity p:first-child{font-size:20px}.identity p:last-child{font-size:20px}.hero-work{margin-top:0}.hero-work figcaption{font-size:12px;flex-direction:column;gap:3px}.portfolio-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}.portfolio-card{padding:20px}.card-media{aspect-ratio:1.2}.card-copy h3{font-size:23px}.card-copy p{font-size:13px}.contact-card-art>span{font-size:44px}.doorways{padding-bottom:100px}.page-intro{padding-block:60px 45px}.about-story{gap:7%;grid-template-columns:1fr 1.2fr}.about-text h2{font-size:34px}.about-text>p{font-size:16px}.timeline-item{grid-template-columns:1fr 2fr;gap:20px}.timeline-item>p:last-child{grid-column:2}.skills-columns{padding-left:0;gap:35px}.skills-columns p{font-size:15px}.project-description{font-size:16px}.project{margin-bottom:var(--space-project)}.chapter-title{align-items:start}.chapter-title>p{font-size:12px;max-width:180px}.gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.contact-links{margin-left:10%}.cover-intro{gap:6%}.cover-footer{font-size:12px}.footer-bottom{font-size:12px}.layout-wide .project-copy,.layout-double .project-copy{column-gap:6%}}
+@media(max-width:767px){:root{--gutter:20px;--nav-height:60px;--category-height:56px;--space-chapter:96px;--space-project:80px;--type-page-title:56px;--type-photo-title:clamp(32px,8vw,56px);--type-chapter-title:32px;--gap-intro-copy:24px}.brand img{width:30px;height:30px}.brand>span{font-size:22px}.cover-header{min-height:76px}.cover-main{padding-block:48px 55px;justify-content:center}.cover-eyebrow{font-size:12px;letter-spacing:.08em}.cover-name{font-size:22.3vw;padding-block:30px;letter-spacing:-.085em}.cover-intro{grid-template-columns:1fr;gap:26px;padding-top:25px}.cover-role{font-size:26px}.cover-secondary{font-size:17px}.cover-note{max-width:430px}.cover-note>p{font-size:14px;max-width:330px}.enter-link{margin-top:28px;font-size:16px;min-height:50px;max-width:430px}.cover-footer{padding-block:20px;font-size:12px}.cover-footer>span:nth-child(2){display:none}.home-hero{padding-block:40px 32px}.eyebrow{font-size:12px;margin-bottom:28px}.identity{margin-top:24px}.identity p:first-child{font-size:23px}.identity p:last-child{font-size:23px}.summary{font-size:16px;max-width:450px;margin-top:18px;line-height:1.8}.skill-tags{margin-block:17px 13px}.skill-tags li{font-size:12px}.hero-work{margin-inline:-20px}.hero-work figcaption{margin-inline:20px;flex-direction:row;font-size:12px;gap:10px}.doorways{padding-bottom:70px}.section-label{margin-bottom:26px;padding-top:16px}.section-label h2,.section-label>span{font-size:12px}.portfolio-cards{grid-template-columns:1fr;gap:24px;padding:0}.portfolio-card{padding:19px;transform:none;border-radius:6px}.portfolio-card:hover,.portfolio-card:focus-visible{transform:none}.card-top{margin-bottom:18px}.card-media{aspect-ratio:1.25}.card-copy{padding-top:20px}.card-copy h3{font-size:25px}.card-copy p{font-size:13px}.contact-card-art{padding:20px}.contact-card-art>span{font-size:clamp(38px,12vw,70px)}.contact-card-art img{width:55px;height:55px}.page-intro{padding-block:44px 35px}.intro-bottom{gap:20px}.intro-bottom>p:first-child{font-size:18px}.intro-bottom>.micro{text-align:right}.about-story{display:flex;flex-direction:column;gap:38px;padding-block:5px var(--space-chapter);align-items:stretch}.about-photo .picture{max-width:none}.about-photo .picture img{max-height:620px;object-fit:cover}.about-text h2{font-size:36px;margin-block:18px 25px}.about-text>p{font-size:16px;line-height:1.85;max-width:none}.about-text>.micro{font-size:12px}.about-section{padding-bottom:var(--space-chapter)}.section-heading{gap:20px;padding-block:20px 28px}.section-heading h2{font-size:28px}.section-heading .micro{font-size:12px}.skills-columns{grid-template-columns:1fr;gap:30px}.skills-columns p{font-size:16px;line-height:1.9}.timeline-item{grid-template-columns:1fr;gap:12px;padding-block:24px}.timeline-item>p:last-child{grid-column:1}.timeline-item h3{font-size:20px}.timeline-item>.micro{font-size:12px}.organisation{font-size:14px}.timeline-item>p:last-child{font-size:15px}.category-inner{width:100%;padding-inline:20px;gap:25px}.category-inner>a{font-size:12px}.design-chapter{padding-top:var(--space-chapter);scroll-margin-top:0}.chapter-heading{padding-block:var(--gap-section-line) 30px}.chapter-title{display:block;margin-top:22px}.chapter-title h2{letter-spacing:0}.chapter-title>p{text-align:left;max-width:none;font-size:13px;margin-top:13px}.project,.layout-reverse{display:flex;flex-direction:column;gap:24px;margin-bottom:var(--space-project)}.project-media{width:100%;gap:12px}.project-copy{padding:0;width:100%}.project-copy h3{font-size:32px}.project-number{margin-bottom:12px}.project-subtitle{font-size:14px;margin-top:12px}.project-tags{margin-top:19px;padding-top:14px}.project-description{font-size:16px;line-height:1.9;margin-top:19px}.project-media img{max-height:620px}.layout-wide .project-copy,.layout-double .project-copy{display:block;padding-top:0}.layout-wide .project-description,.layout-double .project-description{margin-top:19px}.layout-wide .project-media{grid-template-columns:repeat(2,minmax(0,1fr))}.layout-wide .media-count-2 .image-main,.layout-wide .media-count-2 .image-support{grid-column:1/-1}.layout-wide .media-count-3 .image-main{grid-column:1/-1;grid-row:auto}.layout-wide .media-count-4 .image-main{grid-column:1/-1}.layout-wide .media-count-4 .image-support:last-child{grid-column:1/-1}.layout-double .image-main{grid-column:1/-1}.layout-double .image-support:last-child{grid-column:1/-1}.image-enlarge{opacity:1;font-size:16px;bottom:8px;right:8px;width:26px;height:26px}.design-chapter .project:last-child{margin-bottom:0}.photography-intro .intro-bottom{display:block}.photography-intro .intro-bottom h2{font-size:21px}.photography-intro .intro-bottom p{font-size:14px;max-width:280px;line-height:1.7;margin-top:10px}.photography-intro .intro-bottom>.micro{display:block;margin-top:23px;text-align:left;}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.gallery-item{grid-row-end:span 12}.gallery-section{padding-top:0;padding-bottom:25px}.gallery-controls{padding-top:30px}.contact-page{padding-bottom:60px}.contact-page .page-intro{padding-block:44px 30px}.contact-title{font-size:clamp(52px,13.8vw,100px);letter-spacing:0;line-height:1.04}.contact-summary{font-size:15px;margin-top:27px}.contact-links{margin-left:0;padding-top:10px}.contact-links>a,.contact-links>button{grid-template-columns:1fr auto;gap:5px 15px;padding-block:20px;min-height:105px}.contact-links .micro{grid-column:1/-1;font-size:12px}.contact-links>a>span:nth-child(2),.contact-links>button>span:nth-child(2){font-size:24px}.copy-label{font-size:12px}.site-footer{padding-block:28px 14px}.footer-top{display:flex;flex-direction:column;gap:30px;padding-bottom:30px}.footer-email{font-size:23px;gap:23px}.footer-bottom{display:grid;grid-template-columns:1fr auto;gap:10px;font-size:12px;padding-top:16px}.footer-bottom>span:nth-child(2){grid-column:1;grid-row:2}.footer-bottom>a{grid-column:2;grid-row:1/3;margin:0}.viewer-bar{height:58px;padding-inline:16px}.viewer-stage{margin-inline:0}.viewer-stage>button{top:auto;bottom:10px;width:48px;height:48px;z-index:2}.viewer-prev{left:12px}.viewer-next{right:12px}.viewer-caption{padding:15px 65px 24px;min-height:70px;font-size:12px;max-height:100px}.viewer-bar .micro{font-size:12px}.viewer-close{font-size:var(--type-interface)}.viewer-stage>img{max-height:100%}}
+#project-01 .image-main img,
+#project-05 .image-main img,
+#project-04 .image-support img,
+#project-10 .project-media img{max-height:none}
+.brand{min-height:44px}.site-header nav>a,.category-inner>a{min-width:44px}.category-inner>a{justify-content:center}
+/* Shared action states are scoped to keep the approved entry cards untouched. */
+.site-header nav>a,.text-link,.footer-email,.footer-back-top,.contact-links>a,.contact-links>button{transition:color 180ms ease-out,border-color 180ms ease-out}
+.text-link{--arrow-x:3px;--arrow-y:-3px}
+.text-link[download],#load-more{--arrow-x:0px;--arrow-y:3px}
+.text-link[href="#top"]{--arrow-x:0px;--arrow-y:-3px}
+.text-link>span,.footer-email>span,.footer-back-top>span,.language-switch>span,.contact-links>a>span:last-child,.copy-label>span{display:inline-block;transition:transform 180ms ease-out}
+.image-enlarge{transition:opacity 180ms ease-out,transform 180ms ease-out,color 180ms ease-out}
+.viewer-stage>button{transition:color 180ms ease-out,background-color 180ms ease-out}
+.viewer-stage>button>span{display:inline-block;transition:transform 180ms ease-out}
+.viewer-stage>button:is(:active,:focus-visible,.is-pressed){color:var(--red)}
+.viewer-prev:is(:active,:focus-visible,.is-pressed)>span{transform:translateX(-3px)}
+.viewer-next:is(:active,:focus-visible,.is-pressed)>span{transform:translateX(3px)}
+.menu-toggle:is(:active,:focus-visible,.is-pressed)>span{background:var(--red)}
+.text-link:not(:disabled):is(:active,:focus-visible,.is-pressed){color:var(--red);border-color:var(--red)}
+.text-link:not(:disabled):is(:active,:focus-visible,.is-pressed)>span{transform:translate(var(--arrow-x),var(--arrow-y))}
+.site-header nav>a:is(:active,:focus-visible,.is-pressed),.footer-email:is(:active,:focus-visible,.is-pressed),.footer-back-top:is(:active,:focus-visible,.is-pressed),.contact-links>a:is(:active,:focus-visible,.is-pressed),.contact-links>button:is(:active,:focus-visible,.is-pressed){color:var(--red)}
+.footer-email:is(:active,:focus-visible,.is-pressed)>span,.language-switch:is(:active,:focus-visible,.is-pressed)>span,.contact-links>a:is(:active,:focus-visible,.is-pressed)>span:last-child,.contact-links>button:is(:active,:focus-visible,.is-pressed) .copy-label>span{transform:translate(3px,-3px)}
+.footer-back-top{gap:6px}.footer-back-top:is(:active,:focus-visible,.is-pressed)>span{transform:translateY(-3px)}
+.image-button:is(:active,:focus-visible,.is-pressed) .image-enlarge{color:var(--red);transform:translate(3px,-3px)}
+.back-to-top{position:fixed;right:max(20px,env(safe-area-inset-right,0px));bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:35;min-height:44px;padding:10px 14px;gap:16px;font-size:14px;background:var(--cream)}
+.back-to-top[hidden]{display:none}
+@media(hover:hover) and (pointer:fine){
+  .site-header nav>a:hover,.footer-email:hover,.footer-back-top:hover,.contact-links>a:hover,.contact-links>button:hover{color:var(--red)}
+  .text-link:not(:disabled):hover{color:var(--red);border-color:var(--red)}
+  .text-link:not(:disabled):hover>span{transform:translate(var(--arrow-x),var(--arrow-y))}
+  .footer-email:hover>span,.language-switch:hover>span,.contact-links>a:hover>span:last-child,.contact-links>button:hover .copy-label>span{transform:translate(3px,-3px)}
+  .footer-back-top:hover>span{transform:translateY(-3px)}
+  .image-button:hover .image-enlarge{color:var(--red);transform:translate(3px,-3px)}
+  .viewer-stage>button:hover{color:var(--red)}
+  .viewer-prev:hover>span{transform:translateX(-3px)}
+  .viewer-next:hover>span{transform:translateX(3px)}
+  .menu-toggle:hover>span{background:var(--red)}
+}
+@media(max-width:1023px){
+  .site-header.menu-open{position:fixed;inset:0 0 auto}
+  .site-header nav{padding-bottom:max(32px,calc(env(safe-area-inset-bottom,0px) + 24px));overscroll-behavior:contain;scrollbar-width:thin}
+  .site-header.menu-open nav{animation:menu-reveal 180ms ease-out both}
+}
+@keyframes menu-reveal{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.text-link>span,.footer-email>span,.footer-back-top>span,.language-switch>span,.contact-links>a>span:last-child,.copy-label>span,.image-enlarge,.viewer-stage>button>span{transform:none!important}}
+/* Compact Starburst footer. Keep all sizing changes scoped to the footer. */
+.site-footer{padding-block:28px 16px}
+.site-footer .footer-inner{max-width:1040px;margin-inline:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:12px 56px}
+.site-footer .footer-top{grid-column:1;grid-row:1;display:flex;justify-content:flex-start;align-items:center;padding:0}
+.site-footer .footer-brand{min-height:44px;gap:8px}
+.site-footer .footer-brand img{width:28px;height:28px}
+.site-footer .footer-brand-title{font-size:18px;letter-spacing:-.6px;white-space:nowrap}
+.site-footer .footer-brand-title>span{font-size:14px;font-weight:400;letter-spacing:-.2px}
+.site-footer .footer-thanks{grid-column:1;grid-row:2;position:relative;isolation:isolate;width:100%;max-width:380px;margin:12px 0 0;padding:14px 8px 8px;text-align:center;align-self:start}
+.site-footer .footer-thanks-heading{position:relative;z-index:1;margin:0}
+.site-footer .footer-thanks-word{display:block;min-height:1em;font-weight:900;font-size:clamp(38px,4vw,52px);letter-spacing:-.065em;line-height:1;white-space:nowrap}
+.site-footer .footer-thanks-tagline{display:block;margin-top:4px;font-style:italic;font-weight:400;font-size:22px;line-height:1.14;letter-spacing:-.045em}
+html:lang(zh-Hant) .site-footer .footer-thanks-word{font-weight:600;font-size:44px;letter-spacing:.06em}
+html:lang(zh-Hant) .site-footer .footer-thanks-tagline{font-size:20px;letter-spacing:.04em;font-style:normal;margin-top:6px}
+.site-footer .footer-pen-loop{position:absolute;inset:-3% 0;width:100%;height:116%;z-index:0;pointer-events:none;overflow:visible;transform-origin:50% 50%;transform:rotate(0) scale(1);transition:transform 420ms cubic-bezier(.2,.7,.2,1)}
+.site-footer .footer-pen-loop path{stroke:var(--muted);stroke-width:1;vector-effect:non-scaling-stroke;opacity:.4}
+.site-footer .footer-star{position:absolute;z-index:2;right:0;top:-18px;display:block;width:48px;height:48px;color:var(--red);transform:scale(1);transform-origin:50% 50%;transition:transform 360ms cubic-bezier(.2,.7,.2,1)}
+.site-footer .footer-star>svg{width:100%;height:100%;display:block;pointer-events:none;animation:footer-star-spin 24s linear infinite;filter:drop-shadow(0 0 0 transparent);transition:filter 360ms ease-out}
+@keyframes footer-star-spin{from{transform:rotate(6deg)}to{transform:rotate(366deg)}}
+.site-footer .footer-star polygon{stroke:currentColor;stroke-width:1.2;vector-effect:non-scaling-stroke}
+.site-footer .footer-star-control{position:absolute;inset:0;width:100%;height:100%;padding:0;background:transparent;border-radius:50%;cursor:pointer}
+.site-footer .footer-star-control[hidden]{display:none}
+.site-footer .footer-thanks:is(.is-near,.is-engaged,:has(button:focus-visible)) .footer-pen-loop{transform:rotate(-5deg) scale(1.045)}
+.site-footer .footer-thanks:is(.is-near,.is-engaged,:has(button:focus-visible)) .footer-star{transform:scale(1.18)}
+.site-footer .footer-thanks:is(.is-near,.is-engaged,:has(button:focus-visible)) .footer-star>svg{filter:drop-shadow(0 0 3px rgb(208 28 31 / .4)) drop-shadow(0 0 9px rgb(208 28 31 / .24))}
+.site-footer .footer-contact{grid-column:2;grid-row:1/3;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;align-self:center;text-align:left;margin:0}
+.site-footer .footer-signoff{font-size:12px;color:var(--muted);letter-spacing:.04em;margin-bottom:8px}
+.site-footer .footer-pills{display:flex;flex-wrap:wrap;justify-content:flex-start;align-items:center;gap:8px;margin:0;width:100%}
+.site-footer .footer-pill-item{position:relative;display:flex;min-width:0}
+/* The link text already identifies each destination; keep duplicate captions for assistive reading. */
+.site-footer .footer-pill-item>.micro{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.site-footer .footer-pill{display:inline-flex;align-items:center;justify-content:center;min-height:44px;max-width:100%;padding:6px 14px;border:1px solid var(--line);border-radius:999px;gap:8px;font-size:14px;line-height:1.5;letter-spacing:-.02em;transition:color 180ms ease-out,border-color 180ms ease-out}
+.site-footer .footer-pill>span{font-size:16px;transition:transform 180ms ease-out}
+.site-footer .footer-contact-options{margin-top:4px;min-height:44px;font-size:14px;gap:0;line-height:1.5}
+.site-footer .footer-bottom{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;margin-top:12px;padding-top:12px;color:var(--muted);font-size:12px}
+.site-footer .footer-back-top{display:inline-flex;align-items:center;min-height:44px;margin:0;white-space:nowrap}
+.site-footer.footer-compact .footer-inner{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+.site-footer.footer-compact .footer-top{grid-column:1;grid-row:1}
+.site-footer.footer-compact .footer-thanks{grid-column:2;grid-row:1;max-width:320px;justify-self:end;margin:8px 0 0}
+.site-footer.footer-compact .footer-bottom{grid-column:1/-1;grid-row:2;margin-top:12px}
+.site-footer .footer-pill:is(:active,:focus-visible,.is-pressed){color:var(--red);border-color:var(--red)}
+.site-footer .footer-pill:is(:active,:focus-visible,.is-pressed)>span{transform:translate(3px,-3px)}
+@media(hover:hover) and (pointer:fine){
+ .site-footer .footer-thanks:hover .footer-pen-loop{transform:rotate(-5deg) scale(1.045)}
+ .site-footer .footer-thanks:hover .footer-star{transform:scale(1.18)}
+ .site-footer .footer-thanks:hover .footer-star>svg{filter:drop-shadow(0 0 3px rgb(208 28 31 / .4)) drop-shadow(0 0 9px rgb(208 28 31 / .24))}
+ .site-footer .footer-pill:hover{color:var(--red);border-color:var(--red)}
+ .site-footer .footer-pill:hover>span{transform:translate(3px,-3px)}
+}
+@media(max-width:1023px){.site-footer .footer-inner{column-gap:32px}}
+@media(max-width:767px){
+ .site-footer{padding-block:24px 12px}
+ .site-footer .footer-inner,.site-footer.footer-compact .footer-inner{grid-template-columns:minmax(0,1fr);gap:12px}
+ .site-footer .footer-top,.site-footer.footer-compact .footer-top{grid-column:1;grid-row:1;justify-content:center}
+ .site-footer .footer-thanks,.site-footer.footer-compact .footer-thanks{grid-column:1;grid-row:2;max-width:260px;justify-self:center;margin:4px auto 0;padding:10px 0 6px}
+ .site-footer .footer-thanks-word{font-size:32px}
+ .site-footer .footer-thanks-tagline{font-size:18px;margin-top:3px}
+ html:lang(zh-Hant) .site-footer .footer-thanks-word{font-size:36px}
+ html:lang(zh-Hant) .site-footer .footer-thanks-tagline{font-size:18px;margin-top:4px}
+ .site-footer .footer-star{width:44px;height:44px;top:-14px;right:-8px}
+ .site-footer .footer-contact{grid-column:1;grid-row:3;align-items:center;text-align:center}
+ .site-footer .footer-signoff{display:none}
+ .site-footer .footer-pills{justify-content:center}
+ .site-footer .footer-bottom,.site-footer.footer-compact .footer-bottom{grid-column:1;grid-row:4;display:grid;grid-template-columns:1fr auto;gap:6px 12px;margin-top:4px;padding-top:8px;font-size:12px;text-align:left}
+ .site-footer .footer-location{grid-column:1;grid-row:2}
+ .site-footer .footer-back-top{grid-column:2;grid-row:1/3;justify-self:end}
+ .site-footer.footer-compact .footer-bottom{grid-row:3}
+}
+@media(prefers-reduced-motion:reduce){
+ .site-footer .footer-star,.site-footer .footer-star>svg,.site-footer .footer-pen-loop,.site-footer .footer-pill,.site-footer .footer-pill>span{transition:none}
+ .site-footer .footer-star,.site-footer .footer-star>svg,.site-footer .footer-pen-loop{animation:none!important;transform:none!important}
+ .site-footer .footer-pill>span{transform:none!important}
+}
+/* Design-only carousel: fixed proportions, uncropped art, independent controls. */
+.page-design .project{align-items:start}
+.page-design .project-media{display:block;min-width:0}
+.project-stage{
+  position:relative;
+  width:100%;
+  max-width:calc(72svh * var(--stage-ratio));
+  aspect-ratio:var(--stage-ratio);
+  margin-inline:auto;
+  background:var(--cream);
+  touch-action:pan-y pinch-zoom;
+}
+.page-design .project-stage .image-button,
+.page-design .project-stage .picture,
+.page-design .project-stage img{width:100%;height:100%;max-height:none}
+.page-design .project-stage .picture{background-color:transparent;background-size:contain;background-repeat:no-repeat}
+.page-design .project-stage img{object-fit:contain;background:transparent;user-select:none;-webkit-user-drag:none}
+.project-stage .image-enlarge{z-index:1}
+.carousel-control{
+  position:absolute;top:50%;transform:translateY(-50%);
+  display:grid;place-items:center;width:44px;height:44px;padding:0;
+  background:var(--cream);color:var(--ink);font-size:21px;
+  transition:color 180ms ease-out;
+}
+.carousel-prev{left:8px}.carousel-next{right:8px}
+.carousel-control>span{display:block;transition:transform 180ms ease-out}
+.carousel-control:is(:focus-visible,:active,.is-pressed){color:var(--red)}
+.carousel-prev:is(:focus-visible,:active,.is-pressed)>span{transform:translateX(-3px)}
+.carousel-next:is(:focus-visible,:active,.is-pressed)>span{transform:translateX(3px)}
+.carousel-counter{margin:12px auto 0;text-align:right;color:var(--muted);max-width:calc(72svh * var(--stage-ratio))}
+.carousel-feedback{position:absolute;bottom:12px;left:50%;transform:translateX(-50%);max-width:calc(100% - 32px);text-align:center;pointer-events:none}
+.carousel-status:not(:empty){background:var(--cream);padding:7px 10px;font-size:12px;line-height:1.5}
+.carousel-retry{pointer-events:auto;background:var(--cream);min-height:44px;padding:8px 12px;font-size:12px;text-decoration:underline;text-underline-offset:4px}
+.carousel-retry[hidden]{display:none}
+.carousel-retry:is(:focus-visible,:active,.is-pressed){color:var(--red)}
+.page-design .viewer-bar{height:auto;min-height:68px;gap:16px;padding-block:12px;flex-wrap:wrap}
+.page-design #viewer-project{flex:1;min-width:0;line-height:1.5;overflow-wrap:anywhere}
+.page-design #viewer-counter{flex-shrink:0}
+.page-design #viewer-counter[hidden],.page-design .viewer-stage>button[hidden]{display:none}
+@media(hover:hover) and (pointer:fine){
+  .carousel-control:hover,.carousel-retry:hover{color:var(--red)}
+  .carousel-prev:hover>span{transform:translateX(-3px)}
+  .carousel-next:hover>span{transform:translateX(3px)}
+}
+@media(min-width:1024px){
+  #project-10{grid-template-columns:1fr 1.35fr}
+}
+@media(max-width:767px){
+  .page-design .project{display:flex;flex-direction:column;gap:24px}
+  .project-stage,.carousel-counter{max-width:calc(65svh * var(--stage-ratio))}
+  .carousel-control{width:44px;height:44px}
+  .carousel-prev{left:0}.carousel-next{right:0}
+  .page-design .viewer-bar{display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:16px;row-gap:6px;align-items:start}
+  .page-design #viewer-project{grid-column:1;grid-row:1}
+  .page-design .viewer-close{grid-column:2;grid-row:1 / 3;align-self:start}
+  .page-design #viewer-counter{grid-column:1;grid-row:2}
+}
+@media(prefers-reduced-motion:reduce){
+  .carousel-control>span{transform:none!important;transition:none}
+}
+/* Batch 9: all live typography roles are maintained here. The wordmark is a
+   separate brand role; photographs and other artwork are never restyled. */
+:root{
+ --font-brand:'Helvetica Neue',Helvetica,Arial,'PingFang TC','Microsoft JhengHei',sans-serif;
+ --font-display:'Instrument Serif',Georgia,'Times New Roman',serif;
+ --font-body:'DM Sans',Arial,'PingFang TC','Microsoft JhengHei',sans-serif;
+ --font:var(--font-body);--font-legacy:var(--font-brand);
+ --weight-display:400;--tracking-display:0;
+ --card-heading-slot:calc(clamp(15px,1.5vw,21px) * 1.2);
+}
+html:lang(zh-Hant){
+ --font-display:'Instrument Serif','Noto Serif TC','Songti TC','PMingLiU',serif;
+ --font-body:'DM Sans','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;
+ --weight-display:500;--tracking-display:.02em;
+}
+/* The Latin face has only weight 400, including on Chinese mixed-script pages.
+   font-synthesis:none prevents invented bold/italic for unsupported glyphs. */
+body{font-family:var(--font-body);letter-spacing:0;font-synthesis:none}
+input,textarea,select{font-family:var(--font-body);letter-spacing:0}
+button,a,p{letter-spacing:0}
+.brand{font-family:var(--font-brand)}
+.brand>span,.brand>span>span{letter-spacing:inherit}
+.site-header .brand>span{letter-spacing:-1.2px}
+.site-footer .footer-brand-title{letter-spacing:-.6px}
+.site-footer .footer-brand-title>span{letter-spacing:-.2px}
+.site-header nav>a,.text-link,.footer-pill,.footer-back-top,.photo-enter{font-weight:500;letter-spacing:0}
+.identity p:first-child,.identity p:last-child,.language-switch{letter-spacing:0}
+.display,.photography-intro .display,.home-title,.opening-title,.chapter-title h2,.section-heading h2,
+.about-text h2,.project-copy h3,.contact-title,.card-copy h3,
+.contact-card-art>span,.photography-intro .intro-bottom h2,
+.site-footer .footer-thanks-word{
+ font-family:var(--font-display);font-weight:var(--weight-display);
+ letter-spacing:var(--tracking-display);font-style:normal;
+ overflow-wrap:break-word;
+}
+.display,.contact-title{line-height:1.05}
+.chapter-title h2,.section-heading h2,.about-text h2,.photography-intro .intro-bottom h2{line-height:1.15}
+.project-copy h3{line-height:1.15}
+.home-title{line-height:1.2;white-space:nowrap}
+.opening-title{line-height:1.2}
+.doorways{--font:var(--font-body);font-family:var(--font-body)}
+.card-copy{min-height:calc(24px + var(--card-heading-slot) + 9px + 19.8px)}
+.card-copy h3{line-height:1.2;min-height:var(--card-heading-slot)}
+.card-copy p{line-height:1.65}
+.contact-card-art>span{line-height:1.05}
+.page-about .skills-columns h3,.page-about .timeline-content h3{font-family:var(--font-body);font-weight:600;letter-spacing:0}
+.page-about .skills-columns p,.organisation,.project-subtitle,.project-description{letter-spacing:0}
+.site-footer .footer-thanks-word{line-height:1;white-space:nowrap}
+.site-footer .footer-thanks-tagline{font-family:var(--font-body);font-weight:400;font-style:italic;letter-spacing:0}
+html:lang(zh-Hant) .site-footer .footer-thanks-word{font-family:var(--font-display);font-weight:500;letter-spacing:.02em}
+html:lang(zh-Hant) .site-footer .footer-thanks-tagline{font-style:normal;letter-spacing:0}
+.circular-stage.is-enhanced .photo-cover-caption>.micro{font-family:var(--font-body);font-weight:400}
+.circular-gallery .circular-gallery-label{font-family:var(--font-body);font-weight:400}
+/* Micro marks retain their existing tracking; display headings such as the
+   doorway label participate in the display system without losing their size. */
+.micro{letter-spacing:.075em}
+.photo-instruction.micro{letter-spacing:.06em}
+.circular-stage.is-enhanced .photo-cover-caption>.micro{letter-spacing:.03em}
+@media(max-width:1100px){:root{--card-heading-slot:calc(16px * 1.2)}}
+@media(min-width:768px) and (max-width:1023px){
+ :root{--card-heading-slot:calc(23px * 1.2)}
+ .card-copy{min-height:calc(24px + var(--card-heading-slot) + 9px + 21.45px)}
+}
+@media(max-width:767px){
+ :root{--card-heading-slot:calc(25px * 1.2)}
+ .card-copy{min-height:calc(20px + var(--card-heading-slot) + 9px + 21.45px)}
+}
+</style><script>try{if(location.pathname==='/'&&localStorage.getItem('lyfung-language')==='zh'){location.replace('/zh-hant/'+location.search+location.hash)}}catch(e){};window.__site={"lang":"en","page":"design","route":"design","alternate":"/zh-hant/design/","items":[{"id":"design-03-vis","fingerprint":"2:2401101:1793194320236.673","source":"Design work\\作品03：VIS Design-再·栽生\\vis.png","width":1086,"height":1448,"webp":[{"src":"/assets/design-03-vis-640.webp","width":640,"height":853},{"src":"/assets/design-03-vis-1280.webp","width":1086,"height":1448}],"fallback":"/assets/design-03-vis.jpg","large":"/assets/design-03-vis-1280.webp","placeholder":"data:image/webp;base64,UklGRkwBAABXRUJQVlA4IEABAABQBgCdASoYACAAPwFmqk8rJSOiMAgBYCAJQBOgZiMMEzqMSNSNMTOetTXa80YDB9FAbDamn0hKdsiiQAD+6yb07yWOF4dx1VxiCcA9peyRh/HFew20VKA3aEQNM0yLpW4epWXgKOyBp1totm8h+5J4ZCFWLdBb+4MoVFOUVKsfypnQbUnuXuICxFOBnWU+9YJLhxjqMPF2fIq5O7PGua0G+e0mn4I93+ywHLkgQckCcXPO4I+olJvKWuOa50Qb9WywO9AZUYrHYzjw0L1NvQaIUmHcPkd6tIASEgYE5zDp3iLMQDCPV4uxvsULiEWIJyi52rOgA4zUS/AUj4b/aVd/CGl8nHqaMrEU4xnenpij/4YkpDFm5FgTt96TnTFrcMNz+WuIBg04cy8cOe1x/jA0v3KngAP/YvfII/CALIAAAA==","alt":"Re•Born visual identity board with a green and brick-red emblem, colour palette, planter boxes, tote bag, brand cards and stickers","projectId":"03","projectNumber":"01","projectTitle":"Re•Born"},{"id":"design-04-1","fingerprint":"2:2283179:1790337847289.8638","source":"Design work\\作品04：VIS Design-閩南藍衫\\Codex 圖像 2026年9月25日 下午08_04_03.png","width":1122,"height":1402,"webp":[{"src":"/assets/design-04-1-640.webp","width":640,"height":800},{"src":"/assets/design-04-1-1280.webp","width":1122,"height":1402}],"fallback":"/assets/design-04-1.jpg","large":"/assets/design-04-1-1280.webp","placeholder":"data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAABwBACdASoYAB4APvFaqE6ppKQiN/qoATAeCWcAAEVFUOkpB105e8gBhfDKAAD+6pg8z5Zfi7A1gCzpS7GNv3fFm+0SkGHiDK9eL2oKGTb9QwmNcznJWPcQPOILneXKgWj9jBgMmhj/kL033HL4NMjY+q1ODxPrGlejT05GKTw3UWaz/CUXmbNHz/Zqwz1hnGI3VpdfRmT8yNEcAVeQBGiEAAA=","alt":"Blue Shirt visual identity board with typography, colour and applications","projectId":"04","projectNumber":"02","projectTitle":"The Blue Shirt"},{"id":"design-04-0","fingerprint":"2:376238:1790760580775.6045","source":"Design work\\作品04：VIS Design-閩南藍衫\\Stationery_Mockup（dress）.jpg","width":1920,"height":1280,"webp":[{"src":"/assets/design-04-0-640.webp","width":640,"height":426},{"src":"/assets/design-04-0-1280.webp","width":1280,"height":853},{"src":"/assets/design-04-0-1920.webp","width":1920,"height":1280}],"fallback":"/assets/design-04-0.jpg","large":"/assets/design-04-0-1920.webp","placeholder":"data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADQAwCdASoYABAAPwFqrE6rJiQiMAgBYCAJZQCzgCHcqbkp6F3YnEAA/t6fdbxgxu5wZdm4M/mc8tBh3E3HJQ8rZ1X3ocYsHeOnlm+Hb0XsXRrlmZU6YjynZ+s844+tdho0O+OExJAAAA==","alt":"Blue Shirt stationery identity with blue cards, letterhead and traditional pattern details","projectId":"04","projectNumber":"02","projectTitle":"The Blue Shirt"},{"id":"design-05-0","fingerprint":"2:1834336:1790177051780.0315","source":"Design work\\作品05：VIS Design-造·茶韻\\vis 系統.png","width":1122,"height":1402,"webp":[{"src":"/assets/design-05-0-640.webp","width":640,"height":800},{"src":"/assets/design-05-0-1280.webp","width":1122,"height":1402}],"fallback":"/assets/design-05-0.jpg","large":"/assets/design-05-0-1280.webp","placeholder":"data:image/webp;base64,UklGRh4BAABXRUJQVlA4IBIBAAAwBgCdASoYAB4APwFssFErJaSisBgIAWAgCWcAwdGukgYR6rYqVoVtlY8s1RvS/ADJdPsbHm7lh09gAP7rixEZff58xLCeEvqyOOfH+7zwolAs+iw9AUzGPUWu/1Usbjjqk4Rpb6OD7zkeCmHmaDc0O7U7LQWgFtdjE4nXsaTwd0jomXgFjOV2aO0UBjtLU2B6Sz+xSLzDRI/rfX02Dx2pvHxIbFjD1ulvoNIZ7Ysw7als3Oy5m2DdFQ1Hm7PO+TtoaTgO0OoWYJZ6OjuOx2oy44wHFhoVd+eZ4Kw9YOgREaAO5O87XzNT1p5MbEmTPxjUmlm01DMmqfGZ1ewqunD7tNtOGTGL12ivbVavEPJdbRAA","alt":"Zao Tea Rhythm identity system with a seal-like Chinese logo, earthy colours and applications","projectId":"05","projectNumber":"03","projectTitle":"Zao · Tea Rhythm"},{"id":"design-05-1","fingerprint":"2:20740:1790761532880.367","source":"Design work\\作品05：VIS Design-造·茶韻\\Fung Lok Yee_portfolio _2025.png","width":612,"height":138,"webp":[{"src":"/assets/design-05-1-640.webp","width":612,"height":138}],"fallback":"/assets/design-05-1.jpg","large":"/assets/design-05-1-640.webp","placeholder":"data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACQAwCdASoYAAUAPwFsrk+rJiQiMAgBYCAJZwAAUU6c2AdbTxCAAP7e8cUW+RacJCkUYqAw1a1oLbnCFfs5q0FUckgDeYeXE09ijTeNCgAAAA==","alt":"Geometric components behind the Zao Tea Rhythm logo","projectId":"05","projectNumber":"03","projectTitle":"Zao · Tea Rhythm"},{"id":"design-12-1","fingerprint":"2:1727256:1790335052205.7146","source":"Design work\\作品12：VIS Design-閩南春仔花\\01.png","width":1122,"height":1402,"webp":[{"src":"/assets/design-12-1-640.webp","width":640,"height":800},{"src":"/assets/design-12-1-1280.webp","width":1122,"height":1402}],"fallback":"/assets/design-12-1.jpg","large":"/assets/design-12-1-1280.webp","placeholder":"data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAABQBQCdASoYAB4APwFyrlKrJqQiqAqpYCAJYwDCgzK42j1spOlJP1dKpy8FaAx7l++J1gAA/uqugKKHu4misuFy+MOUPS5oMET1hNWbld8GQ9oFIqHwbzd+iXhR+IVUW12xkvt2SPQD/EdzE35PQK3XDqpKw0byDMxe7K/uRzF510wHlGRsQo+m1pwKfWHzjWolaHe5hZckI7Ikkie8YODmtC9PmLxolwTAPISWXacNgRauoF5leAAA","alt":"Twined Flower identity board showing the logo, colours, typography, patterns and stationery applications","projectId":"12","projectNumber":"04","projectTitle":"Twined Flower"},{"id":"design-12-0","fingerprint":"2:421050:1790694713559.031","source":"Design work\\作品12：VIS Design-閩南春仔花\\Mockup.jpg","width":1920,"height":1280,"webp":[{"src":"/assets/design-12-0-640.webp","width":640,"height":426},{"src":"/assets/design-12-0-1280.webp","width":1280,"height":853},{"src":"/assets/design-12-0-1920.webp","width":1920,"height":1280}],"fallback":"/assets/design-12-0.jpg","large":"/assets/design-12-0-1920.webp","placeholder":"data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAADwAwCdASoYABAAPwFqrE8rJiQiMAgBYCAJZQCuHCHRsSpUlSGdTqsgAP7ec+L8OheAF4wbngeU3nYpVT4GLbrZ17NMnsS0YwJEnmtMZHjE3qgg9ZepCww8egwkAAAA","alt":"Twined Flower stationery with a red floral emblem and flowing blue and yellow patterns","projectId":"12","projectNumber":"04","projectTitle":"Twined Flower"},{"id":"design-17-0","fingerprint":"2:1587367:1793194305745.0244","source":"Design work\\作品17：VIS design-大樹藥局\\vis.png","width":1086,"height":1448,"webp":[{"src":"/assets/design-17-0-640.webp","width":640,"height":853},{"src":"/assets/design-17-0-1280.webp","width":1086,"height":1448}],"fallback":"/assets/design-17-0.jpg","large":"/assets/design-17-0-1280.webp","placeholder":"data:image/webp;base64,UklGRugAAABXRUJQVlA4INwAAAAQBgCdASoYACAAPwFurU6rJqQiMAgBYCAJYwDALAgOW2avySTiOiPx47jtvGHzZ9P9Tr+8b0/d0swA/u3OZe2GqckjUsgYfeCmClgcJLZ/hN9TNo71F5OzDDkMO1+ouMi9eQk16cVdNiH1Lj5CHtgF5fiP1v2Z7wxuVfozHT0kEfaeIuxS4LfOadZMt3coOZUC0kyjoo4P00QHeYXUF2lXvj+tLxlZI9znVk0y++c5suMntmB3vnsSw35LQ9WOCdcjP2x3DvEFa25jiAMzNhScvD4drp9HEJwABAgA","alt":"Great Tree Pharmacy visual identity board with a tree formed from hands and heart-shaped leaves, green and gold colours, patterns, stationery and branded applications","projectId":"17","projectNumber":"05","projectTitle":"Great Tree Pharmacy"},{"id":"design-01-0","fingerprint":"2:3476244:1730042710510.2424","source":"Design work\\作品01：文創設計-巴蜀文化絲巾設計\\mockup.jpg","width":1920,"height":1440,"webp":[{"src":"/assets/design-01-0-640.webp","width":640,"height":480},{"src":"/assets/design-01-0-1280.webp","width":1280,"height":960},{"src":"/assets/design-01-0-1920.webp","width":1920,"height":1440}],"fallback":"/assets/design-01-0.jpg","large":"/assets/design-01-0-1920.webp","placeholder":"data:image/webp;base64,UklGRgwBAABXRUJQVlA4IAABAABwBQCdASoYABIAPwF0rlKrJqQiqAqpYCAJZAC7G1VDx9kTUejcdVGE/trwacZF14s8yAomAPPNoS1zPlh8cSh9LbPBFhemC5hzRxYAc8T0ez4kBM9DdJnw8aJorAytvU3vTuFIxs51WNleSwUif93AJTTlnRmVYbDprs86uLWdphRplBK5vK0HHlkm1orB2rnhEi5w1+/zvtHY6LNgybSBOA7L1wm/dg4zOBZ+z7DIp7nFUlDEvMwhKYF3FP19YksUYHb5ndnbtDhTYxu80MedaDzg1WidN61YN4WZZqnsmyHMXO8JitZt2FJFex+5BTwXzUwMBHCtjvDuMtjwMcAA","alt":"Bashu-inspired silk scarf patterns displayed in a diagonal arrangement","projectId":"01","projectNumber":"06","projectTitle":"Echoes of Bashu"},{"id":"design-01-1","fingerprint":"2:9338159:1638459067914.8025","source":"Design work\\作品01：文創設計-巴蜀文化絲巾設計\\01.jpg","width":1920,"height":1932,"webp":[{"src":"/assets/design-01-1-640.webp","width":640,"height":644},{"src":"/assets/design-01-1-1280.webp","width":1280,"height":1288},{"src":"/assets/design-01-1-1920.webp","width":1920,"height":1932}],"fallback":"/assets/design-01-1.jpg","large":"/assets/design-01-1-1920.webp","placeholder":"data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAABQBQCdASoYABgAPwF2s1QrJySjKAgBYCAJagCdIFzBvlU744TyQaG0ZX6DnPP8QDUOZAAA/tM0ri0WwLN4wJo/DXnkUQHP3xP1TDhvoJ7zHJ+l6ruf62x4mkqyYdJvG7gbwONzZGiuBvOF3SSKBOhXqMv1hqzwqF0x+va8FVFiklzwhmZy+A3T5DlLxAhFqR1YjIFcGhowDuh0OVr4QDInjqLolsC7oBVEuJITBZO7U9olwLpVYEgAAAA=","alt":"Bashu scarf pattern in coral, pale blue and yellow","projectId":"01","projectNumber":"06","projectTitle":"Echoes of Bashu"},{"id":"design-01-2","fingerprint":"2:9180563:1638459080654.1372","source":"Design work\\作品01：文創設計-巴蜀文化絲巾設計\\02.jpg","width":1920,"height":1920,"webp":[{"src":"/assets/design-01-2-640.webp","width":640,"height":640},{"src":"/assets/design-01-2-1280.webp","width":1280,"height":1280},{"src":"/assets/design-01-2-1920.webp","width":1920,"height":1920}],"fallback":"/assets/design-01-2.jpg","large":"/assets/design-01-2-1920.webp","placeholder":"data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAABwBQCdASoYABgAPwF4tFOrJyUiqAgBYCAJagC/PAgdgNZuxKk4O7JT/puXz0AWMaumnoAAAP6NVsBd2k/w/s95WxG+1a5OpjrxSPIMLjz1YlicxBXC0lddwJfGa//g2SKbkfI7CG7LIAIRwllJXugNn73mh0jnWcJFXH8AlWu/yeHEm64z+TV4ix5BujjbDS58KvyK1eSwHj+upZWnoxglfJMPLX+kivt2VU/FUSDMhznHWFhjvNqyC96F0bRyaKfWtFqNztBYI3mjWUlUAAAA","alt":"Bashu scarf pattern in red and warm yellow","projectId":"01","projectNumber":"06","projectTitle":"Echoes of Bashu"},{"id":"design-01-3","fingerprint":"2:11143337:1638459094523.6208","source":"Design work\\作品01：文創設計-巴蜀文化絲巾設計\\03.jpg","width":1920,"height":1920,"webp":[{"src":"/assets/design-01-3-640.webp","width":640,"height":640},{"src":"/assets/design-01-3-1280.webp","width":1280,"height":1280},{"src":"/assets/design-01-3-1920.webp","width":1920,"height":1920}],"fallback":"/assets/design-01-3.jpg","large":"/assets/design-01-3-1920.webp","placeholder":"data:image/webp;base64,UklGRuYAAABXRUJQVlA4INoAAACQBQCdASoYABgAPwF4tFOrJySiqAgBYCAJZACuIagW1Bo8Hb/QZTKuG4ZYufQd3pz94+TmAAD+VKVJkO8CjhFPvkytsaORu78JJQfbfmRihjyMTh/dHzFAd2dDHE0Ue8wTWDoO6T9UBxdJJZ8XwlinNS7roZMqZ525HDhUlCum/T33g1oKx4MXzuLsKbIc8gtoms1xgDdwO06KRPVe3IL93DZKdeAtsP+b/qSuXpAdrD870u1HZivyRFoERM6WnMFvmnd/G7KCGhGdIL0pK84rSC+KEX1lYNwAAA==","alt":"Bashu scarf pattern in magenta and purple","projectId":"01","projectNumber":"06","projectTitle":"Echoes of Bashu"},{"id":"design-02-0","fingerprint":"2:483672:1790688054540.6814","source":"Design work\\作品02：文創設計-多巴胺販賣所\\多巴胺販賣所_首頁與說明頁.jpg","width":1523,"height":1077,"webp":[{"src":"/assets/design-02-0-640.webp","width":640,"height":453},{"src":"/assets/design-02-0-1280.webp","width":1280,"height":905},{"src":"/assets/design-02-0-1920.webp","width":1523,"height":1077}],"fallback":"/assets/design-02-0.jpg","large":"/assets/design-02-0-1920.webp","placeholder":"data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAACwBACdASoYABEAPwF2slOrJySiqAgBYCAJZgBV0AQPj7o6p66YHVQXgQ+ED8MAAP6yCmlMSCIEmHZP4BaiApNipP+Gbl1oDx5J00/b+wWUMf4hAzOyhqvksEe4sh/9VU83AUrN52POIkNBJbszR2ZHq0A0g9S6DJbntUsc3BaG60VWkelVqplkshtzXm6A6ukCm3vatltA2wbiE+Nng7Bg+xEfpYigx08Kl56AKqTAAAAA","alt":"Colourful illustrated character keyrings, stickers, pens and notebooks from The Dopamine Store","projectId":"02","projectNumber":"07","projectTitle":"The Dopamine Store"},{"id":"design-13-0","fingerprint":"2:2914033:1790157821543.287","source":"Design work\\作品13：IP設計-北京文化熊\\mockup.png","width":1536,"height":1024,"webp":[{"src":"/assets/design-13-0-640.webp","width":640,"height":427},{"src":"/assets/design-13-0-1280.webp","width":1280,"height":853},{"src":"/assets/design-13-0-1920.webp","width":1536,"height":1024}],"fallback":"/assets/design-13-0.jpg","large":"/assets/design-13-0-1920.webp","placeholder":"data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAABQBQCdASoYABAAPwFqrE8rJiQiMAgBYCAJagCdOUDZCt/1KB8aOkVtUEPXjq8J55gU64AA/ky7roVwyxmlZU0dvAGTKuXXm3L9FRiBouM4qooXb9oRErEzab9heqH//C5xPtN5ef3tFeRD2Q3jMfwl4vZe0p/o8OtER8KOTOtLjm/KF3BLbyqD2890IveHpT6Xb5V+mf2fOHH2S2FSyMJm3zSuqL302XJAh3RnqwE/BMTgLGbr1hXdXMxSWrcnwAA=","alt":"Beijing Culture Bear panda character applied to gift bags, stationery, cups, clothing and accessories","projectId":"13","projectNumber":"08","projectTitle":"Beijing Culture Bear"},{"id":"design-13-1","fingerprint":"2:2240355:1790157123474.9146","source":"Design work\\作品13：IP設計-北京文化熊\\ip emotion.png","width":1536,"height":1024,"webp":[{"src":"/assets/design-13-1-640.webp","width":640,"height":427},{"src":"/assets/design-13-1-1280.webp","width":1280,"height":853},{"src":"/assets/design-13-1-1920.webp","width":1536,"height":1024}],"fallback":"/assets/design-13-1.jpg","large":"/assets/design-13-1-1920.webp","placeholder":"data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAAAQBQCdASoYABAAPwForE6rJaQiMAgBYCAJQBOmUFHgLmaTAe3r+jGMSLYLtdACWhRAAP62wWjN7cY1cLEGOYrX/F2JJTnoiThq2aqm3NdM5E8CAzSPuutw6USRPL1eq6osbZY1DnnvMd33FdregYkCmqSQUNAYxSOnusc04WlvaZlsr+23IgWvuXyqBj2/HbDtRg9BD2yGD90mMKI18M20HxHQ5BE+Eh6QTDhL6wTyAz5jyjA8+hheAAA=","alt":"Beijing Culture Bear character sheet with front, side and back views, facial expressions and poses","projectId":"13","projectNumber":"08","projectTitle":"Beijing Culture Bear"},{"id":"design-06-1","fingerprint":"2:2462396:1790673691786.036","source":"Design work\\作品06：Branding Design\\01.PNG","width":1254,"height":1254,"webp":[{"src":"/assets/design-06-1-640.webp","width":640,"height":640},{"src":"/assets/design-06-1-1280.webp","width":1254,"height":1254}],"fallback":"/assets/design-06-1.jpg","large":"/assets/design-06-1-1280.webp","placeholder":"data:image/webp;base64,UklGRhIBAABXRUJQVlA4IAYBAADQBQCdASoYABgAPwFyrFGrJqOiqA1RYCAJYwCo9d31hjNDW8C1wh2FUGJWZgmrK8FrQX4iKr8AAM4x8rXuf/TOr+URU5E22V0so5y7/j73VqJ7L7sUUXxa2NykOWXRt09T/54QWQnDzDshRXYuFkqNO6Z6yMi6rSptmfCWwbUkiZDkLPapfyiS4QsDResbeOcl7BsdJhKaLCKCs0yLY9CTgAUxB4X2gK48Yv35QhYY1xkVFaeIOdfpLvdx/RnbPX5tkOhY6eGsHSftp6Z4su54qi3MfyQqY3vGZ43FQwGYtN77ZguAEDLuxJQZtBd9TfIrKP2SFGwVWKIHI3kWzmlcO2AFM4AA","alt":"Illustrated portrait before makeup in the personal beauty concept series","projectId":"06","projectNumber":"09","projectTitle":"Break the Rules"},{"id":"design-06-2","fingerprint":"2:2593430:1790673690308.3564","source":"Design work\\作品06：Branding Design\\02.PNG","width":1254,"height":1254,"webp":[{"src":"/assets/design-06-2-640.webp","width":640,"height":640},{"src":"/assets/design-06-2-1280.webp","width":1254,"height":1254}],"fallback":"/assets/design-06-2.jpg","large":"/assets/design-06-2-1280.webp","placeholder":"data:image/webp;base64,UklGRhgBAABXRUJQVlA4IAwBAADwBQCdASoYABgAPwF2s1QrJySjKAgBYCAJYwCdAYxf9gDRJ4Et8gKlZS1LFPzlMppXAUpOcN/yAADib3IgAzbTS+1sBBb1eJGG1JKjHglemDreLk+jZEypd2c3MIoaCh0FWhrkZC+ycj/czlhSiAMyC9FBU/46n7tEWSV8m0/YDCqVknWE+uE9h7VG76Igy1/+Yg2HUa40xe8rvkDTtcJbIPMeUPLcOevxQm22JuDQwnVHcPLiYgXOEC7z0C9NhLRSQ+M3ZKFe/dHMtvV4sU99+uK96W9/e2fvx0PZTMWIjNlSh5gQIWBUWieDz7ZzZRid+11BAXDxPBOXDLnz2Y8cItgJMRnKRcWDEgAA","alt":"Illustrated portrait with a hand applying lipstick in the concept series","projectId":"06","projectNumber":"09","projectTitle":"Break the Rules"},{"id":"design-06-0","fingerprint":"2:2694117:1790673694609.4163","source":"Design work\\作品06：Branding Design\\03.PNG","width":1254,"height":1254,"webp":[{"src":"/assets/design-06-0-640.webp","width":640,"height":640},{"src":"/assets/design-06-0-1280.webp","width":1254,"height":1254}],"fallback":"/assets/design-06-0.jpg","large":"/assets/design-06-0-1280.webp","placeholder":"data:image/webp;base64,UklGRiABAABXRUJQVlA4IBQBAAAwBgCdASoYABgAPwFyrFGrJqQiqA1RYCAJQBWGYxcAFBwFjyV5afxnt6BV07ugD096X4bg/hb5KTAAAOJvccA2yRSdfPxS9BjwNgr12fFAuWdFBVvZVqgUoVQtseDhnKZRTjV2vJ4DMbnynFZ5ruDFTt4V8ck7ej1dEIgCW64o6KRhfN/UvKq2sVuIJAGvVa14dzk/R7pI+UoMNk2jrO+Lj7cf4QELFYeaZCB4ongJMkiEdI9CCSPXWFdwoTHKI5IwqiigwSUBDpu+TwHHYr54RzCZCqXnQOyqL2JqV5l8TJZ5dHp4wyq2OpyXfY0djCQVN3Fpj0dl1Ki4ukHqOcrYqERsYqzIhcWJlgtNyigHUeQAAAA=","alt":"Personal beauty campaign concept with an illustrated portrait and makeup products","projectId":"06","projectNumber":"09","projectTitle":"Break the Rules"},{"id":"design-09-0","fingerprint":"2:21244743:1730297729070.8042","source":"Design work\\作品09：graphic design\\Ceiling_Banner_Mockup_2.png","width":1920,"height":1440,"webp":[{"src":"/assets/design-09-0-640.webp","width":640,"height":480},{"src":"/assets/design-09-0-1280.webp","width":1280,"height":960},{"src":"/assets/design-09-0-1920.webp","width":1920,"height":1440}],"fallback":"/assets/design-09-0.jpg","large":"/assets/design-09-0-1920.webp","placeholder":"data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAADQBACdASoYABIAPwF0sFIrJqSiqAqpYCAJZAAAMXPE3eNVBUMzSfP4gynD529hAADwL3NBb3tY4ZI/Tkpa7DOuRAC/MXOOzeV8tpFNisYysGvuVGs6RvfivnLiDG40wureAtYuMXLoD1aE0QcLG0ToPBamjy9ZbHP/JzyT/EBHtaGaaB3Zxa+SRsCumwufuISjgGqZgP8YES+ARYXNh50AAAA=","alt":"Marine safety event banner displayed in a timber-roofed venue","projectId":"09","projectNumber":"10","projectTitle":"Messages from the Sea"},{"id":"design-09-1","fingerprint":"2:4055163:1730195177460.9504","source":"Design work\\作品09：graphic design\\03.png","width":1920,"height":1440,"webp":[{"src":"/assets/design-09-1-640.webp","width":640,"height":480},{"src":"/assets/design-09-1-1280.webp","width":1280,"height":960},{"src":"/assets/design-09-1-1920.webp","width":1920,"height":1440}],"fallback":"/assets/design-09-1.jpg","large":"/assets/design-09-1-1920.webp","placeholder":"data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADwAwCdASoYABIAPwF0rVMrJqOiqAqpYCAJYwDMWA9etFDtUhXk1XgAAPcnrkOH4iMs+gzF40dxH3G2QsScQAtbh9+lpMLMVElDnAAA","alt":"Marine safety promotional flyer mockup","projectId":"09","projectNumber":"10","projectTitle":"Messages from the Sea"},{"id":"design-09-flyer","fingerprint":"2:5152698:1730196939430.7861","source":"Design work\\作品09：graphic design\\Single_US_Letter_Flyer_Mockup_2.png","width":1920,"height":1440,"webp":[{"src":"/assets/design-09-flyer-640.webp","width":640,"height":480},{"src":"/assets/design-09-flyer-1280.webp","width":1280,"height":960},{"src":"/assets/design-09-flyer-1920.webp","width":1920,"height":1440}],"fallback":"/assets/design-09-flyer.jpg","large":"/assets/design-09-flyer-1920.webp","placeholder":"data:image/webp;base64,UklGRlIAAABXRUJQVlA4IEYAAABwAwCdASoYABIAPwFurU6rJqQjMAgBYCAJaQAAW+soVhoBXQAA/q40t5qkEc/UlnTt1lj/N4lf5d1Nemhy+Wv43XRtHAAA","alt":"Marine safety information flyer displayed as printed sheets","projectId":"09","projectNumber":"10","projectTitle":"Messages from the Sea"},{"id":"design-09-3","fingerprint":"2:12726530:1730210355134.2637","source":"Design work\\作品09：graphic design\\Free Paper Folder with String Mockup.png","width":1920,"height":1365,"webp":[{"src":"/assets/design-09-3-640.webp","width":640,"height":455},{"src":"/assets/design-09-3-1280.webp","width":1280,"height":910},{"src":"/assets/design-09-3-1920.webp","width":1920,"height":1365}],"fallback":"/assets/design-09-3.jpg","large":"/assets/design-09-3-1920.webp","placeholder":"data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAADQAwCdASoYABEAPwFuqU8rJqOiMBgMAWAgCWkAAC51UIWkIX81kwAA/ucdMgPBhtOLyC4AikjrWZaxwb58LtEj7Dbt+SoLoZtcOjwdZ1AAAA==","alt":"Marine safety folder and information graphics","projectId":"09","projectNumber":"10","projectTitle":"Messages from the Sea"},{"id":"design-09-banner-3","fingerprint":"2:21114564:1730297764536.044","source":"Design work\\作品09：graphic design\\Ceiling_Banner_Mockup_3.png","width":1920,"height":1440,"webp":[{"src":"/assets/design-09-banner-3-640.webp","width":640,"height":480},{"src":"/assets/design-09-banner-3-1280.webp","width":1280,"height":960},{"src":"/assets/design-09-banner-3-1920.webp","width":1920,"height":1440}],"fallback":"/assets/design-09-banner-3.jpg","large":"/assets/design-09-banner-3-1920.webp","placeholder":"data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAAAQBQCdASoYABIAPwFqr1ErJaQisBgIAWAgCUATpnHYJmPTOlF+jK4kMIMCrdiwkKdQAOIuz0BVywgB9Un6dO3kqwTbbKEeScgWMDDRYR+IlKAmq0pDXGxCOzuRpEIqU4k4C/QaG1A3cSlQuBStkEeDnIGsyem0ciwwuP8lxL0b2rn1v142Q0jEvGG7ddQxDI0BGzj1P+LPwIAA","alt":"Mini Mariner campaign banner suspended in a timber-roofed venue","projectId":"09","projectNumber":"10","projectTitle":"Messages from the Sea"},{"id":"design-09-roll-up","fingerprint":"2:4366243:1730297239577.1992","source":"Design work\\作品09：graphic design\\Free Exhibition Stand Roll-Up Banner Mockup.png","width":1920,"height":1440,"webp":[{"src":"/assets/design-09-roll-up-640.webp","width":640,"height":480},{"src":"/assets/design-09-roll-up-1280.webp","width":1280,"height":960},{"src":"/assets/design-09-roll-up-1920.webp","width":1920,"height":1440}],"fallback":"/assets/design-09-roll-up.jpg","large":"/assets/design-09-roll-up-1920.webp","placeholder":"data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAACQBACdASoYABIAPwFsr1ErJaQisBgIAWAgCWMAAC6C9yhEO/yDrwicRJoCLoAA/uqP1FmqReT1ZFQ1CbkZP/CNFyIZYmrXNz9Spj3BfYdxMmgKCiL1oyN1sChBlqiJ/ys3FMGr1Yi8IxksTcCAAA==","alt":"Two marine safety roll-up exhibition banners with illustrated activities","projectId":"09","projectNumber":"10","projectTitle":"Messages from the Sea"},{"id":"design-09-tote-photo","fingerprint":"2:958461:1790688371115.7974","source":"Design work\\作品09：graphic design\\IMG_2101.JPG","width":1800,"height":1200,"webp":[{"src":"/assets/design-09-tote-photo-640.webp","width":640,"height":427},{"src":"/assets/design-09-tote-photo-1280.webp","width":1280,"height":853},{"src":"/assets/design-09-tote-photo-1920.webp","width":1800,"height":1200}],"fallback":"/assets/design-09-tote-photo.jpg","large":"/assets/design-09-tote-photo-1920.webp","placeholder":"data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAAAwBACdASoYABAAPwFqrE8rJiQiMAgBYCAJbACdMoACA2UiHLUCnemRKVAA9ycLe6LudWP8RM1fGHSikCHL2qCHoSeno4v3xl/SlfXURgJ8LLvAQhcS0fOahyBOvUUyLQB0HEYJJKdmnCel6SRYTaDtrJJUrtautDxouLTFfEm3rz3IwAA=","alt":"Front and back of marine safety tote bags against a blue background","projectId":"09","projectNumber":"10","projectTitle":"Messages from the Sea"},{"id":"design-09-towel","fingerprint":"2:6518749:1730198594660.402","source":"Design work\\作品09：graphic design\\towel_1.png","width":1920,"height":1080,"webp":[{"src":"/assets/design-09-towel-640.webp","width":640,"height":360},{"src":"/assets/design-09-towel-1280.webp","width":1280,"height":720},{"src":"/assets/design-09-towel-1920.webp","width":1920,"height":1080}],"fallback":"/assets/design-09-towel.jpg","large":"/assets/design-09-towel-1920.webp","placeholder":"data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACwAwCdASoYAA4APwFssE+rJiSiMAgBYCAJYwC7AB8vMp4IYgjYYAD+w/FGljxUJ+WHHlrFkpsVEaYO8HF1C8vAPu9eofYwFTmpR40MeXtSp3AA","alt":"Blue towel featuring international maritime signal flags","projectId":"09","projectNumber":"10","projectTitle":"Messages from the Sea"},{"id":"design-11-0","fingerprint":"2:13752897:1790680168252.76","source":"Design work\\作品11：Mother‘s Day Card\\Mockup01.png","width":1920,"height":1536,"webp":[{"src":"/assets/design-11-0-640.webp","width":640,"height":512},{"src":"/assets/design-11-0-1280.webp","width":1280,"height":1024},{"src":"/assets/design-11-0-1920.webp","width":1920,"height":1536}],"fallback":"/assets/design-11-0.jpg","large":"/assets/design-11-0-1920.webp","placeholder":"data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAwCdASoYABMAPwF0slOrJqQiqAgBYCAJZQDHMBESlxA0QeJA+sAA/t56wNLQY55PZzybh+nyFVYlA9CBAriKIpbCKV0PIgem4AAA","alt":"Mother’s Day folded card with pink floral illustrations, an embroidery-hoop motif and space for a handwritten message","projectId":"11","projectNumber":"11","projectTitle":"Mother’s Day Card"},{"id":"design-11-1","fingerprint":"2:7550867:1790680106015.4326","source":"Design work\\作品11：Mother‘s Day Card\\Mockup02.png","width":1920,"height":1536,"webp":[{"src":"/assets/design-11-1-640.webp","width":640,"height":512},{"src":"/assets/design-11-1-1280.webp","width":1280,"height":1024},{"src":"/assets/design-11-1-1920.webp","width":1920,"height":1536}],"fallback":"/assets/design-11-1.jpg","large":"/assets/design-11-1-1920.webp","placeholder":"data:image/webp;base64,UklGRkQAAABXRUJQVlA4IDgAAAAQAwCdASoYABMAPwFsq08rJiOiMAgBYCAJZwDNhCo9CRAA/u4AGEBGV2f1eAGmu2HgxTzdAAAAAA==","alt":"Multiple views of the Mother’s Day card showing a line-drawn hand gesture, floral cover and interior writing area","projectId":"11","projectNumber":"11","projectTitle":"Mother’s Day Card"},{"id":"design-07-0","fingerprint":"2:2264481:1790691791463.1108","source":"Design work\\作品07：咖啡包裝\\美式意式咖啡液_產品攝影_3x2.png","width":1536,"height":1024,"webp":[{"src":"/assets/design-07-0-640.webp","width":640,"height":427},{"src":"/assets/design-07-0-1280.webp","width":1280,"height":853},{"src":"/assets/design-07-0-1920.webp","width":1536,"height":1024}],"fallback":"/assets/design-07-0.jpg","large":"/assets/design-07-0-1920.webp","placeholder":"data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAABwBACdASoYABAAPwForE6rJaQiMAgBYCAJYgCsACKHGVqZo9IxcW7wYoRb0AD+tTd25g7OTvDMplyKmJvBw9amK2l5aGpnuVljni1Usk/wRVZxVJUswyKey1X5XDEuWdawGpmjfdb4Bvfs5g/qBZlqSbvGuCS0NXyqceWegXsCwOu3f8RnMLo8H3pgW2gkln2ErF6CS4A5ZafN75nw2gV9F01HvtSj6Nn+xqAA","alt":"Coffee concentrate bottles with individual illustrated labels in warm natural light","projectId":"07","projectNumber":"12","projectTitle":"A Daily Brew"},{"id":"design-08-0","fingerprint":"2:2714169:1790693802265.9888","source":"Design work\\作品08：醬料包裝設計\\mockup.png","width":1536,"height":1024,"webp":[{"src":"/assets/design-08-0-640.webp","width":640,"height":427},{"src":"/assets/design-08-0-1280.webp","width":1280,"height":853},{"src":"/assets/design-08-0-1920.webp","width":1536,"height":1024}],"fallback":"/assets/design-08-0.jpg","large":"/assets/design-08-0-1920.webp","placeholder":"data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAADwAwCdASoYABAAPwFqrE8rJiQiMAgBYCAJQBYdg4gZ7HVHAVHmHvjwAPy0dhj79WbJGfiDlX58t6C77+6ou9WBiqraYyge4fsPbkorg1QvdGWVIhhFJqVCiC2wttLpnaSEBlMhNQEYooDtlopJzzdiZ8WfFO+sKd2xVsZyh30W8009pm6OchOVG2Cn0gHw4/f+HAaSoSNEYwAA","alt":"XO sauce jar and illustrated paper boxes in warm brown and cream","projectId":"08","projectNumber":"13","projectTitle":"Flavour, Collected"},{"id":"design-10-0","fingerprint":"2:2548641:1790325897276.2751","source":"Design work\\作品10：活動展覽設計-咖啡實驗室\\Codex 圖像 2026年9月25日 下午04_44_52.png","width":1086,"height":1448,"webp":[{"src":"/assets/design-10-0-640.webp","width":640,"height":853},{"src":"/assets/design-10-0-1280.webp","width":1086,"height":1448}],"fallback":"/assets/design-10-0.jpg","large":"/assets/design-10-0-1280.webp","placeholder":"data:image/webp;base64,UklGRhIBAABXRUJQVlA4IAYBAABwBgCdASoYACAAPwFurk8rJqQiMAgBYCAJZQDLqAgdltbQwRLU5JK27fNCCAKULd+BDsXjfHo5lUA8AAAA+6KDFJ2IapSm76zcvD/rG9wxeGUndMVbQdrZ9SLBeyF95kEbdUoEc0odavpJ/jyBXVAth770e96VwenMjFb2aE4KbXQZKjBLkXz0mUkjsnHkmxR1YHVapbhjRqHgy7DxsGm2/8J6/vezQ8E0cwscVYTOHlgZ0zYkZVNSYeL/kQQ0GgA0+sdc1RBz/H2YWVmGtfwjRl+BK79qrXC9YQMNUmRYD2FY/5QfsYJzRwfm93qa6MU7BKhR2xpm4tsV63x8LOJ9D19AEOAA","alt":"Coffee Laboratory exhibition concept showing the booth, product displays, tasting area and character installation","projectId":"10","projectNumber":"14","projectTitle":"The Coffee Laboratory"}],"gallery":false};</script></head><body class="page-design" id="top"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="/home/" aria-label="LY.Fung — Home"><img src="/assets/logo.png" width="40" height="40" alt=""><span>LY.Fung</span></a><button class="menu-toggle" aria-expanded="false" aria-controls="main-navigation" aria-label="Open menu"><span></span><span></span></button><nav id="main-navigation" aria-label="Main navigation"><a href="/home/" >Home</a><a href="/about/" >About</a><a href="/design/" aria-current="page">Design</a><a href="/photography/" >Photography</a><a href="/contact/" >Contact</a><span class="nav-separator" aria-hidden="true"></span><a class="language-switch" data-language="zh" href="/zh-hant/design/" lang="zh-Hant" aria-label="Switch to Traditional Chinese">繁中 <span aria-hidden="true">↗</span></a></nav></header><main id="main"><header class="page-intro wrap" id="all"><p class="micro">02 / A SELECTION OF CREATIVE WORK</p><h1 class="display">Design<span class="name-dot">.</span></h1><div class="intro-bottom"><p>Ideas made visible.<br>Stories given a shape.</p><p class="micro">14 PROJECTS / 05 CHAPTERS</p></div></header><nav class="category-nav" aria-label="Design chapters"><div class="wrap category-inner"><a href="#all" data-section="all" aria-current="location">All</a><a href="#visual-identity" data-section="visual-identity">Visual Identity</a><a href="#cultural-design" data-section="cultural-design">Cultural Design</a><a href="#graphic-communication" data-section="graphic-communication">Graphic Communication</a><a href="#packaging" data-section="packaging">Packaging</a><a href="#exhibition-event" data-section="exhibition-event">Exhibition & Event</a></div></nav><div class="design-chapters wrap"><section class="design-chapter" id="visual-identity" aria-labelledby="heading-visual-identity"><header class="chapter-heading"><div class="chapter-line micro"><span>DESIGN — 01</span><span>05 PROJECTS</span></div><div class="chapter-title"><h2 id="heading-visual-identity">Visual Identity</h2><p>Giving ideas an identity.</p></div></header><article class="project layout-split" id="project-03"><div class="project-media project-carousel" data-project-carousel="03" data-index="0" role="region" aria-roledescription="carousel" aria-labelledby="project-title-03" style="--stage-ratio:0.8"><div class="project-stage"><button class="image-button image-main" id="project-image-03" data-viewer-id="design-03-vis" aria-label="Enlarge: Re•Born visual identity board with a green and brick-red emblem, colour palette, planter boxes, tote bag, brand cards and stickers"><picture class="picture " style="background-image:url('data:image/webp;base64,UklGRkwBAABXRUJQVlA4IEABAABQBgCdASoYACAAPwFmqk8rJSOiMAgBYCAJQBOgZiMMEzqMSNSNMTOetTXa80YDB9FAbDamn0hKdsiiQAD+6yb07yWOF4dx1VxiCcA9peyRh/HFew20VKA3aEQNM0yLpW4epWXgKOyBp1totm8h+5J4ZCFWLdBb+4MoVFOUVKsfypnQbUnuXuICxFOBnWU+9YJLhxjqMPF2fIq5O7PGua0G+e0mn4I93+ywHLkgQckCcXPO4I+olJvKWuOa50Qb9WywO9AZUYrHYzjw0L1NvQaIUmHcPkd6tIASEgYE5zDp3iLMQDCPV4uxvsULiEWIJyi52rOgA4zUS/AUj4b/aVd/CGl8nHqaMrEU4xnenpij/4YkpDFm5FgTt96TnTFrcMNz+WuIBg04cy8cOe1x/jA0v3KngAP/YvfII/CALIAAAA==')"><source type="image/webp" srcset="/assets/design-03-vis-640.webp 640w, /assets/design-03-vis-1280.webp 1086w" sizes="(max-width:767px) calc(100vw - 40px), 50vw"><img src="/assets/design-03-vis.jpg" width="1086" height="1448" alt="Re•Born visual identity board with a green and brick-red emblem, colour palette, planter boxes, tote bag, brand cards and stickers" loading="lazy"  decoding="async"></picture><span class="image-enlarge" aria-hidden="true">↗</span></button><div class="carousel-feedback"><p class="carousel-status" role="status"></p><button class="carousel-retry" hidden>Try again</button></div></div></div><div class="project-copy"><p class="project-number micro">PROJECT / 01</p><h3 id="project-title-03">Re•Born</h3><p class="project-subtitle">A second life, by design.</p><ul class="project-tags micro"><li>Visual identity</li><li>Sustainability</li></ul><p class="project-description">Re•Born explores how a visual identity can express renewal through simple, memorable forms. A circular flower and sun motif is paired with angular green shapes, connecting the ideas of growth, nature and a fresh beginning. Applied to a growing-kit box, the identity carries that story from the mark into a tangible object. The visual language stays direct and approachable, inviting a closer look at the possibilities of giving everyday materials a second life.</p></div></article><article class="project layout-reverse" id="project-04"><div class="project-media project-carousel" data-project-carousel="04" data-index="0" role="region" aria-roledescription="carousel" aria-labelledby="project-title-04" style="--stage-ratio:0.8"><div class="project-stage"><button class="image-button image-main" id="project-image-04" data-viewer-id="design-04-1" aria-label="Enlarge: Blue Shirt visual identity board with typography, colour and applications"><picture class="picture " style="background-image:url('data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAABwBACdASoYAB4APvFaqE6ppKQiN/qoATAeCWcAAEVFUOkpB105e8gBhfDKAAD+6pg8z5Zfi7A1gCzpS7GNv3fFm+0SkGHiDK9eL2oKGTb9QwmNcznJWPcQPOILneXKgWj9jBgMmhj/kL033HL4NMjY+q1ODxPrGlejT05GKTw3UWaz/CUXmbNHz/Zqwz1hnGI3VpdfRmT8yNEcAVeQBGiEAAA=')"><source type="image/webp" srcset="/assets/design-04-1-640.webp 640w, /assets/design-04-1-1280.webp 1122w" sizes="(max-width:767px) calc(100vw - 40px), 50vw"><img src="/assets/design-04-1.jpg" width="1122" height="1402" alt="Blue Shirt visual identity board with typography, colour and applications" loading="lazy"  decoding="async"></picture><span class="image-enlarge" aria-hidden="true">↗</span></button><button class="carousel-control carousel-prev" aria-label="Previous image: The Blue Shirt" aria-controls="project-image-04"><span aria-hidden="true">←</span></button><button class="carousel-control carousel-next" aria-label="Next image: The Blue Shirt" aria-controls="project-image-04"><span aria-hidden="true">→</span></button><div class="carousel-feedback"><p class="carousel-status" role="status"></p><button class="carousel-retry" hidden>Try again</button></div></div><p class="carousel-counter micro" aria-live="polite" aria-atomic="true">01 / 02</p></div><div class="project-copy"><p class="project-number micro">PROJECT / 02</p><h3 id="project-title-04">The Blue Shirt</h3><p class="project-subtitle">Heritage in a contemporary language.</p><ul class="project-tags micro"><li>Visual identity</li><li>Local culture</li></ul><p class="project-description">The Blue Shirt looks to Minnan clothing culture as a starting point for a contemporary identity. A restrained blue palette, carefully constructed Chinese lettering and patterned details bring a sense of place into the system. The stationery applications balance cultural references with generous space and a clear hierarchy. Rather than treating heritage as decoration alone, the project considers how it can become a consistent visual language that feels recognisable, useful and relevant today.</p></div></article><article class="project layout-split" id="project-05"><div class="project-media project-carousel" data-project-carousel="05" data-index="0" role="region" aria-roledescription="carousel" aria-labelledby="project-title-05" style="--stage-ratio:0.8"><div class="project-stage"><button class="image-button image-main" id="project-image-05" data-viewer-id="design-05-0" aria-label="Enlarge: Zao Tea Rhythm identity system with a seal-like Chinese logo, earthy colours and applications"><picture class="picture " style="background-image:url('data:image/webp;base64,UklGRh4BAABXRUJQVlA4IBIBAAAwBgCdASoYAB4APwFssFErJaSisBgIAWAgCWcAwdGukgYR6rYqVoVtlY8s1RvS/ADJdPsbHm7lh09gAP7rixEZff58xLCeEvqyOOfH+7zwolAs+iw9AUzGPUWu/1Usbjjqk4Rpb6OD7zkeCmHmaDc0O7U7LQWgFtdjE4nXsaTwd0jomXgFjOV2aO0UBjtLU2B6Sz+xSLzDRI/rfX02Dx2pvHxIbFjD1ulvoNIZ7Ysw7als3Oy5m2DdFQ1Hm7PO+TtoaTgO0OoWYJZ6OjuOx2oy44wHFhoVd+eZ4Kw9YOgREaAO5O87XzNT1p5MbEmTPxjUmlm01DMmqfGZ1ewqunD7tNtOGTGL12ivbVavEPJdbRAA')"><source type="image/webp" srcset="/assets/design-05-0-640.webp 640w, /assets/design-05-0-1280.webp 1122w" sizes="(max-width:767px) calc(100vw - 40px), 50vw"><img src="/assets/design-05-0.jpg" width="1122" height="1402" alt="Zao Tea Rhythm identity system with a seal-like Chinese logo, earthy colours and applications" loading="lazy"  decoding="async"></picture><span class="image-enlarge" aria-hidden="true">↗</span></button><button class="carousel-control carousel-prev" aria-label="Previous image: Zao · Tea Rhythm" aria-controls="project-image-05"><span aria-hidden="true">←</span></button><button class="carousel-control carousel-next" aria-label="Next image: Zao · Tea Rhythm" aria-controls="project-image-05"><span aria-hidden="true">→</span></button><div class="carousel-feedback"><p class="carousel-status" role="status"></p><button class="carousel-retry" hidden>Try again</button></div></div><p class="carousel-counter micro" aria-live="polite" aria-atomic="true">01 / 02</p></div><div class="project-copy"><p class="project-number micro">PROJECT / 03</p><h3 id="project-title-05">Zao · Tea Rhythm</h3><p class="project-subtitle">A quiet conversation with tea.</p><ul class="project-tags micro"><li>Visual identity</li><li>Tea culture</li></ul><p class="project-description">Zao · Tea Rhythm brings together the structure of Chinese window frames, the character of traditional lettering and the atmosphere of tea culture. A seal-like mark anchors the identity, while muted brown, red and green tones extend its visual rhythm. The project moves between logo construction and practical applications, seeking a balance between cultural familiarity and contemporary clarity. Its aim is a coherent identity that leaves room for the quiet, considered experience associated with tea.</p></div></article><article class="project layout-reverse" id="project-12"><div class="project-media project-carousel" data-project-carousel="12" data-index="0" role="region" aria-roledescription="carousel" aria-labelledby="project-title-12" style="--stage-ratio:0.8"><div class="project-stage"><button class="image-button image-main" id="project-image-12" data-viewer-id="design-12-1" aria-label="Enlarge: Twined Flower identity board showing the logo, colours, typography, patterns and stationery applications"><picture class="picture " style="background-image:url('data:image/webp;base64,UklGRsQAAABXRUJQVlA4ILgAAABQBQCdASoYAB4APwFyrlKrJqQiqAqpYCAJYwDCgzK42j1spOlJP1dKpy8FaAx7l++J1gAA/uqugKKHu4misuFy+MOUPS5oMET1hNWbld8GQ9oFIqHwbzd+iXhR+IVUW12xkvt2SPQD/EdzE35PQK3XDqpKw0byDMxe7K/uRzF510wHlGRsQo+m1pwKfWHzjWolaHe5hZckI7Ikkie8YODmtC9PmLxolwTAPISWXacNgRauoF5leAAA')"><source type="image/webp" srcset="/assets/design-12-1-640.webp 640w, /assets/design-12-1-1280.webp 1122w" sizes="(max-width:767px) calc(100vw - 40px), 50vw"><img src="/assets/design-12-1.jpg" width="1122" height="1402" alt="Twined Flower identity board showing the logo, colours, typography, patterns and stationery applications" loading="lazy"  decoding="async"></picture><span class="image-enlarge" aria-hidden="true">↗</span></button><button class="carousel-control carousel-prev" aria-label="Previous image: Twined Flower" aria-controls="project-image-12"><span aria-hidden="true">←</span></button><button class="carousel-control carousel-next" aria-label="Next image: Twined Flower" aria-controls="project-image-12"><span aria-hidden="true">→</span></button><div class="carousel-feedback"><p class="carousel-status" role="status"></p><button class="carousel-retry" hidden>Try again</button></div></div><p class="carousel-counter micro" aria-live="polite" aria-atomic="true">01 / 02</p></div><div class="project-copy"><p class="project-number micro">PROJECT / 04</p><h3 id="project-title-12">Twined Flower</h3><p class="project-subtitle">A floral language, woven into identity.</p><ul class="project-tags micro"><li>Visual identity</li><li>Cultural design</li></ul><p class="project-description">Twined Flower develops a visual identity around Minnan floral references and the movement of intertwining lines. An angular red flower forms the central mark, balanced by flowing blue and yellow details. The pattern system moves between a complete floral composition, cropped motifs and repeating borders, giving the identity different levels of expression. Applied to stationery, cards and envelopes, these elements connect a clear, recognisable symbol with a more intricate graphic language.</p></div></article><article class="project layout-split" id="project-17"><div class="project-media project-carousel" data-project-carousel="17" data-index="0" role="region" aria-roledescription="carousel" aria-labelledby="project-title-17" style="--stage-ratio:0.8"><div class="project-stage"><button class="image-button image-main" id="project-image-17" data-viewer-id="design-17-0" aria-label="Enlarge: Great Tree Pharmacy visual identity board with a tree formed from hands and heart-shaped leaves, green and gold colours, patterns, stationery and branded applications"><picture class="picture " style="background-image:url('data:image/webp;base64,UklGRugAAABXRUJQVlA4INwAAAAQBgCdASoYACAAPwFurU6rJqQiMAgBYCAJYwDALAgOW2avySTiOiPx47jtvGHzZ9P9Tr+8b0/d0swA/u3OZe2GqckjUsgYfeCmClgcJLZ/hN9TNo71F5OzDDkMO1+ouMi9eQk16cVdNiH1Lj5CHtgF5fiP1v2Z7wxuVfozHT0kEfaeIuxS4LfOadZMt3coOZUC0kyjoo4P00QHeYXUF2lXvj+tLxlZI9znVk0y++c5suMntmB3vnsSw35LQ9WOCdcjP2x3DvEFa25jiAMzNhScvD4drp9HEJwABAgA')"><source type="image/webp" srcset="/assets/design-17-0-640.webp 640w, /assets/design-17-0-1280.webp 1086w" sizes="(max-width:767px) calc(100vw - 40px), 50vw"><img src="/assets/design-17-0.jpg" width="1086" height="1448" alt="Great Tree Pharmacy visual identity board with a tree formed from hands and heart-shaped leaves, green and gold colours, patterns, stationery and branded applications" loading="lazy"  decoding="async"></picture><span class="image-enlarge" aria-hidden="true">↗</span></button><div class="carousel-feedback"><p class="carousel-status" role="status"></p><button class="carousel-retry" hidden>Try again</button></div></div></div><div class="project-copy"><p class="project-number micro">PROJECT / 05</p><h3 id="project-title-17">Great Tree Pharmacy</h3><p class="project-subtitle">Care, rooted in every detail.</p><ul class="project-tags micro"><li>Visual identity</li><li>Brand applications</li></ul><p class="project-description">Great Tree Pharmacy explores a caring, approachable visual identity through a tree formed from supporting hands and heart-shaped leaves. Green, warm gold and soft neutral tones connect the symbol to a consistent graphic system. Alternate logo arrangements, repeating motifs and geometric patterns extend the identity across stationery, bags, cups, staff clothing and a membership card. The study focuses on making the same message of care recognisable across everyday touchpoints, from a small printed item to a larger brand application.</p></div></article></section><section class="design-chapter" id="cultural-design" aria-labelledby="heading-cultural-design"><header class="chapter-heading"><div class="chapter-line micro"><span>DESIGN — 02</span><span>03 PROJECTS</span></div><div class="chapter-title"><h2 id="heading-cultural-design">Cultural Design</h2><p>Culture, seen a little differently.</p></div></header><article class="project layout-wide" id="project-01"><div class="project-media project-carousel" data-project-carousel="01" data-index="0" role="region" aria-roledescription="carousel" aria-labelledby="project-title-01" style="--stage-ratio:1.3333333333333333"><div class="project-stage"><button class="image-button image-main" id="project-image-01" data-viewer-id="design-01-0" aria-label="Enlarge: Bashu-inspired silk scarf patterns displayed in a diagonal arrangement"><picture class="picture " style="background-image:url('data:image/webp;base64,UklGRgwBAABXRUJQVlA4IAABAABwBQCdASoYABIAPwF0rlKrJqQiqAqpYCAJZAC7G1VDx9kTUejcdVGE/trwacZF14s8yAomAPPNoS1zPlh8cSh9LbPBFhemC5hzRxYAc8T0ez4kBM9DdJnw8aJorAytvU3vTuFIxs51WNleSwUif93AJTTlnRmVYbDprs86uLWdphRplBK5vK0HHlkm1orB2rnhEi5w1+/zvtHY6LNgybSBOA7L1wm/dg4zOBZ+z7DIp7nFUlDEvMwhKYF3FP19YksUYHb5ndnbtDhTYxu80MedaDzg1WidN61YN4WZZqnsmyHMXO8JitZt2FJFex+5BTwXzUwMBHCtjvDuMtjwMcAA')"><source type="image/webp" srcset="/assets/design-01-0-640.webp 640w, /assets/design-01-0-1280.webp 1280w, /assets/design-01-0-1920.webp 1920w" sizes="(max-width:767px) calc(100vw - 40px), 70vw"><img src="/assets/design-01-0.jpg" width="1920" height="1440" alt="Bashu-inspired silk scarf patterns displayed in a diagonal arrangement" loading="lazy"  decoding="async"></picture><span class="image-enlarge" aria-hidden="true">↗</span></button><button class="carousel-control carousel-prev" aria-label="Previous image: Echoes of Bashu" aria-controls="project-image-01"><span aria-hidden="true">←</span></button><button class="carousel-control carousel-next" aria-label="Next image: Echoes of Bashu" aria-controls="project-image-01"><span aria-hidden="true">→</span></button><div class="carousel-feedback"><p class="carousel-status" role="status"></p><button class="carousel-retry" hidden>Try again</button></div></div><p class="carousel-counter micro" aria-live="polite" aria-atomic="true">01 / 04</p></div><div class="project-copy"><p class="project-number micro">PROJECT / 06</p><h3 id="project-title-01">Echoes of Bashu</h3><p class="project-subtitle">A cultural story, unfolded.</p><ul class="project-tags micro"><li>Cultural product</li><li>Pattern design</li></ul><p class="project-description">Echoes of Bashu translates cultural references into a vivid, wearable pattern. Mirrored animal forms, decorative geometry and a symmetrical composition create a visual world that rewards both a distant glance and a closer look. Three colour variations explore different moods while retaining the same underlying structure. By placing these motifs on a silk scarf, the project brings cultural storytelling into an everyday accessory, allowing the pattern to be folded, worn and experienced in more than one way.</p></div></article><article class="project layout-wide" id="project-02"><div class="project-media project-carousel" data-project-carousel="02" data-index="0" role="region" aria-roledescription="carousel" aria-labelledby="project-title-02" style="--stage-ratio:1.414113277623027"><div class="project-stage"><button class="image-button image-main" id="project-image-02" data-viewer-id="design-02-0" aria-label="Enlarge: Colourful illustrated character keyrings, stickers, pens and notebooks from The Dopamine Store"><picture class="picture " style="background-image:url('data:image/webp;base64,UklGRr4AAABXRUJQVlA4ILIAAACwBACdASoYABEAPwF2slOrJySiqAgBYCAJZgBV0AQPj7o6p66YHVQXgQ+ED8MAAP6yCmlMSCIEmHZP4BaiApNipP+Gbl1oDx5J00/b+wWUMf4hAzOyhqvksEe4sh/9VU83AUrN52POIkNBJbszR2ZHq0A0g9S6DJbntUsc3BaG60VWkelVqplkshtzXm6A6ukCm3vatltA2wbiE+Nng7Bg+xEfpYigx08Kl56AKqTAAAAA')"><source type="image/webp" srcset="/assets/design-02-0-640.webp 640w, /assets/design-02-0-1280.webp 1280w, /assets/design-02-0-1920.webp 1523w" sizes="(max-width:767px) calc(100vw - 40px), 70vw"><img src="/assets/design-02-0.jpg" width="1523" height="1077" alt="Colourful illustrated character keyrings, stickers, pens and notebooks from The Dopamine Store" loading="lazy"  decoding="async"></picture><span class="image-enlarge" aria-hidden="true">↗</span></button><div class="carousel-feedback"><p class="carousel-status" role="status"></p><button class="carousel-retry" hidden>Try again</button></div></div></div><div class="project-copy"><p class="project-number micro">PROJECT / 07</p><h3 id="project-title-02">The Dopamine Store</h3><p class="project-subtitle">A little colour. A little happiness.</p><ul class="project-tags micro"><li>IP design</li><li>Creative product</li></ul><p class="project-description">The Dopamine Store is a playful character-led collection built around the simple pleasure of colour. Expressive illustrated personalities appear across keyrings, stationery and small everyday objects, connected by a bright palette and a flexible graphic system. Each application gives the characters a slightly different role while keeping the collection recognisable. The project explores how an approachable visual world can move beyond a single illustration and become a family of objects that brings small moments of delight.</p></div></article><article class="project layout-wide" id="project-13"><div class="project-media project-carousel" data-project-carousel="13" data-index="0" role="region" aria-roledescription="carousel" aria-labelledby="project-title-13" style="--stage-ratio:1.5"><div class="project-stage"><button class="image-button image-main" id="project-image-13" data-viewer-id="design-13-0" aria-label="Enlarge: Beijing Culture Bear panda character applied to gift bags, stationery, cups, clothing and accessories"><picture class="picture " style="background-image:url('data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAABQBQCdASoYABAAPwFqrE8rJiQiMAgBYCAJagCdOUDZCt/1KB8aOkVtUEPXjq8J55gU64AA/ky7roVwyxmlZU0dvAGTKuXXm3L9FRiBouM4qooXb9oRErEzab9heqH//C5xPtN5ef3tFeRD2Q3jMfwl4vZe0p/o8OtER8KOTOtLjm/KF3BLbyqD2890IveHpT6Xb5V+mf2fOHH2S2FSyMJm3zSuqL302XJAh3RnqwE/BMTgLGbr1hXdXMxSWrcnwAA=')"><source type="image/webp" srcset="/assets/design-13-0-640.webp 640w, /assets/design-13-0-1280.webp 1280w, /assets/design-13-0-1920.webp 1536w" sizes="(max-width:767px) calc(100vw - 40px), 70vw"><img src="/assets/design-13-0.jpg" width="1536" height="1024" alt="Beijing Culture Bear panda character applied to gift bags, stationery, cups, clothing and accessories" loading="lazy"  decoding="async"></picture><span class="image-enlarge" aria-hidden="true">↗</span></button><button class="carousel-control carousel-prev" aria-label="Previous image: Beijing Culture Bear" aria-controls="project-image-13"><span aria-hidden="true">←</span></button><button class="carousel-control carousel-next" aria-label="Next image: Beijing Culture Bear" aria-controls="project-image-13"><span aria-hidden="true">→</span></button><div class="carousel-feedback"><p class="carousel-status" role="status"></p><button class="carousel-retry" hidden>Try again</button></div></div><p class="carousel-counter micro" aria-live="polite" aria-atomic="true">01 / 02</p></div><div class="project-copy"><p class="project-number micro">PROJECT / 08</p><h3 id="project-title-13">Beijing Culture Bear</h3><p class="project-subtitle">One character. Many ways to connect.</p><ul class="project-tags micro"><li>Character design</li><li>Cultural products</li></ul><p class="project-description">Beijing Culture Bear builds a character-led visual world around an expressive panda and ornate theatrical headwear. Red, blue and gold details give the character a recognisable silhouette, while a range of expressions and gestures brings flexibility to its personality. The project visualises the character across gift bags, stationery, drinkware, clothing and accessories. Together, the character sheet and product mockups explore how one cultural figure can stay consistent while adapting to different everyday encounters.</p></div></article></section><section class="design-chapter" id="graphic-communication" aria-labelledby="heading-graphic-communication"><header class="chapter-heading"><div class="chapter-line micro"><span>DESIGN — 03</span><span>03 PROJECTS</span></div><div class="chapter-title"><h2 id="heading-graphic-communication">Graphic Communication</h2><p>A clear message. A fresh perspective.</p></div></header><article class="project layout-wide" id="project-06"><div class="project-media project-carousel" data-project-carousel="06" data-index="0" role="region" aria-roledescription="carousel" aria-labelledby="project-title-06" style="--stage-ratio:1"><div class="project-stage"><button class="image-button image-main" id="project-image-06" data-viewer-id="design-06-1" aria-label="Enlarge: Illustrated portrait before makeup in the personal beauty concept series"><picture class="picture " style="background-image:url('data:image/webp;base64,UklGRhIBAABXRUJQVlA4IAYBAADQBQCdASoYABgAPwFyrFGrJqOiqA1RYCAJYwCo9d31hjNDW8C1wh2FUGJWZgmrK8FrQX4iKr8AAM4x8rXuf/TOr+URU5E22V0so5y7/j73VqJ7L7sUUXxa2NykOWXRt09T/54QWQnDzDshRXYuFkqNO6Z6yMi6rSptmfCWwbUkiZDkLPapfyiS4QsDResbeOcl7BsdJhKaLCKCs0yLY9CTgAUxB4X2gK48Yv35QhYY1xkVFaeIOdfpLvdx/RnbPX5tkOhY6eGsHSftp6Z4su54qi3MfyQqY3vGZ43FQwGYtN77ZguAEDLuxJQZtBd9TfIrKP2SFGwVWKIHI3kWzmlcO2AFM4AA')"><source type="image/webp" srcset="/assets/design-06-1-640.webp 640w, /assets/design-06-1-1280.webp 1254w" sizes="(max-width:767px) calc(100vw - 40px), 70vw"><img src="/assets/design-06-1.jpg" width="1254" height="1254" alt="Illustrated portrait before makeup in the personal beauty concept series" loading="lazy"  decoding="async"></picture><span class="image-enlarge" aria-hidden="true">↗</span></button><button class="carousel-control carousel-prev" aria-label="Previous image: Break the Rules" aria-controls="project-image-06"><span aria-hidden="true">←</span></button><button class="carousel-control carousel-next" aria-label="Next image: Break the Rules" aria-controls="project-image-06"><span aria-hidden="true">→</span></button><div class="carousel-feedback"><p class="carousel-status" role="status"></p><button class="carousel-retry" hidden>Try again</button></div></div><p class="carousel-counter micro" aria-live="polite" aria-atomic="true">01 / 03</p></div><div class="project-copy"><p class="project-number micro">PROJECT / 09</p><h3 id="project-title-06">Break the Rules</h3><p class="project-subtitle">Beauty, beyond a fixed definition.</p><ul class="project-tags micro"><li>Campaign visual</li><li>Personal Concept</li></ul><p class="project-description">Break the Rules is a personal campaign concept exploring beauty as a form of self-expression. A portrait develops across a sequence of images, with makeup tools and products framing the transformation. The composition uses familiar beauty imagery to question fixed expectations about appearance and identity. Created as an independent visual exploration, the series considers how a social campaign can communicate an idea through progression, contrast and a single, direct message. It is not presented as a commissioned brand campaign.</p></div></article><article class="project layout-wide" id="project-09"><div class="project-media project-carousel" data-project-carousel="09" data-index="0" role="region" aria-roledescription="carousel" aria-labelledby="project-title-09" style="--stage-ratio:1.3333333333333333"><div class="project-stage"><button class="image-button image-main" id="project-image-09" data-viewer-id="design-09-0" aria-label="Enlarge: Marine safety event banner displayed in a timber-roofed venue"><picture class="picture " style="background-image:url('data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAADQBACdASoYABIAPwF0sFIrJqSiqAqpYCAJZAAAMXPE3eNVBUMzSfP4gynD529hAADwL3NBb3tY4ZI/Tkpa7DOuRAC/MXOOzeV8tpFNisYysGvuVGs6RvfivnLiDG40wureAtYuMXLoD1aE0QcLG0ToPBamjy9ZbHP/JzyT/EBHtaGaaB3Zxa+SRsCumwufuISjgGqZgP8YES+ARYXNh50AAAA=')"><source type="image/webp" srcset="/assets/design-09-0-640.webp 640w, /assets/design-09-0-1280.webp 1280w, /assets/design-09-0-1920.webp 1920w" sizes="(max-width:767px) calc(100vw - 40px), 70vw"><img src="/assets/design-09-0.jpg" width="1920" height="1440" alt="Marine safety event banner displayed in a timber-roofed venue" loading="lazy"  decoding="async"></picture><span class="image-enlarge" aria-hidden="true">↗</span></button><button class="carousel-control carousel-prev" aria-label="Previous image: Messages from the Sea" aria-controls="project-image-09"><span aria-hidden="true">←</span></button><button class="carousel-control carousel-next" aria-label="Next image: Messages from the Sea" aria-controls="project-image-09"><span aria-hidden="true">→</span></button><div class="carousel-feedback"><p class="carousel-status" role="status"></p><button class="carousel-retry" hidden>Try again</button></div></div><p class="carousel-counter micro" aria-live="polite" aria-atomic="true">01 / 08</p></div><div class="project-copy"><p class="project-number micro">PROJECT / 10</p><h3 id="project-title-09">Messages from the Sea</h3><p class="project-subtitle">Public information, made approachable.</p><ul class="project-tags micro"><li>Poster &amp; flyer</li><li>Promotional graphics</li></ul><p class="project-description">This collection brings together promotional graphics developed around marine safety and public communication. Posters, banners, printed information and souvenir applications share a maritime vocabulary, combining blue tones, illustration and practical information hierarchy. The challenge is to make important messages accessible across formats with very different viewing distances and uses. Together, the pieces explore how a consistent graphic approach can support both the visibility of an event and a clearer, more approachable encounter with public information.</p></div></article><article class="project layout-split" id="project-11"><div class="project-media project-carousel" data-project-carousel="11" data-index="0" role="region" aria-roledescription="carousel" aria-labelledby="project-title-11" style="--stage-ratio:1.25"><div class="project-stage"><button class="image-button image-main" id="project-image-11" data-viewer-id="design-11-0" aria-label="Enlarge: Mother’s Day folded card with pink floral illustrations, an embroidery-hoop motif and space for a handwritten message"><picture class="picture " style="background-image:url('data:image/webp;base64,UklGRlgAAABXRUJQVlA4IEwAAADQAwCdASoYABMAPwF0slOrJqQiqAgBYCAJZQDHMBESlxA0QeJA+sAA/t56wNLQY55PZzybh+nyFVYlA9CBAriKIpbCKV0PIgem4AAA')"><source type="image/webp" srcset="/assets/design-11-0-640.webp 640w, /assets/design-11-0-1280.webp 1280w, /assets/design-11-0-1920.webp 1920w" sizes="(max-width:767px) calc(100vw - 40px), 50vw"><img src="/assets/design-11-0.jpg" width="1920" height="1536" alt="Mother’s Day folded card with pink floral illustrations, an embroidery-hoop motif and space for a handwritten message" loading="lazy"  decoding="async"></picture><span class="image-enlarge" aria-hidden="true">↗</span></button><button class="carousel-control carousel-prev" aria-label="Previous image: Mother’s Day Card" aria-controls="project-image-11"><span aria-hidden="true">←</span></button><button class="carousel-control carousel-next" aria-label="Next image: Mother’s Day Card" aria-controls="project-image-11"><span aria-hidden="true">→</span></button><div class="carousel-feedback"><p class="carousel-status" role="status"></p><button class="carousel-retry" hidden>Try again</button></div></div><p class="carousel-counter micro" aria-live="polite" aria-atomic="true">01 / 02</p></div><div class="project-copy"><p class="project-number micro">PROJECT / 11</p><h3 id="project-title-11">Mother’s Day Card</h3><p class="project-subtitle">A small card, a heartfelt thank you.</p><ul class="project-tags micro"><li>Greeting card</li><li>Illustration</li></ul><p class="project-description">This Mother’s Day card turns a simple message of gratitude into a gentle printed keepsake. Pink floral illustrations, an embroidery-hoop motif and a continuous thread-like line connect the cover with the folded interior. A line-drawn hand gesture adds a personal note, while the writing area leaves room for the sender’s own words. The two mockups show how the composition carries across the card’s surfaces, balancing decorative detail with space for a heartfelt message.</p></div></article></section><section class="design-chapter" id="packaging" aria-labelledby="heading-packaging"><header class="chapter-heading"><div class="chapter-line micro"><span>DESIGN — 04</span><span>02 PROJECTS</span></div><div class="chapter-title"><h2 id="heading-packaging">Packaging</h2><p>Everyday things, thoughtfully wrapped.</p></div></header><article class="project layout-split" id="project-07"><div class="project-media project-carousel" data-project-carousel="07" data-index="0" role="region" aria-roledescription="carousel" aria-labelledby="project-title-07" style="--stage-ratio:1.5"><div class="project-stage"><button class="image-button image-main" id="project-image-07" data-viewer-id="design-07-0" aria-label="Enlarge: Coffee concentrate bottles with individual illustrated labels in warm natural light"><picture class="picture " style="background-image:url('data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAABwBACdASoYABAAPwForE6rJaQiMAgBYCAJYgCsACKHGVqZo9IxcW7wYoRb0AD+tTd25g7OTvDMplyKmJvBw9amK2l5aGpnuVljni1Usk/wRVZxVJUswyKey1X5XDEuWdawGpmjfdb4Bvfs5g/qBZlqSbvGuCS0NXyqceWegXsCwOu3f8RnMLo8H3pgW2gkln2ErF6CS4A5ZafN75nw2gV9F01HvtSj6Nn+xqAA')"><source type="image/webp" srcset="/assets/design-07-0-640.webp 640w, /assets/design-07-0-1280.webp 1280w, /assets/design-07-0-1920.webp 1536w" sizes="(max-width:767px) calc(100vw - 40px), 50vw"><img src="/assets/design-07-0.jpg" width="1536" height="1024" alt="Coffee concentrate bottles with individual illustrated labels in warm natural light" loading="lazy"  decoding="async"></picture><span class="image-enlarge" aria-hidden="true">↗</span></button><div class="carousel-feedback"><p class="carousel-status" role="status"></p><button class="carousel-retry" hidden>Try again</button></div></div></div><div class="project-copy"><p class="project-number micro">PROJECT / 12</p><h3 id="project-title-07">A Daily Brew</h3><p class="project-subtitle">A small ritual, bottled.</p><ul class="project-tags micro"><li>Packaging</li><li>Coffee</li></ul><p class="project-description">A Daily Brew explores a label system for bottled coffee, treating an everyday drink as a small personal ritual. Individual labels combine typography and illustration, giving each bottle its own expression while keeping the range connected. The clear bottle and dark liquid become part of the composition rather than a surface to conceal. The resulting presentation aims to feel familiar, relaxed and easy to recognise, with enough detail to invite a closer look at the shelf or table.</p></div></article><article class="project layout-reverse" id="project-08"><div class="project-media project-carousel" data-project-carousel="08" data-index="0" role="region" aria-roledescription="carousel" aria-labelledby="project-title-08" style="--stage-ratio:1.5"><div class="project-stage"><button class="image-button image-main" id="project-image-08" data-viewer-id="design-08-0" aria-label="Enlarge: XO sauce jar and illustrated paper boxes in warm brown and cream"><picture class="picture " style="background-image:url('data:image/webp;base64,UklGRqYAAABXRUJQVlA4IJoAAADwAwCdASoYABAAPwFqrE8rJiQiMAgBYCAJQBYdg4gZ7HVHAVHmHvjwAPy0dhj79WbJGfiDlX58t6C77+6ou9WBiqraYyge4fsPbkorg1QvdGWVIhhFJqVCiC2wttLpnaSEBlMhNQEYooDtlopJzzdiZ8WfFO+sKd2xVsZyh30W8009pm6OchOVG2Cn0gHw4/f+HAaSoSNEYwAA')"><source type="image/webp" srcset="/assets/design-08-0-640.webp 640w, /assets/design-08-0-1280.webp 1280w, /assets/design-08-0-1920.webp 1536w" sizes="(max-width:767px) calc(100vw - 40px), 50vw"><img src="/assets/design-08-0.jpg" width="1536" height="1024" alt="XO sauce jar and illustrated paper boxes in warm brown and cream" loading="lazy"  decoding="async"></picture><span class="image-enlarge" aria-hidden="true">↗</span></button><div class="carousel-feedback"><p class="carousel-status" role="status"></p><button class="carousel-retry" hidden>Try again</button></div></div></div><div class="project-copy"><p class="project-number micro">PROJECT / 13</p><h3 id="project-title-08">Flavour, Collected</h3><p class="project-subtitle">From ingredient to impression.</p><ul class="project-tags micro"><li>Packaging</li><li>Food illustration</li></ul><p class="project-description">Flavour, Collected develops a packaging language for XO sauce through ingredient-led illustration and a warm, restrained palette. Seafood drawings connect the product to its contents, while vertical typography gives the box a distinct rhythm. The jar label and outer packaging share the same visual cues, helping the range read as one family. The project considers how a food package can communicate flavour and character before it is opened, without relying on an overly busy composition.</p></div></article></section><section class="design-chapter" id="exhibition-event" aria-labelledby="heading-exhibition-event"><header class="chapter-heading"><div class="chapter-line micro"><span>DESIGN — 05</span><span>01 PROJECTS</span></div><div class="chapter-title"><h2 id="heading-exhibition-event">Exhibition & Event</h2><p>Ideas that become places.</p></div></header><article class="project layout-reverse" id="project-10"><div class="project-media project-carousel" data-project-carousel="10" data-index="0" role="region" aria-roledescription="carousel" aria-labelledby="project-title-10" style="--stage-ratio:0.75"><div class="project-stage"><button class="image-button image-main" id="project-image-10" data-viewer-id="design-10-0" aria-label="Enlarge: Coffee Laboratory exhibition concept showing the booth, product displays, tasting area and character installation"><picture class="picture " style="background-image:url('data:image/webp;base64,UklGRhIBAABXRUJQVlA4IAYBAABwBgCdASoYACAAPwFurk8rJqQiMAgBYCAJZQDLqAgdltbQwRLU5JK27fNCCAKULd+BDsXjfHo5lUA8AAAA+6KDFJ2IapSm76zcvD/rG9wxeGUndMVbQdrZ9SLBeyF95kEbdUoEc0odavpJ/jyBXVAth770e96VwenMjFb2aE4KbXQZKjBLkXz0mUkjsnHkmxR1YHVapbhjRqHgy7DxsGm2/8J6/vezQ8E0cwscVYTOHlgZ0zYkZVNSYeL/kQQ0GgA0+sdc1RBz/H2YWVmGtfwjRl+BK79qrXC9YQMNUmRYD2FY/5QfsYJzRwfm93qa6MU7BKhR2xpm4tsV63x8LOJ9D19AEOAA')"><source type="image/webp" srcset="/assets/design-10-0-640.webp 640w, /assets/design-10-0-1280.webp 1086w" sizes="(max-width:767px) calc(100vw - 40px), 50vw"><img src="/assets/design-10-0.jpg" width="1086" height="1448" alt="Coffee Laboratory exhibition concept showing the booth, product displays, tasting area and character installation" loading="lazy"  decoding="async"></picture><span class="image-enlarge" aria-hidden="true">↗</span></button><div class="carousel-feedback"><p class="carousel-status" role="status"></p><button class="carousel-retry" hidden>Try again</button></div></div></div><div class="project-copy"><p class="project-number micro">PROJECT / 14</p><h3 id="project-title-10">The Coffee Laboratory</h3><p class="project-subtitle">An identity you can step into.</p><ul class="project-tags micro"><li>Exhibition concept</li><li>Spatial communication</li></ul><p class="project-description">The Coffee Laboratory imagines an exhibition space where coffee can be discovered through display, tasting and conversation. A clear overhead identity connects the booth, while ingredient displays, product shelving and an approachable character create different points of interest. The concept brings visual communication into a spatial setting, considering both recognition from a distance and engagement up close. It is presented as an exhibition design concept, showing how a theme can connect signage, objects and the visitor experience.</p></div></article></section></div></main><a class="back-to-top text-link" href="#top" hidden>Back to top <span aria-hidden="true">↑</span></a><footer id="portfolio-footer" class="site-footer wrap"><div class="footer-inner"><div class="footer-top"><a class="brand footer-brand" href="/home/" aria-label="LY.Fung Portfolio — Home"><img src="/assets/logo.png" width="40" height="40" alt=""><span class="footer-brand-title">LY.Fung <span>Portfolio</span></span></a></div><div class="footer-thanks" data-footer-message><svg class="footer-pen-loop" viewBox="0 0 1000 330" fill="none" preserveAspectRatio="none" aria-hidden="true"><path d="M62 247C-18 156 137 48 487 36C798 25 985 97 953 194C924 284 672 323 368 306C120 293 25 251 49 192C70 137 248 80 441 68"/></svg><h2 class="footer-thanks-heading"><span class="footer-thanks-word" data-footer-thanks aria-live="polite" aria-atomic="true">Thank You</span><span class="footer-thanks-tagline">For stopping by</span></h2><span class="footer-star"><svg viewBox="0 0 100 100" fill="none" aria-hidden="true"><polygon points="50,3 56.98811421776806,23.920002690195155 73.5,9.296806022131378 69.09188309203678,30.90811690796322 90.70319397786861,26.5 76.07999730980484,43.01188578223194 97,50 76.07999730980484,56.98811421776806 90.70319397786862,73.5 69.09188309203678,69.09188309203678 73.5,90.70319397786862 56.988114217768064,76.07999730980484 50,97 43.011885782231936,76.07999730980484 26.50000000000001,90.70319397786862 30.908116907963226,69.0918830920368 9.296806022131392,73.50000000000001 23.920002690195155,56.98811421776806 3,50.00000000000001 23.92000269019515,43.01188578223195 9.296806022131385,26.499999999999996 30.908116907963212,30.90811690796322 26.49999999999998,9.296806022131392 43.01188578223192,23.92000269019516"/></svg><button type="button" class="footer-star-control" data-footer-thanks-cycle hidden aria-label="Say thanks another way" title="Say thanks another way"></button></span></div><div class="footer-contact"><p class="footer-signoff">HAVE SOMETHING IN MIND?</p><nav class="footer-pills" aria-label="Explore work and contact"><div class="footer-pill-item"><span class="micro">Selected creative works</span><a class="footer-pill" href="/design/">Design portfolio <span aria-hidden="true">↗</span></a></div><div class="footer-pill-item"><span class="micro">Portrait stories</span><a class="footer-pill" href="/photography/">Photography <span aria-hidden="true">↗</span></a></div><div class="footer-pill-item"><span class="micro">Let’s talk</span><a class="footer-pill footer-email" href="mailto:lyfung214@gmail.com">lyfung214@gmail.com <span aria-hidden="true">↗</span></a></div></nav><a class="text-link footer-contact-options" href="/contact/">All contact options</a></div><div class="footer-bottom micro"><span class="footer-copyright">© 2026 LY.Fung</span><span class="footer-location">Thoughtfully made, in Hong Kong.</span><a class="footer-back-top" href="#top">Back to top <span aria-hidden="true">↑</span></a></div></div></footer><dialog id="lightbox" class="lightbox" aria-label="Image viewer"><div class="viewer-bar"><span id="viewer-project" class="micro"></span><span id="viewer-counter" class="micro" aria-live="polite"></span><button id="viewer-close" class="viewer-close" aria-label="Close image viewer">Close <span aria-hidden="true">×</span></button></div><div class="viewer-stage"><p id="viewer-status" role="status"></p><img id="viewer-image" alt="" draggable="false"><button class="viewer-prev" aria-label="Previous image"><span aria-hidden="true">←</span></button><button class="viewer-next" aria-label="Next image"><span aria-hidden="true">→</span></button></div><p class="viewer-caption" id="viewer-caption"></p></dialog><script>// Included only on Design; the shared viewer receives these project states.
+function setupDesignCarousels(items,tr) {
+  const projectItems=new Map();
+  for(const item of items){
+    if(!item.projectId)continue;
+    if(!projectItems.has(item.projectId))projectItems.set(item.projectId,[]);
+    projectItems.get(item.projectId).push(item);
+  }
+  const carousels=new Map();
+  document.querySelectorAll('[data-project-carousel]').forEach(element=>{
+    const items=projectItems.get(element.dataset.projectCarousel);
+    const stage=element.querySelector('.project-stage');
+    const button=stage.querySelector('.image-button');
+    const status=element.querySelector('.carousel-status');
+    const retry=element.querySelector('.carousel-retry');
+    const counter=element.querySelector('.carousel-counter');
+    const state={index:0,token:0,preloads:[],select};
+    const width=()=>Math.ceil(stage.getBoundingClientRect().width);
+    const updateSizes=()=>{const source=button.querySelector('source');if(source)source.sizes=`${width()}px`;};
+    const preloadNeighbors=()=>{
+      const desired=width()*devicePixelRatio;
+      const neighbors=new Set([-1,1].map(delta=>(state.index+delta+items.length)%items.length));
+      neighbors.delete(state.index);
+      state.preloads=[...neighbors].map(index=>{
+        const image=new Image();
+        image.src=(items[index].webp.find(variant=>variant.width>=desired)||items[index].webp.at(-1)).src;
+        return image;
+      });
+    };
+    const watchImage=(picture,item,token,announce)=>{
+      const img=picture.querySelector('img');
+      let timer;
+      const finish=()=>{
+        clearTimeout(timer);
+        if(state.token!==token)return;
+        picture.classList.add('is-loaded');status.textContent='';retry.hidden=true;
+        button.removeAttribute('aria-busy');
+      };
+      const fail=()=>{
+        if(state.token!==token)return;
+        const source=picture.querySelector('source');
+        if(source){source.remove();img.src=item.fallback;return;}
+        clearTimeout(timer);
+        status.textContent=tr('This image could not load. Please try again.','暫時未能載入圖片，請重試。');
+        retry.hidden=false;button.removeAttribute('aria-busy');
+      };
+      img.addEventListener('load',finish,{once:true});img.addEventListener('error',fail);
+      if(img.complete){if(img.naturalWidth)finish();else fail();}
+      if(announce&&!img.complete)timer=setTimeout(()=>{
+        if(state.token===token){status.textContent=tr('Loading image…','圖片載入中…');button.setAttribute('aria-busy','true');}
+      },240);
+    };
+    function select(index,{preload=true,force=false}={}){
+      index=(index+items.length)%items.length;
+      if(index===state.index&&!force)return;
+      state.index=index;element.dataset.index=String(index);
+      const item=items[index],token=++state.token;
+      const retryHadFocus=document.activeElement===retry;
+      status.textContent='';retry.hidden=true;button.removeAttribute('aria-busy');
+      if(retryHadFocus)button.focus({preventScroll:true});
+      button.dataset.viewerId=item.id;button.setAttribute('aria-label',tr('Enlarge: ','放大：')+item.alt);
+      if(counter)counter.textContent=`${String(index+1).padStart(2,'0')} / ${String(items.length).padStart(2,'0')}`;
+      const picture=document.createElement('picture');picture.className='picture';picture.style.backgroundImage=`url('${item.placeholder}')`;
+      const source=document.createElement('source');source.type='image/webp';source.srcset=item.webp.map(p=>`${p.src} ${p.width}w`).join(', ');source.sizes=`${width()}px`;
+      const img=document.createElement('img');img.width=item.width;img.height=item.height;img.alt=item.alt;img.decoding='async';img.loading='eager';
+      picture.append(source,img);
+      button.querySelector('picture').replaceWith(picture);
+      img.src=item.fallback;
+      watchImage(picture,item,token,true);
+      if(preload)preloadNeighbors();
+    }
+    updateSizes();
+    watchImage(button.querySelector('picture'),items[0],state.token,false);
+    new ResizeObserver(updateSizes).observe(stage);
+    element.querySelector('.carousel-prev')?.addEventListener('click',()=>select(state.index-1));
+    element.querySelector('.carousel-next')?.addEventListener('click',()=>select(state.index+1));
+    retry.addEventListener('click',()=>select(state.index,{force:true}));
+    element.addEventListener('keydown',event=>{
+      if(items.length<2||event.altKey||event.ctrlKey||event.metaKey||event.target===retry)return;
+      if(event.key==='ArrowLeft'||event.key==='ArrowRight'){event.preventDefault();select(state.index+(event.key==='ArrowRight'?1:-1));}
+    });
+    let touch=null,suppressClickUntil=0;
+    stage.addEventListener('touchstart',event=>{
+      if(event.touches.length===1)suppressClickUntil=0;
+      touch=event.touches.length===1&&!event.target.closest('.carousel-control,.carousel-retry')?{x:event.touches[0].clientX,y:event.touches[0].clientY}:null;
+    },{passive:true});
+    stage.addEventListener('touchmove',event=>{if(event.touches.length!==1)touch=null;},{passive:true});
+    stage.addEventListener('touchend',event=>{
+      if(!touch||!event.changedTouches.length)return;
+      const dx=event.changedTouches[0].clientX-touch.x,dy=event.changedTouches[0].clientY-touch.y;
+      if(items.length>1&&Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.5){select(state.index+(dx<0?1:-1));suppressClickUntil=performance.now()+500;}
+      touch=null;
+    },{passive:true});
+    stage.addEventListener('touchcancel',()=>{touch=null;},{passive:true});
+    stage.addEventListener('click',event=>{if(performance.now()<suppressClickUntil&&event.target.closest('.image-button')){event.preventDefault();event.stopPropagation();}},true);
+    carousels.set(element.dataset.projectCarousel,state);
+  });
+  return {projectItems,carousels};
+}
+
+(() => {
+  'use strict';
+  const config=window.__site;
+  const zh=config.lang==='zh';
+  const tr=(en,cn)=>zh?cn:en;
+  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.__metrics={lcp:0,cls:0};
+  if('PerformanceObserver' in window) {
+    try {new PerformanceObserver(list=>{const entries=list.getEntries();window.__metrics.lcp=entries.at(-1).startTime;}).observe({type:'largest-contentful-paint',buffered:true});} catch {}
+    try {new PerformanceObserver(list=>{for(const entry of list.getEntries())if(!entry.hadRecentInput)window.__metrics.cls+=entry.value;}).observe({type:'layout-shift',buffered:true});} catch {}
+  }
+  const activatePicture=img=>{
+    if(img.complete && img.naturalWidth) img.closest('.picture')?.classList.add('is-loaded');
+    else img.addEventListener('load',()=>img.closest('.picture')?.classList.add('is-loaded'),{once:true});
+    img.addEventListener('error',()=>{
+      const source=img.closest('picture')?.querySelector('source');
+      if(source){source.remove();img.src=img.getAttribute('src');}
+    },{once:true});
+  };
+  document.querySelectorAll('.picture img').forEach(img=>{if(config.page!=='photography'&&!img.closest('[data-project-carousel]'))activatePicture(img);});
+  // Use a real fragment link so exploration still works without JavaScript.
+  // Move the reading/keyboard position without interrupting native scrolling.
+  const explore=document.getElementById('explore');
+  if(explore){
+    const focusExplore=()=>{if(location.hash==='#explore')explore.focus({preventScroll:true});};
+    window.addEventListener('hashchange',focusExplore);
+    document.querySelector('a[href="#explore"]')?.addEventListener('click',()=>explore.focus({preventScroll:true}));
+    if(location.hash==='#explore')requestAnimationFrame(focusExplore);
+  }
+  const header=document.querySelector('.site-header');
+  const menu=document.querySelector('.menu-toggle');
+  const navigation=document.querySelector('#main-navigation');
+  const categoryLinks=[...document.querySelectorAll('[data-section]')];
+  const backToTop=document.querySelector('.back-to-top');
+  const desktop=window.matchMedia('(min-width: 1024px)');
+  const primaryClick=event=>event.button===0&&!event.metaKey&&!event.ctrlKey&&!event.shiftKey&&!event.altKey;
+  // Some touch browsers defer :active until release. Keep press feedback
+  // explicit, scoped to actions, and cancel it as soon as scrolling begins.
+  let pressed=null;
+  const clearPressed=()=>{pressed?.element.classList.remove('is-pressed');pressed=null;};
+  document.addEventListener('pointerdown',event=>{
+    if(!event.isPrimary||!['touch','pen'].includes(event.pointerType))return;
+    clearPressed();
+    const element=event.target.closest('.text-link:not(:disabled),.site-header nav>a,.footer-pill,.menu-toggle,.footer-email,.footer-back-top,.contact-links>a,.contact-wechat-action,a.contact-value,.image-button,.viewer-stage>button,.carousel-control,.carousel-retry');
+    if(element){pressed={element,id:event.pointerId};element.classList.add('is-pressed');}
+  },{passive:true});
+  for(const type of ['pointerup','pointercancel'])document.addEventListener(type,event=>{if(pressed?.id===event.pointerId)clearPressed();},{passive:true});
+  document.addEventListener('scroll',clearPressed,{capture:true,passive:true});
+  window.addEventListener('blur',clearPressed);
+  const currentChapter=()=>{
+    const styles=getComputedStyle(document.documentElement);
+    const threshold=parseFloat(styles.getPropertyValue('--nav-height'))+parseFloat(styles.getPropertyValue('--category-height'))+65;
+    let current='all';
+    for(const section of document.querySelectorAll('.design-chapter')){
+      if(section.getBoundingClientRect().top<=threshold)current=section.id;
+    }
+    return current;
+  };
+  const updateBackToTop=()=>{
+    if(backToTop)backToTop.hidden=scrollY<=innerHeight||header.classList.contains('menu-open')||!!document.querySelector('#lightbox[open]');
+  };
+  let menuState=null;
+  const closeMenu=({restoreFocus=true}={})=>{
+    if(!menuState)return;
+    const saved=menuState;
+    menuState=null;
+    header.classList.remove('menu-open');
+    menu.setAttribute('aria-expanded','false');
+    menu.setAttribute('aria-label',tr('Open menu','開啟選單'));
+    for(const [name,value] of saved.headerAttributes){
+      if(value===null)header.removeAttribute(name);else header.setAttribute(name,value);
+    }
+    for(const [element,inert] of saved.background)element.inert=inert;
+    if(saved.bodyStyle===null)document.body.removeAttribute('style');else document.body.setAttribute('style',saved.bodyStyle);
+    if(!document.querySelector('#lightbox[open]'))document.body.classList.remove('modal-open');
+    window.scrollTo({left:saved.x,top:saved.y,behavior:'instant'});
+    if(restoreFocus&&!desktop.matches)menu.focus({preventScroll:true});
+    updateBackToTop();
+  };
+  const openMenu=()=>{
+    if(menuState||desktop.matches||document.querySelector('#lightbox[open]'))return;
+    menuState={x:scrollX,y:scrollY,chapter:currentChapter(),bodyStyle:document.body.getAttribute('style'),headerAttributes:['role','aria-modal','aria-label'].map(name=>[name,header.getAttribute(name)]),background:[...document.body.children].filter(e=>e!==header&&!['SCRIPT','STYLE'].includes(e.tagName)).map(e=>[e,e.inert])};
+    const scrollbar=innerWidth-document.documentElement.clientWidth;
+    const padding=parseFloat(getComputedStyle(document.body).paddingRight);
+    document.body.style.position='fixed';
+    document.body.style.top=`-${menuState.y}px`;
+    document.body.style.left=`-${menuState.x}px`;
+    document.body.style.width='100%';
+    document.body.style.paddingRight=`${padding+scrollbar}px`;
+    for(const [element] of menuState.background)element.inert=true;
+    header.classList.add('menu-open');
+    header.setAttribute('role','dialog');
+    header.setAttribute('aria-modal','true');
+    header.setAttribute('aria-label',tr('Main menu','主要選單'));
+    menu.setAttribute('aria-expanded','true');
+    menu.setAttribute('aria-label',tr('Close menu','關閉選單'));
+    document.body.classList.add('modal-open');
+    navigation.scrollTop=0;
+    navigation.querySelector('a').focus({preventScroll:true});
+    updateBackToTop();
+  };
+  if(menu) {
+    menu.addEventListener('click',()=>{
+      if(menuState)closeMenu();else openMenu();
+    });
+    document.addEventListener('keydown',event=>{
+      if(!menuState)return;
+      if(event.key==='Escape'){event.preventDefault();closeMenu();}
+      if(event.key==='Tab'){
+        const focusables=[...header.querySelectorAll('a,button')].filter(e=>!e.disabled&&e.getClientRects().length);
+        const first=focusables[0],last=focusables.at(-1);
+        if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}
+        else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
+      }
+    });
+    desktop.addEventListener('change',event=>{
+      if(!event.matches||!menuState)return;
+      const wasToggle=document.activeElement===menu;
+      closeMenu({restoreFocus:false});
+      if(wasToggle||!header.contains(document.activeElement))navigation.querySelector('[aria-current="page"]').focus({preventScroll:true});
+    });
+    window.addEventListener('pagehide',()=>closeMenu({restoreFocus:false}));
+  }
+  document.querySelectorAll('[data-language]').forEach(link=>{
+    link.addEventListener('click',()=>{
+      try {localStorage.setItem('lyfung-language',link.dataset.language);}catch{}
+      const target=new URL(link.href,location.origin);
+      // Measure before the menu unlocks so a manually read chapter survives.
+      target.hash=categoryLinks.length?(menuState?.chapter||currentChapter()):location.hash;
+      link.href=target.href;
+    });
+  });
+  header.querySelectorAll('a').forEach(link=>link.addEventListener('click',event=>{
+    if(primaryClick(event))closeMenu({restoreFocus:false});
+  }));
+  document.querySelectorAll('a[href="#top"]').forEach(link=>link.addEventListener('click',event=>{
+    if(!primaryClick(event))return;
+    event.preventDefault();
+    if(location.hash!=='#top')history.pushState(null,'','#top');
+    const heading=document.querySelector('main h1');
+    heading.setAttribute('tabindex','-1');
+    heading.focus({preventScroll:true});
+    window.scrollTo({top:0,left:0,behavior:reduced?'instant':'smooth'});
+    updateBackToTop();
+  }));
+  if(backToTop){
+    let scheduled=false;
+    const schedule=()=>{if(!scheduled){scheduled=true;requestAnimationFrame(()=>{scheduled=false;updateBackToTop();});}};
+    window.addEventListener('scroll',schedule,{passive:true});
+    window.addEventListener('resize',schedule);
+    window.addEventListener('pageshow',schedule);
+    updateBackToTop();
+  }
+  if(categoryLinks.length) {
+    let ticking=false;
+    const updateChapter=()=>{
+      ticking=false;
+      if(menuState)return;
+      const current=currentChapter();
+      for(const link of categoryLinks) {
+        if(link.dataset.section===current)link.setAttribute('aria-current','location');
+        else link.removeAttribute('aria-current');
+      }
+    };
+    window.addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(updateChapter);}},{passive:true});
+    updateChapter();
+    categoryLinks.forEach(link=>link.addEventListener('click',()=>{
+      const target=document.getElementById(link.dataset.section);
+      if(target){target.setAttribute('tabindex','-1');setTimeout(()=>target.focus({preventScroll:true}),reduced?0:600);}
+    }));
+  }
+  const gallery=document.getElementById('gallery');
+  const loadMore=document.getElementById('load-more');
+  let galleryCount=18;
+  let loading=false;
+  const itemById=new Map(config.items.map((item,index)=>[item.id,{...item,index}]));
+  const {projectItems,carousels}=config.page==='design'?setupDesignCarousels(config.items,tr):{projectItems:new Map(),carousels:new Map()};
+  const photoUI=config.page==='photography'?setupPhotography(config,tr):null;
+  const masonry=config.photoMode==='all'&&gallery?setupMasonryGallery(gallery,{items:itemById,tr}):null;
+  const makeGalleryItem=item=>{
+    const button=document.createElement('button');
+    button.className='gallery-open';
+    button.dataset.viewerId=item.id;
+    button.setAttribute('aria-label',tr('Open: ','開啟：')+item.alt);
+    const picture=document.createElement('picture');picture.className='picture';picture.style.backgroundImage=`url('${item.placeholder}')`;
+    const source=document.createElement('source');source.type='image/webp';source.srcset=item.webp.map(p=>`${p.src} ${p.width}w`).join(', ');source.sizes='(max-width:767px) calc(100vw - 40px), 240px';
+    const img=document.createElement('img');img.width=item.width;img.height=item.height;img.alt=item.alt;img.loading='lazy';img.decoding='async';img.src=item.fallback;
+    picture.append(source,img);button.append(picture);const frame=document.createElement('div');frame.className='gallery-item'+(item.width/item.height>1.15?' landscape':'');frame.dataset.viewerId=item.id;frame.append(button);photoUI?.watch(img);return frame;
+  };
+  const layoutGallery=()=>{
+    if(!gallery)return;
+    if(masonry){masonry.sync();return;}
+    const style=getComputedStyle(gallery);
+    const gap=parseFloat(style.rowGap);
+    const row=parseFloat(style.gridAutoRows);
+    for(const button of gallery.children){
+      const item=itemById.get(button.dataset.viewerId);
+      const height=button.getBoundingClientRect().width*item.height/item.width;
+      button.style.gridRowEnd=`span ${Math.ceil((height+gap)/(row+gap))}`;
+    }
+  };
+  const loadBatch=()=>{
+    if(loading||galleryCount>=config.items.length)return;
+    loading=true;
+    gallery.setAttribute('aria-busy','true');
+    const batch=config.items.slice(galleryCount,galleryCount+18);
+    const fragment=document.createDocumentFragment();
+    for(const item of batch)fragment.append(makeGalleryItem(item));
+    gallery.append(fragment);
+    galleryCount+=batch.length;
+    layoutGallery();
+    document.getElementById('gallery-status').textContent=`${galleryCount} / ${config.items.length} ${tr('added to gallery','張已加入相簿')}`;
+    if(galleryCount>=config.items.length){
+      loadMore.disabled=true;
+      loadMore.textContent=tr('You’ve seen them all. Thank you.','已經看完全部照片，謝謝你的觀看。');
+    }
+    gallery.removeAttribute('aria-busy');
+    loading=false;
+  };
+  if(gallery) {
+    layoutGallery();
+    if(!masonry)new ResizeObserver(layoutGallery).observe(gallery);
+    loadMore.addEventListener('click',loadBatch);
+    if('IntersectionObserver' in window) {
+      const observer=new IntersectionObserver(entries=>{
+        if(entries.some(e=>e.isIntersecting))loadBatch();
+        if(galleryCount>=config.items.length)observer.disconnect();
+      },{rootMargin:'450px 0px'});
+      observer.observe(document.getElementById('gallery-sentinel'));
+    }
+  }
+  const dialog=document.getElementById('lightbox');
+  if(dialog) {
+    const image=document.getElementById('viewer-image');
+    const status=document.getElementById('viewer-status');
+    const prev=dialog.querySelector('.viewer-prev');
+    const next=dialog.querySelector('.viewer-next');
+    const photoViewer=config.page==='photography';
+    let photoTimer;
+    let retry;
+    if(photoViewer){
+      const feedback=document.createElement('div');feedback.className='viewer-feedback';status.before(feedback);feedback.append(status);
+      retry=document.createElement('button');retry.className='viewer-retry';retry.hidden=true;retry.textContent=tr('Try again','重試');feedback.append(retry);
+    }
+    let active=0,trigger=null,preloads=[],activeItems=config.items,activeProject=null,viewerVersion=0,viewerPosition=null;
+    const show=index=>{
+      active=(index+activeItems.length)%activeItems.length;
+      const item=activeItems[active],version=++viewerVersion;
+      clearTimeout(photoTimer);
+      if(retry)retry.hidden=true;
+      if(photoViewer){
+        status.textContent='';dialog.classList.add('is-photo-loading');
+        photoTimer=setTimeout(()=>{if(version===viewerVersion)status.textContent=tr('Loading photograph…','照片載入中…');},300);
+      }else status.textContent=tr('Loading image…','圖片載入中…');
+      image.onload=()=>{if(version===viewerVersion){clearTimeout(photoTimer);status.textContent='';dialog.classList.remove('is-photo-loading');}};
+      image.onerror=()=>{
+        if(version!==viewerVersion)return;
+        if((activeProject||photoViewer)&&new URL(image.src,location.href).pathname!==item.fallback){image.src=item.fallback;return;}
+        clearTimeout(photoTimer);
+        status.textContent=tr('This image could not load. Try another image.','暫時未能載入圖片，請瀏覽另一張。');
+        if(retry){status.textContent=tr('This photograph could not load. Please try again.','暫時未能載入這張照片，請重試。');retry.hidden=false;}
+      };
+      image.src=item.large;
+      image.alt=item.alt;
+      const counter=document.getElementById('viewer-counter');
+      counter.textContent=`${String(active+1).padStart(2,'0')} / ${activeProject?String(activeItems.length).padStart(2,'0'):activeItems.length}`;
+      counter.hidden=!!activeProject&&activeItems.length===1;
+      prev.hidden=next.hidden=activeItems.length===1;
+      const projectLabel=document.getElementById('viewer-project');
+      if(projectLabel)projectLabel.textContent=`PROJECT / ${item.projectNumber||item.projectId} · ${item.projectTitle}`;
+      dialog.setAttribute('aria-label',activeProject?`${item.projectTitle} — ${tr('Image viewer','圖片檢視器')}`:tr('Image viewer','圖片檢視器'));
+      document.getElementById('viewer-caption').textContent=photoViewer?'':item.alt;
+      const neighbors=new Set([-1,1].map(delta=>(active+delta+activeItems.length)%activeItems.length));
+      neighbors.delete(active);
+      preloads=[...neighbors].map(index=>{const neighbor=new Image();neighbor.src=activeItems[index].large;return neighbor;});
+    };
+    retry?.addEventListener('click',()=>{const item=activeItems[active];show(active);const target=new URL(item.fallback,location.href);target.searchParams.set('retry',Date.now());image.src=target.href;document.getElementById('viewer-close').focus();});
+    document.addEventListener('click',event=>{
+      const button=event.target.closest('[data-viewer-id]');
+      if(!button)return;
+      const item=itemById.get(button.dataset.viewerId);
+      if(!item)return;
+      trigger=button;
+      activeProject=item.projectId||null;
+      activeItems=activeProject?projectItems.get(activeProject):(masonry?masonry.viewerItems():config.items);
+      viewerPosition={x:scrollX,y:scrollY};
+      show(activeItems.findIndex(entry=>entry.id===item.id));
+      dialog.showModal();
+      document.body.classList.add('modal-open');
+      updateBackToTop();
+      document.getElementById('viewer-close').focus();
+    });
+    document.getElementById('viewer-close').addEventListener('click',()=>dialog.close());
+    dialog.addEventListener('close',()=>{
+      viewerVersion++;clearTimeout(photoTimer);
+      if(activeProject)carousels.get(activeProject)?.select(active,{preload:false});
+      document.body.classList.remove('modal-open');
+      if(viewerPosition)window.scrollTo({left:viewerPosition.x,top:viewerPosition.y,behavior:'instant'});
+      trigger?.focus({preventScroll:true});updateBackToTop();
+    });
+    prev.addEventListener('click',()=>show(active-1));next.addEventListener('click',()=>show(active+1));
+    dialog.addEventListener('keydown',event=>{
+      if(event.key==='ArrowLeft'){event.preventDefault();show(active-1);}
+      if(event.key==='ArrowRight'){event.preventDefault();show(active+1);}
+      if(event.key==='Tab'){
+        const focusables=[...dialog.querySelectorAll('button')].filter(button=>!button.hidden&&!button.disabled);
+        const first=focusables[0],last=focusables.at(-1);
+        if(event.shiftKey&&document.activeElement===first){event.preventDefault();last.focus();}
+        else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
+      }
+    });
+    let touch=null;
+    image.addEventListener('touchstart',event=>{touch=event.touches.length===1?{x:event.touches[0].clientX,y:event.touches[0].clientY}:null;},{passive:true});
+    image.addEventListener('touchend',event=>{
+      if(!touch)return;
+      const dx=event.changedTouches[0].clientX-touch.x,dy=event.changedTouches[0].clientY-touch.y;
+      if(Math.abs(dx)>55&&Math.abs(dx)>Math.abs(dy)*1.5)show(active+(dx<0?1:-1));
+      touch=null;
+    },{passive:true});
+    image.addEventListener('touchcancel',()=>{touch=null;},{passive:true});
+  }
+  const thanksButton=document.querySelector('[data-footer-thanks-cycle]');
+  if(thanksButton){
+    const stage=thanksButton.closest('[data-footer-message]'),footer=stage.closest('.site-footer');
+    let pulseTimer,nearFrame=0,pointer=null,footerVisible=false;
+    const clearPulse=()=>{clearTimeout(pulseTimer);stage.classList.remove('is-engaged');};
+    const pulse=()=>{clearTimeout(pulseTimer);stage.classList.add('is-engaged');pulseTimer=setTimeout(clearPulse,1100);};
+    const clearNear=()=>{cancelAnimationFrame(nearFrame);nearFrame=0;pointer=null;stage.classList.remove('is-near');};
+    const visibility=new IntersectionObserver(entries=>{footerVisible=entries[0].isIntersecting;if(!footerVisible)clearNear();},{rootMargin:'48px'});
+    visibility.observe(footer);
+    document.addEventListener('pointermove',event=>{
+      if(event.pointerType==='touch'||!footerVisible)return;
+      pointer={x:event.clientX,y:event.clientY};
+      if(nearFrame)return;
+      nearFrame=requestAnimationFrame(()=>{
+        nearFrame=0;if(!pointer)return;
+        const box=stage.getBoundingClientRect(),reach=24;
+        stage.classList.toggle('is-near',pointer.x>=box.left-reach&&pointer.x<=box.right+reach&&pointer.y>=box.top-reach&&pointer.y<=box.bottom+reach);
+      });
+    },{passive:true});
+    document.addEventListener('pointerleave',clearNear);
+    stage.addEventListener('pointerdown',pulse,{passive:true});
+    stage.addEventListener('pointercancel',clearPulse,{passive:true});
+    window.addEventListener('scroll',clearNear,{passive:true});
+    window.addEventListener('blur',()=>{clearNear();clearPulse();});
+    const word=document.querySelector('[data-footer-thanks]');
+    const words=tr(['Thank You','Thanks'],['多謝','謝謝']);let index=0;
+    const updateLabel=()=>thanksButton.setAttribute('aria-label',tr('Say thanks another way. Currently: ','換個方式說謝謝。目前：')+words[index]);
+    thanksButton.hidden=false;updateLabel();
+    thanksButton.addEventListener('click',()=>{index=(index+1)%words.length;word.textContent=words[index];updateLabel();});
+  }
+  if(config.page==='contact')setupContact(tr);
+})();
+</script></body></html>

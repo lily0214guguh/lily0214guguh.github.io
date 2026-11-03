@@ -1,0 +1,83 @@
+{
+  "fingerprint": "db3cbce2aff7090643a0d7cc90a2253ca8ad49d11c6c21e14402861e3064f440",
+  "width": 1672,
+  "height": 941,
+  "layers": {
+    "leftPlant": {
+      "box": [
+        136,
+        450,
+        215,
+        310
+      ],
+      "object": {
+        "webp": "/assets/home-scene/leftPlant-object-db3cbce2af.webp",
+        "png": "/assets/home-scene/leftPlant-object-db3cbce2af.png"
+      },
+      "plate": {
+        "webp": "/assets/home-scene/leftPlant-plate-db3cbce2af.webp",
+        "png": "/assets/home-scene/leftPlant-plate-db3cbce2af.png"
+      },
+      "mask": {
+        "webp": "/assets/home-scene/leftPlant-mask-db3cbce2af.webp",
+        "png": "/assets/home-scene/leftPlant-mask-db3cbce2af.png"
+      }
+    },
+    "rightPlant": {
+      "box": [
+        1168,
+        345,
+        275,
+        190
+      ],
+      "object": {
+        "webp": "/assets/home-scene/rightPlant-object-db3cbce2af.webp",
+        "png": "/assets/home-scene/rightPlant-object-db3cbce2af.png"
+      },
+      "plate": {
+        "webp": "/assets/home-scene/rightPlant-plate-db3cbce2af.webp",
+        "png": "/assets/home-scene/rightPlant-plate-db3cbce2af.png"
+      },
+      "mask": {
+        "webp": "/assets/home-scene/rightPlant-mask-db3cbce2af.webp",
+        "png": "/assets/home-scene/rightPlant-mask-db3cbce2af.png"
+      }
+    },
+    "brushes": {
+      "box": [
+        416,
+        418,
+        164,
+        130
+      ],
+      "object": {
+        "webp": "/assets/home-scene/brushes-object-db3cbce2af.webp",
+        "png": "/assets/home-scene/brushes-object-db3cbce2af.png"
+      },
+      "plate": {
+        "webp": "/assets/home-scene/brushes-plate-db3cbce2af.webp",
+        "png": "/assets/home-scene/brushes-plate-db3cbce2af.png"
+      },
+      "mask": {
+        "webp": "/assets/home-scene/brushes-mask-db3cbce2af.webp",
+        "png": "/assets/home-scene/brushes-mask-db3cbce2af.png"
+      }
+    },
+    "book": {
+      "box": [
+        464,
+        594,
+        251,
+        114
+      ],
+      "original": {
+        "webp": "/assets/home-scene/book-original-db3cbce2af.webp",
+        "png": "/assets/home-scene/book-original-db3cbce2af.png"
+      },
+      "alternate": {
+        "webp": "/assets/home-scene/book-alternate-db3cbce2af.webp",
+        "png": "/assets/home-scene/book-alternate-db3cbce2af.png"
+      }
+    }
+  }
+}
