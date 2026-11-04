@@ -1,5 +1,5 @@
 {
-  "fingerprint": "db3cbce2aff7090643a0d7cc90a2253ca8ad49d11c6c21e14402861e3064f440",
+  "fingerprint": "d8fa309aa84e4c9563a68d866cb80f67b0a3f5d0699c858824d7f0d34a5513af",
   "width": 1672,
   "height": 941,
   "layers": {
@@ -11,16 +11,16 @@
         310
       ],
       "object": {
-        "webp": "/assets/home-scene/leftPlant-object-db3cbce2af.webp",
-        "png": "/assets/home-scene/leftPlant-object-db3cbce2af.png"
+        "webp": "/assets/home-scene/leftPlant-object-d8fa309aa8.webp",
+        "png": "/assets/home-scene/leftPlant-object-d8fa309aa8.png"
       },
       "plate": {
-        "webp": "/assets/home-scene/leftPlant-plate-db3cbce2af.webp",
-        "png": "/assets/home-scene/leftPlant-plate-db3cbce2af.png"
+        "webp": "/assets/home-scene/leftPlant-plate-d8fa309aa8.webp",
+        "png": "/assets/home-scene/leftPlant-plate-d8fa309aa8.png"
       },
       "mask": {
-        "webp": "/assets/home-scene/leftPlant-mask-db3cbce2af.webp",
-        "png": "/assets/home-scene/leftPlant-mask-db3cbce2af.png"
+        "webp": "/assets/home-scene/leftPlant-mask-d8fa309aa8.webp",
+        "png": "/assets/home-scene/leftPlant-mask-d8fa309aa8.png"
       }
     },
     "rightPlant": {
@@ -31,16 +31,16 @@
         190
       ],
       "object": {
-        "webp": "/assets/home-scene/rightPlant-object-db3cbce2af.webp",
-        "png": "/assets/home-scene/rightPlant-object-db3cbce2af.png"
+        "webp": "/assets/home-scene/rightPlant-object-d8fa309aa8.webp",
+        "png": "/assets/home-scene/rightPlant-object-d8fa309aa8.png"
       },
       "plate": {
-        "webp": "/assets/home-scene/rightPlant-plate-db3cbce2af.webp",
-        "png": "/assets/home-scene/rightPlant-plate-db3cbce2af.png"
+        "webp": "/assets/home-scene/rightPlant-plate-d8fa309aa8.webp",
+        "png": "/assets/home-scene/rightPlant-plate-d8fa309aa8.png"
       },
       "mask": {
-        "webp": "/assets/home-scene/rightPlant-mask-db3cbce2af.webp",
-        "png": "/assets/home-scene/rightPlant-mask-db3cbce2af.png"
+        "webp": "/assets/home-scene/rightPlant-mask-d8fa309aa8.webp",
+        "png": "/assets/home-scene/rightPlant-mask-d8fa309aa8.png"
       }
     },
     "brushes": {
@@ -51,16 +51,16 @@
         130
       ],
       "object": {
-        "webp": "/assets/home-scene/brushes-object-db3cbce2af.webp",
-        "png": "/assets/home-scene/brushes-object-db3cbce2af.png"
+        "webp": "/assets/home-scene/brushes-object-d8fa309aa8.webp",
+        "png": "/assets/home-scene/brushes-object-d8fa309aa8.png"
       },
       "plate": {
-        "webp": "/assets/home-scene/brushes-plate-db3cbce2af.webp",
-        "png": "/assets/home-scene/brushes-plate-db3cbce2af.png"
+        "webp": "/assets/home-scene/brushes-plate-d8fa309aa8.webp",
+        "png": "/assets/home-scene/brushes-plate-d8fa309aa8.png"
       },
       "mask": {
-        "webp": "/assets/home-scene/brushes-mask-db3cbce2af.webp",
-        "png": "/assets/home-scene/brushes-mask-db3cbce2af.png"
+        "webp": "/assets/home-scene/brushes-mask-d8fa309aa8.webp",
+        "png": "/assets/home-scene/brushes-mask-d8fa309aa8.png"
       }
     },
     "book": {
@@ -71,12 +71,110 @@
         114
       ],
       "original": {
-        "webp": "/assets/home-scene/book-original-db3cbce2af.webp",
-        "png": "/assets/home-scene/book-original-db3cbce2af.png"
+        "webp": "/assets/home-scene/book-original-d8fa309aa8.webp",
+        "png": "/assets/home-scene/book-original-d8fa309aa8.png"
       },
       "alternate": {
-        "webp": "/assets/home-scene/book-alternate-db3cbce2af.webp",
-        "png": "/assets/home-scene/book-alternate-db3cbce2af.png"
+        "webp": "/assets/home-scene/book-alternate-d8fa309aa8.webp",
+        "png": "/assets/home-scene/book-alternate-d8fa309aa8.png"
+      }
+    },
+    "rightPens": {
+      "box": [
+        1084,
+        461,
+        96,
+        74
+      ],
+      "parts": [
+        {
+          "origin": "20% 95%",
+          "webp": "/assets/home-scene/rightPens-0-d8fa309aa8.webp",
+          "png": "/assets/home-scene/rightPens-0-d8fa309aa8.png"
+        },
+        {
+          "origin": "37% 95%",
+          "webp": "/assets/home-scene/rightPens-1-d8fa309aa8.webp",
+          "png": "/assets/home-scene/rightPens-1-d8fa309aa8.png"
+        },
+        {
+          "origin": "64% 95%",
+          "webp": "/assets/home-scene/rightPens-2-d8fa309aa8.webp",
+          "png": "/assets/home-scene/rightPens-2-d8fa309aa8.png"
+        }
+      ],
+      "plate": {
+        "webp": "/assets/home-scene/rightPens-plate-d8fa309aa8.webp",
+        "png": "/assets/home-scene/rightPens-plate-d8fa309aa8.png"
+      },
+      "mask": {
+        "webp": "/assets/home-scene/rightPens-mask-d8fa309aa8.webp",
+        "png": "/assets/home-scene/rightPens-mask-d8fa309aa8.png"
+      }
+    },
+    "tablePens": {
+      "box": [
+        586,
+        675,
+        265,
+        82
+      ],
+      "parts": [
+        {
+          "origin": "50% 45%",
+          "webp": "/assets/home-scene/tablePens-0-d8fa309aa8.webp",
+          "png": "/assets/home-scene/tablePens-0-d8fa309aa8.png"
+        },
+        {
+          "origin": "50% 55%",
+          "webp": "/assets/home-scene/tablePens-1-d8fa309aa8.webp",
+          "png": "/assets/home-scene/tablePens-1-d8fa309aa8.png"
+        },
+        {
+          "origin": "55% 75%",
+          "webp": "/assets/home-scene/tablePens-2-d8fa309aa8.webp",
+          "png": "/assets/home-scene/tablePens-2-d8fa309aa8.png"
+        }
+      ],
+      "plate": {
+        "webp": "/assets/home-scene/tablePens-plate-d8fa309aa8.webp",
+        "png": "/assets/home-scene/tablePens-plate-d8fa309aa8.png"
+      },
+      "mask": {
+        "webp": "/assets/home-scene/tablePens-mask-d8fa309aa8.webp",
+        "png": "/assets/home-scene/tablePens-mask-d8fa309aa8.png"
+      }
+    },
+    "lamp": {
+      "box": [
+        399,
+        345,
+        124,
+        66
+      ],
+      "off": {
+        "webp": "/assets/home-scene/lamp-off-d8fa309aa8.webp",
+        "png": "/assets/home-scene/lamp-off-d8fa309aa8.png"
+      },
+      "mask": {
+        "webp": "/assets/home-scene/lamp-mask-d8fa309aa8.webp",
+        "png": "/assets/home-scene/lamp-mask-d8fa309aa8.png"
+      }
+    },
+    "screen": {
+      "box": [
+        700,
+        383,
+        217,
+        138
+      ],
+      "plate": {
+        "webp": "/assets/home-scene/screen-blank-d8fa309aa8.webp",
+        "png": "/assets/home-scene/screen-blank-d8fa309aa8.png"
+      },
+      "object": {
+        "webp": "/assets/home-scene/screen-vector-d8fa309aa8.webp",
+        "png": "/assets/home-scene/screen-vector-d8fa309aa8.png"
       }
     }
   }
