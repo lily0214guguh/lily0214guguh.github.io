@@ -253,28 +253,43 @@ html:lang(zh-Hant) .site-footer .footer-thanks-tagline{font-style:normal;letter-
 /* Home and About only. Geometry and transforms of the four entry cards remain
    in their original rules; translate composes with their existing rotation. */
 .interaction-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
-.home-hero .star-explore{position:relative;isolation:isolate;gap:28px;min-height:48px;padding:11px 22px;border:1px solid rgba(255,255,255,.5);border-radius:12px;background:rgba(40,40,36,.76);color:#fff;overflow:visible;-webkit-backdrop-filter:blur(14px) saturate(125%);backdrop-filter:blur(14px) saturate(125%);box-shadow:inset 0 1px 0 rgba(255,255,255,.26),0 6px 18px -8px rgba(40,40,36,.3);transition:background-color 180ms,box-shadow 180ms}
-.home-hero .star-explore:hover,.home-hero .star-explore:focus-visible,.home-hero .star-explore.is-pressed{color:#fff;background:rgba(40,40,36,.84);border-color:rgba(255,255,255,.78)}
-.home-hero .star-explore>.explore-label{font-size:var(--type-interface);line-height:1.5;transform:none}
-.home-hero .star-explore>span:last-child{font-size:20px;line-height:1;transition:transform 180ms}
-.home-hero .star-explore:hover>span:last-child{transform:translate(3px,-3px)}
-.explore-star-border{position:absolute;inset:-1px;width:calc(100% + 2px);height:calc(100% + 2px);overflow:visible;pointer-events:none;color:#fff}
-.explore-star-border path{vector-effect:non-scaling-stroke}
-.explore-border-base{stroke:currentColor;stroke-opacity:.16;stroke-width:1}
-.explore-star-trail{stroke:currentColor;stroke-width:1;stroke-linecap:round;visibility:hidden}
-.explore-star{fill:currentColor;filter:drop-shadow(0 0 3px #ffffff99);visibility:hidden}
-.is-star-ready .explore-star-trail,.is-star-ready .explore-star{visibility:visible}
+/* Capsule button adapted from Uiverse.io by uiverse-astronaut. */
+.home-hero .explore-cta {
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 24px;
+  border: 0;
+  border-radius: 999px;
+  background: #0e1116;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: -.005em;
+  line-height: 1;
+  box-shadow: 0 1px 1px rgba(14,17,22,.06), 0 14px 28px -18px rgba(14,17,22,.4);
+  transition: translate 140ms cubic-bezier(.22,1,.36,1), background-color 220ms ease-out, box-shadow 220ms ease-out;
+}
+.home-hero .explore-cta:is(:hover,:focus-visible,:active,.is-pressed) {
+  color: #fff;
+  background: #1a1f28;
+  box-shadow: 0 1px 1px rgba(14,17,22,.08), 0 20px 36px -16px rgba(14,17,22,.48);
+}
+.home-hero .explore-cta:is(:active,.is-pressed) { translate: 0 1px; }
+.home-hero .explore-cta > span.explore-label { font-size: inherit; transform: none; }
+.home-hero .explore-cta > span.explore-arrow {
+  width: 16px;
+  height: 16px;
+  transition: transform 220ms cubic-bezier(.22,1,.36,1);
+}
+.home-hero .explore-cta:is(:hover,:focus-visible) > .explore-arrow { transform: translate(2px,-2px); }
 /* Frost only the card surface; artwork, type, sizing and transforms stay intact. */
 .page-home .portfolio-card{background-color:rgba(255,255,255,.38);background-image:linear-gradient(145deg,rgba(255,255,255,.42),rgba(255,255,255,0) 54%,rgba(245,241,232,.12));border-color:rgba(159,151,135,.28);border-top-color:rgba(255,255,255,.95);-webkit-backdrop-filter:blur(16px) saturate(112%);backdrop-filter:blur(16px) saturate(112%);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 8px 28px -18px rgba(40,40,36,.22)}
 .page-home .portfolio-card:is(:hover,:focus-visible){border-color:var(--red)}
 .page-home .card-design .card-media img{object-fit:cover;object-position:center}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
  .page-home .portfolio-card{background:var(--paper)}
- .home-hero .star-explore,.home-hero .star-explore:is(:hover,:focus-visible,.is-pressed){background:var(--ink)}
 }
 @media(prefers-reduced-transparency:reduce){
  .page-home .portfolio-card{background:var(--paper);-webkit-backdrop-filter:none;backdrop-filter:none}
- .home-hero .star-explore,.home-hero .star-explore:is(:hover,:focus-visible,.is-pressed){background:var(--ink);-webkit-backdrop-filter:none;backdrop-filter:none}
 }
 @media(hover:hover) and (pointer:fine){
  .portfolio-card[data-magnet]{translate:var(--magnet-x,0px) var(--magnet-y,0px)}
@@ -307,8 +322,7 @@ html:lang(zh-Hant) .site-footer .footer-thanks-tagline{font-style:normal;letter-
 @media(max-width:767px){.page-about .portrait-lanyard{padding:60px 24px 20px}.page-about .portrait-lanyard:not(.is-lanyard-ready){padding:0}}
 @media(prefers-reduced-motion:reduce){
  .portfolio-card[data-magnet]{translate:none!important}
- .home-hero .star-explore>span:last-child{transition:none;transform:none!important}
- .explore-star-trail,.explore-star{display:none}
+ .home-hero .explore-cta:is(:active,.is-pressed){translate:none}
  .portrait-badge,.portrait-badge-turn{transition:none!important;will-change:auto}
 }
 </style><script>try{if(location.pathname==='/'&&localStorage.getItem('lyfung-language')==='zh'){location.replace('/zh-hant/'+location.search+location.hash)}}catch(e){};window.__site={"lang":"en","page":"about","route":"about","alternate":"/zh-hant/about/","items":[],"gallery":false};</script></head><body class="page-about" id="top"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="/home/" aria-label="LY.Fung — Home"><img src="/assets/logo.png" width="40" height="40" alt=""></a><button class="menu-toggle" aria-expanded="false" aria-controls="main-navigation" aria-label="Open menu"><span></span><span></span></button><nav id="main-navigation" aria-label="Main navigation"><a href="/home/" >Home</a><a href="/about/" aria-current="page">About</a><a href="/design/" >Design</a><a href="/photography/" >Photography</a><a href="/contact/" >Contact</a><span class="nav-separator" aria-hidden="true"></span><a class="language-switch" data-language="zh" href="/zh-hant/about/" lang="zh-Hant" aria-label="Switch to Traditional Chinese">繁中 <span aria-hidden="true">↗</span></a></nav></header><main id="main" class="wrap"><header class="page-intro"><p class="micro">01 / THE PERSON BEHIND THE WORK</p><h1 class="display">About Me<span class="name-dot">.</span></h1></header><section class="about-story"><div class="about-introduction about-text"><span class="micro">A LITTLE INTRODUCTION</span><h2>Curious by nature.<br>Thoughtful by design.</h2><p>I’m LY.Fung, a visual designer and portrait photographer from Hong Kong. I graduated from the Department of Commercial Design at Chung Yuan Christian University in Taiwan, with a proven track record of winning awards in cultural and creative design. Experienced in brand identity (VIS), digital marketing, and event planning through diverse internships across Hong Kong, Taiwan, and Zhejiang. Dedicated to delivering impactful visual solutions that bridge cultural insights with market trends.</p></div><figure class="about-photo"><div class="portrait-lanyard" data-portrait-lanyard><svg class="portrait-band" aria-hidden="true" preserveAspectRatio="none"><path class="portrait-band-shadow"/><path class="portrait-band-color"/><path class="portrait-band-weave"/></svg><button type="button" class="portrait-badge" disabled aria-label="Turn the portrait card over" aria-pressed="false" aria-describedby="portrait-lanyard-hint"><span class="portrait-clip" aria-hidden="true"></span><span class="portrait-badge-turn"><span class="portrait-badge-front"><picture class="picture " style="background-image:url('data:image/webp;base64,UklGRhwBAABXRUJQVlA4IBABAAAQBwCdASoYACsAPwF6tVWrJySjJWgBYCAJYwC7BAnVgCCOBuCeNr+mcLrzL655XJsrvd+qvm7QR29JBoRszx1qgAD+txZDadaT4XlI10WSb+3lwwCx/CUtTNsOf+9c22i0iVb0cDV6Kkq/kyAc+tGf4cArfxrDkUfhvw3pgX5iOXKFxJqoHEnb3TznOK1jVRT8ST9IIZjKyp/izW4WPZZd45Dr8Qw6lZ413zWJqWuMdQ7IC7Q1ymAWD/pjibGM33rWG64/W7e8DKi5Q67MMAuX2HWzDTpJdefL/Vl7veJAbXJHh/29TPHNGyypwLzxTuXv27YSYb2OSLYuRuVmKwcHzTD/IUbkSmsBjrkZJJVgAA==')"><source type="image/webp" srcset="/assets/portrait-320.webp 320w, /assets/portrait-640.webp 640w, /assets/portrait-960.webp 960w" sizes="(max-width:767px) 90vw, 40vw"><img src="/assets/portrait.jpg" width="960" height="1706" alt="Lok Yee Fung in a quiet outdoor moment with a book" loading="eager" fetchpriority="high" decoding="async"></picture></span><span class="portrait-badge-back" aria-hidden="true"><img src="/assets/logo.png" alt="" width="64" height="64"><span class="portrait-back-name">LY.Fung</span><span class="portrait-back-role">Graphic Designer<br>Portrait Photographer</span></span></span></button><span id="portrait-lanyard-hint" class="interaction-sr">Drag sideways and release to swing. Click or press Enter to turn it over; use Left and Right to swing, and Home to reset.</span></div><figcaption class="micro">LOK YEE FUNG / HONG KONG</figcaption></figure><div class="about-continuation about-text"><p>My work spans personalized portrait shoots, product and market research, UX workflow planning, and community-event materials. I have led end-to-end creative processes—from client consultation, concept development, mood boards, and styling through photography, retouching, and final delivery. I also bring experience researching consumer trends, assessing B2B/B2C market feasibility, and developing business proposals for product concepts.</p><p>I am especially interested in projects that connect cultural insight, strong visual storytelling, and practical market needs. I can support clients with branding, visual content, photography, travel planning, design research, AI-assisted concept development, and creative project coordination.</p><a class="text-link" href="/assets/LY-Fung-2026-CV.pdf" download="Fung Lok Yee_2026CV.pdf">Download my CV <span aria-hidden="true">↓</span></a></div></section><section class="about-section"><div class="section-heading"><span class="micro">01 /</span><h2>Skills</h2></div><div class="skills-columns"><div class="skills-software"><div><h3>Design software</h3><p>Illustrator · Photoshop · InDesign<br>Lightroom · Canva · Procreate</p></div><div><h3>AI software</h3><p>Cursor · ChatGPT · Codex<br>Midjourney · Hailuo · Kling</p></div></div><div><h3>Creative skills</h3><p>Visual identity · Packaging · Graphic communication<br>Cultural design · Photography · Visual planning<br>Makeup · AIGC · Vibe Coding</p></div></div></section><section class="about-section"><div class="section-heading"><span class="micro">02 /</span><h2>Work experience</h2></div><div class="timeline"><article class="timeline-item"><p class="micro">Jun — Jul 2026</p><div class="timeline-content"><h3>Business Analytics and Fintech Internship</h3><p class="organisation">Prozparity International Energy Group Limited</p><ul class="timeline-description timeline-highlights"><li><strong class="timeline-highlight-label">Product R&amp;D &amp; UX Strategy:</strong> Spearheaded research for smart glasses navigation systems and smart greenhouse products; designed end-to-end user workflows and inclusive features to enhance product UX.</li><li><strong class="timeline-highlight-label">Business Development &amp; Market Feasibility:</strong> Conducted B2B/B2C market feasibility evaluations and prepared structured business proposals to drive product development plans.</li><li><strong class="timeline-highlight-label">AI Video Design:</strong> Leveraged AI tools to design a product concept video.</li></ul></div></article><article class="timeline-item"><p class="micro">2023 — Present</p><div class="timeline-content"><h3>Portrait Photographer</h3><p class="organisation">Freelance</p><ul class="timeline-description timeline-highlights"><li><strong class="timeline-highlight-label">Tailored Creative Direction:</strong> Orchestrated 50+ personalized photography sessions, including custom makeup styling and thematic conceptualization based on client personality and aesthetic preferences.</li><li><strong class="timeline-highlight-label">Project Management:</strong> Managed the end-to-end production process, from initial client consultations and mood boarding to professional retouching.</li></ul></div></article><article class="timeline-item"><p class="micro">Jan 2025</p><div class="timeline-content"><h3>Project Assistant Intern</h3><p class="organisation">Zhejiang Hong Kong and Macau Youth Talent Service Center</p><ul class="timeline-description timeline-highlights"><li><strong class="timeline-highlight-label">Market &amp; Product Research:</strong> Conducted comprehensive market analysis for cultural and creative products to identify consumer trends and design opportunities.</li></ul></div></article><article class="timeline-item"><p class="micro">Jul — Aug 2023</p><div class="timeline-content"><h3>Design Intern</h3><p class="organisation">Hong Kong Marine Police</p><ul class="timeline-description timeline-highlights"><li><strong class="timeline-highlight-label">Publicity Material Design:</strong> Created visual materials to disseminate sea-safety and anti-crime messages to the general public.</li><li><strong class="timeline-highlight-label">Event Organization:</strong> Assisted in organizing community outreach activities.</li><li><strong class="timeline-highlight-label">Open-Day Support:</strong> Designed open-day materials and assisted with activities.</li></ul></div></article><article class="timeline-item"><p class="micro">Sep 2022 — Jun 2023</p><div class="timeline-content"><h3>Brand Design Intern</h3><p class="organisation">溫太醫 · Taiwan</p><ul class="timeline-description timeline-highlights"><li><strong class="timeline-highlight-label">Brand Identity Development:</strong> Led the Visual Identity System (VIS) design for a strategic sub-brand, successfully achieving trademark registration.</li><li><strong class="timeline-highlight-label">Market-Ready Design:</strong> Translated brand values into commercial design assets, preparing the sub-brand for future market entry.</li></ul></div></article></div></section><section class="about-section education"><div class="section-heading"><span class="micro">03 /</span><h2>Education</h2></div><article class="timeline-item"><p class="micro">2020 — 2024</p><div class="timeline-content"><h3>Chung Yuan Christian University</h3><p class="organisation">Taiwan · Bachelor of Commercial Design</p><p class="timeline-description">Brand identity, visual communication and cultural & creative product design.</p></div></article></section></main><footer id="portfolio-footer" class="site-footer wrap"><div class="footer-inner"><div class="footer-top"><a class="brand footer-brand" href="/home/" aria-label="LY.Fung Portfolio — Home"><img src="/assets/logo.png" width="40" height="40" alt=""><span class="footer-brand-title">LY.Fung <span>Portfolio</span></span></a></div><div class="footer-thanks" data-footer-message><svg class="footer-pen-loop" viewBox="0 0 1000 330" fill="none" preserveAspectRatio="none" aria-hidden="true"><path d="M62 247C-18 156 137 48 487 36C798 25 985 97 953 194C924 284 672 323 368 306C120 293 25 251 49 192C70 137 248 80 441 68"/></svg><h2 class="footer-thanks-heading"><span class="footer-thanks-word" data-footer-thanks aria-live="polite" aria-atomic="true">Thank You</span><span class="footer-thanks-tagline">For stopping by</span></h2><span class="footer-star"><svg viewBox="0 0 100 100" fill="none" aria-hidden="true"><polygon points="50,3 56.98811421776806,23.920002690195155 73.5,9.296806022131378 69.09188309203678,30.90811690796322 90.70319397786861,26.5 76.07999730980484,43.01188578223194 97,50 76.07999730980484,56.98811421776806 90.70319397786862,73.5 69.09188309203678,69.09188309203678 73.5,90.70319397786862 56.988114217768064,76.07999730980484 50,97 43.011885782231936,76.07999730980484 26.50000000000001,90.70319397786862 30.908116907963226,69.0918830920368 9.296806022131392,73.50000000000001 23.920002690195155,56.98811421776806 3,50.00000000000001 23.92000269019515,43.01188578223195 9.296806022131385,26.499999999999996 30.908116907963212,30.90811690796322 26.49999999999998,9.296806022131392 43.01188578223192,23.92000269019516"/></svg><button type="button" class="footer-star-control" data-footer-thanks-cycle hidden aria-label="Say thanks another way" title="Say thanks another way"></button></span></div><div class="footer-contact"><p class="footer-signoff">HAVE SOMETHING IN MIND?</p><nav class="footer-pills" aria-label="Explore work and contact"><div class="footer-pill-item"><span class="micro">Selected creative works</span><a class="footer-pill" href="/design/">Design portfolio <span aria-hidden="true">↗</span></a></div><div class="footer-pill-item"><span class="micro">Portrait stories</span><a class="footer-pill" href="/photography/">Photography <span aria-hidden="true">↗</span></a></div><div class="footer-pill-item"><span class="micro">Let’s talk</span><a class="footer-pill footer-email" href="mailto:lyfung214@gmail.com">lyfung214@gmail.com <span aria-hidden="true">↗</span></a></div></nav><a class="text-link footer-contact-options" href="/contact/">All contact options</a></div><div class="footer-bottom micro"><span class="footer-copyright">© 2026 LY.Fung</span><span class="footer-location">Thoughtfully made, in Hong Kong.</span><a class="footer-back-top" href="#top">Back to top <span aria-hidden="true">↑</span></a></div></div></footer><script>
@@ -466,21 +480,51 @@ html:lang(zh-Hant) .site-footer .footer-thanks-tagline{font-style:normal;letter-
     updateBackToTop();
   }
   if(categoryLinks.length) {
+    const track=categoryLinks[0].parentElement;
+    const rail=track.parentElement;
     let ticking=false;
+    let activeLink=null;
+    let focusTimer;
     const updateChapter=()=>{
       ticking=false;
       if(menuState)return;
       const current=currentChapter();
-      for(const link of categoryLinks) {
-        if(link.dataset.section===current)link.setAttribute('aria-current','location');
-        else link.removeAttribute('aria-current');
+      const nextLink=categoryLinks.find(link=>link.dataset.section===current);
+      if(nextLink!==activeLink){
+        for(const link of categoryLinks){
+          if(link===nextLink)link.setAttribute('aria-current','location');
+          else link.removeAttribute('aria-current');
+        }
+        activeLink=nextLink;
+        const linkBounds=activeLink.getBoundingClientRect();
+        const railBounds=rail.getBoundingClientRect();
+        if(linkBounds.left<railBounds.left||linkBounds.right>railBounds.right){
+          const center=linkBounds.left+linkBounds.width/2;
+          rail.scrollTo({left:rail.scrollLeft+center-(railBounds.left+railBounds.width/2),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+        }
       }
+      track.style.setProperty('--category-pill-x',`${activeLink.offsetLeft}px`);
+      track.style.setProperty('--category-pill-width',`${activeLink.offsetWidth}px`);
+      track.classList.add('has-category-pill');
     };
-    window.addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(updateChapter);}},{passive:true});
+    const scheduleChapter=()=>{
+      if(ticking)return;
+      ticking=true;
+      requestAnimationFrame(updateChapter);
+    };
+    window.addEventListener('scroll',scheduleChapter,{passive:true});
+    window.addEventListener('resize',scheduleChapter);
+    window.addEventListener('pageshow',scheduleChapter);
+    document.fonts?.ready.then(scheduleChapter);
     updateChapter();
-    categoryLinks.forEach(link=>link.addEventListener('click',()=>{
+    categoryLinks.forEach(link=>link.addEventListener('click',event=>{
+      if(!primaryClick(event))return;
       const target=document.getElementById(link.dataset.section);
-      if(target){target.setAttribute('tabindex','-1');setTimeout(()=>target.focus({preventScroll:true}),reduced?0:600);}
+      if(target){
+        target.setAttribute('tabindex','-1');
+        clearTimeout(focusTimer);
+        focusTimer=setTimeout(()=>target.focus({preventScroll:true}),reduced?0:600);
+      }
     }));
   }
   const gallery=document.getElementById('gallery');
@@ -671,35 +715,6 @@ html:lang(zh-Hant) .site-footer .footer-thanks-tagline{font-style:normal;letter-
  const motion=matchMedia('(prefers-reduced-motion: reduce)'),fine=matchMedia('(hover: hover) and (pointer: fine)');
  const clamp=(value,min,max)=>Math.max(min,Math.min(max,value));
  const paused=()=>document.hidden||document.querySelector('.site-header.menu-open')||document.querySelector('#lightbox[open]');
-
- // StarBorder: a single white star and a graduated 30% trail, travelling the
- // exact rounded outline clockwise in four seconds. Hover adds one quick lap.
- const explore=document.querySelector('[data-star-border]');
- if(explore){
-  const svg=explore.querySelector('svg'),base=svg.querySelector('[data-border-path]'),star=svg.querySelector('[data-border-star]'),trails=[...svg.querySelectorAll('[data-trail]')];
-  let length=0,progress=0,frame=0,last=0,visible=false,lap=0,pulse;
-  const draw=()=>{
-   const point=base.getPointAtLength((progress%1)*length);
-   star.setAttribute('transform',`translate(${point.x} ${point.y})`);
-   for(const path of trails){const tail=Number(path.dataset.trail);path.setAttribute('stroke-dasharray',`${tail} ${100-tail}`);path.setAttribute('stroke-dashoffset',String(-(progress*100-tail)));}
-  };
-  const resize=()=>{const w=svg.clientWidth,h=svg.clientHeight,r=Math.min(12,w/2,h/2);const d=`M${r} .5H${w-r}Q${w-.5} .5 ${w-.5} ${r}V${h-r}Q${w-.5} ${h-.5} ${w-r} ${h-.5}H${r}Q.5 ${h-.5} .5 ${h-r}V${r}Q.5 .5 ${r} .5Z`;svg.setAttribute('viewBox',`0 0 ${w} ${h}`);for(const path of [base,...trails])path.setAttribute('d',d);length=base.getTotalLength();draw();explore.classList.add('is-star-ready');};
-  function tick(time){frame=0;const dt=last?Math.min((time-last)/1000,.05):0;last=time;if(!visible||motion.matches||paused()){last=0;return;}progress=(progress+dt/Number(explore.dataset.duration||4))%1;if(lap>0){const step=Math.min(lap,dt/1.2);progress=(progress+step)%1;lap-=step;}draw();frame=requestAnimationFrame(tick);}
-  const start=()=>{if(!frame&&visible&&!motion.matches&&!paused())frame=requestAnimationFrame(tick);};
-  const orbit=()=>{lap=Math.max(lap,1);start();};
-  explore.addEventListener('pointerenter',event=>{if(event.pointerType!=='touch')orbit();});explore.addEventListener('focus',orbit);
-  explore.addEventListener('click',()=>{if(motion.matches)return;pulse?.cancel();pulse=explore.animate([{boxShadow:'0 0 0 0 #ffffff00'},{boxShadow:'0 0 0 6px #ffffff55,0 0 20px #ffffff66',offset:.3},{boxShadow:'0 0 0 12px #ffffff00'}],{duration:550,easing:'ease-out'});});
-  const refreshVisibility=()=>{const r=explore.getBoundingClientRect();visible=r.bottom>0&&r.top<innerHeight&&r.right>0&&r.left<innerWidth;start();};
-  new ResizeObserver(()=>{resize();refreshVisibility();}).observe(explore);
-  new IntersectionObserver(refreshVisibility).observe(explore);
-  // Native fragment restoration can skip an observer threshold transition
-  // while the sticky opening is released. Reconcile after that scroll too.
-  let visibilityFrame=0;
-  const queueVisibility=()=>{if(!visibilityFrame)visibilityFrame=requestAnimationFrame(()=>{visibilityFrame=0;refreshVisibility();});};
-  window.addEventListener('scroll',queueVisibility,{passive:true});window.addEventListener('resize',queueVisibility);window.addEventListener('pageshow',queueVisibility);window.addEventListener('hashchange',queueVisibility);
-  new MutationObserver(start).observe(document.querySelector('.site-header'),{attributes:true,attributeFilter:['class']});
-  document.addEventListener('visibilitychange',start);motion.addEventListener('change',()=>{last=0;start();});
- }
 
  // Magnet composes independent translate with the cards' original transform.
  // The nearest card is attracted within 100px; no layout/slot ever moves.
