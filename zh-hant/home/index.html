@@ -371,7 +371,7 @@ html:lang(zh-Hant) .site-footer .footer-thanks-tagline{font-style:normal;letter-
 .target-cursor-label{position:absolute;left:0;top:0;font:500 12px/1.5 var(--font-body);white-space:nowrap;max-width:180px}
 @keyframes home-cursor-spin{to{transform:rotate(360deg)}}
 @media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
- .has-home-target-cursor .page-home,.has-home-target-cursor .page-home *{cursor:none!important}
+ .has-home-target-cursor .opening-stage,.has-home-target-cursor .opening-stage *{cursor:none!important}
 }
 @media(hover:none),(pointer:coarse),(prefers-reduced-motion:reduce){.home-target-cursor{display:none!important}}
 /* The three steps share the existing document flow: no pinning or extra
@@ -544,51 +544,21 @@ html:lang(zh-Hant) .site-footer .footer-thanks-tagline{font-style:normal;letter-
     updateBackToTop();
   }
   if(categoryLinks.length) {
-    const track=categoryLinks[0].parentElement;
-    const rail=track.parentElement;
     let ticking=false;
-    let activeLink=null;
-    let focusTimer;
     const updateChapter=()=>{
       ticking=false;
       if(menuState)return;
       const current=currentChapter();
-      const nextLink=categoryLinks.find(link=>link.dataset.section===current);
-      if(nextLink!==activeLink){
-        for(const link of categoryLinks){
-          if(link===nextLink)link.setAttribute('aria-current','location');
-          else link.removeAttribute('aria-current');
-        }
-        activeLink=nextLink;
-        const linkBounds=activeLink.getBoundingClientRect();
-        const railBounds=rail.getBoundingClientRect();
-        if(linkBounds.left<railBounds.left||linkBounds.right>railBounds.right){
-          const center=linkBounds.left+linkBounds.width/2;
-          rail.scrollTo({left:rail.scrollLeft+center-(railBounds.left+railBounds.width/2),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
-        }
+      for(const link of categoryLinks) {
+        if(link.dataset.section===current)link.setAttribute('aria-current','location');
+        else link.removeAttribute('aria-current');
       }
-      track.style.setProperty('--category-pill-x',`${activeLink.offsetLeft}px`);
-      track.style.setProperty('--category-pill-width',`${activeLink.offsetWidth}px`);
-      track.classList.add('has-category-pill');
     };
-    const scheduleChapter=()=>{
-      if(ticking)return;
-      ticking=true;
-      requestAnimationFrame(updateChapter);
-    };
-    window.addEventListener('scroll',scheduleChapter,{passive:true});
-    window.addEventListener('resize',scheduleChapter);
-    window.addEventListener('pageshow',scheduleChapter);
-    document.fonts?.ready.then(scheduleChapter);
+    window.addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(updateChapter);}},{passive:true});
     updateChapter();
-    categoryLinks.forEach(link=>link.addEventListener('click',event=>{
-      if(!primaryClick(event))return;
+    categoryLinks.forEach(link=>link.addEventListener('click',()=>{
       const target=document.getElementById(link.dataset.section);
-      if(target){
-        target.setAttribute('tabindex','-1');
-        clearTimeout(focusTimer);
-        focusTimer=setTimeout(()=>target.focus({preventScroll:true}),reduced?0:600);
-      }
+      if(target){target.setAttribute('tabindex','-1');setTimeout(()=>target.focus({preventScroll:true}),reduced?0:600);}
     }));
   }
   const gallery=document.getElementById('gallery');
@@ -1030,6 +1000,8 @@ html:lang(zh-Hant) .site-footer .footer-thanks-tagline{font-style:normal;letter-
  'use strict';
  if(!document.body.classList.contains('page-home'))return;
  const fine=matchMedia('(hover: hover) and (pointer: fine)'),motion=matchMedia('(prefers-reduced-motion: reduce)'),root=document.documentElement,header=document.querySelector('.site-header');
+ const landing=document.querySelector('.opening-stage');
+ if(!landing)return;
  const cursor=document.createElement('div');cursor.className='home-target-cursor';cursor.hidden=true;cursor.setAttribute('aria-hidden','true');cursor.innerHTML='<div class="target-cursor-box"><div class="target-cursor-reticle"><i></i><i></i><i></i><i></i></div></div><span class="target-cursor-dot"></span><span class="target-cursor-label"></span>';document.body.append(cursor);
  const box=cursor.querySelector('.target-cursor-box'),dot=cursor.querySelector('.target-cursor-dot'),label=cursor.querySelector('.target-cursor-label');
  const zh=document.documentElement.lang==='zh-Hant',labels={leftPlant:['Sway','輕擺'],rightPlant:['Sway','輕擺'],brushes:['Jostle','輕碰'],rightPens:['Jostle','輕碰'],tablePens:['Nudge','輕碰'],lamp:['Light','燈光'],screen:['Zoom','縮放'],camera:['Reflect','反光'],book:['Turn','翻頁']};
@@ -1037,6 +1009,14 @@ html:lang(zh-Hant) .site-footer .footer-thanks-tagline{font-style:normal;letter-
  let frame=0,point=null,target=null,current=null,last=0;
  const allowed=()=>fine.matches&&!motion.matches&&!document.hidden&&!header.classList.contains('menu-open');
  const hide=()=>{if(frame)cancelAnimationFrame(frame);frame=0;point=target=current=null;last=0;cursor.hidden=true;root.classList.remove('has-home-target-cursor');};
+ const refreshTarget=()=>{
+  if(!point||!allowed()){hide();return;}
+  const element=document.elementFromPoint(point.x,point.y);
+  if(!element||!landing.contains(element)){hide();return;}
+  const candidate=element.closest('a,button,.cursor-target');
+  target=candidate&&!candidate.disabled&&!candidate.closest('[inert]')?candidate:null;
+  if(!frame)frame=requestAnimationFrame(tick);
+ };
  function tick(time){frame=0;if(!point||!allowed()){hide();return;}
   const alpha=1-Math.exp(-24*Math.min((time-(last||time-16))/1000,.05));last=time;
   if(target&&(!target.isConnected||target.disabled||target.closest('[inert]')))target=null;
@@ -1047,7 +1027,9 @@ html:lang(zh-Hant) .site-footer .footer-thanks-tagline{font-style:normal;letter-
   const text=target?.dataset.cursorLabel||'';if(label.textContent!==text)label.textContent=text;label.style.transform=`translate3d(${Math.min(innerWidth-85,point.x+15)}px,${Math.max(8,Math.min(innerHeight-26,point.y+15))}px,0)`;
   cursor.hidden=false;root.classList.add('has-home-target-cursor');frame=requestAnimationFrame(tick);
  }
- document.addEventListener('pointermove',event=>{if(event.pointerType!=='mouse'||!allowed()){if(event.pointerType==='touch')hide();return;}point={x:event.clientX,y:event.clientY};const candidate=event.target.closest('a,button,.cursor-target');target=candidate&&!candidate.disabled&&!candidate.closest('[inert]')?candidate:null;if(!frame)frame=requestAnimationFrame(tick);},{passive:true});
+ document.addEventListener('pointermove',event=>{if(event.pointerType!=='mouse'){hide();return;}point={x:event.clientX,y:event.clientY};refreshTarget();},{passive:true});
+ window.addEventListener('scroll',()=>{if(point)refreshTarget();},{passive:true});
+ window.addEventListener('resize',()=>{if(point)refreshTarget();});
  document.addEventListener('pointerdown',event=>{if(event.pointerType!=='mouse'){hide();return;}if(!cursor.hidden)dot.animate([{scale:1},{scale:2.6,offset:.3},{scale:1}],{duration:240,easing:'ease-out'});},{passive:true});
  document.addEventListener('pointerleave',hide);window.addEventListener('blur',hide);document.addEventListener('visibilitychange',hide);document.addEventListener('keydown',event=>{if(event.key==='Tab'||event.key==='Escape')hide();});fine.addEventListener('change',hide);motion.addEventListener('change',hide);new MutationObserver(()=>{if(!allowed())hide();}).observe(header,{attributes:true,attributeFilter:['class']});
 })();
