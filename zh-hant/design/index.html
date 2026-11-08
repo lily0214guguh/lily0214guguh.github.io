@@ -113,6 +113,12 @@ html:lang(zh-Hant) .site-footer .footer-thanks-tagline{font-size:20px;letter-spa
 .site-footer.footer-compact .footer-top{grid-column:1;grid-row:1}
 .site-footer.footer-compact .footer-thanks{grid-column:2;grid-row:1;max-width:320px;justify-self:end;margin:8px 0 0}
 .site-footer.footer-compact .footer-bottom{grid-column:1/-1;grid-row:2;margin-top:12px}
+@media(prefers-reduced-motion:no-preference){
+ .site-footer[data-scroll-reveal]{opacity:var(--footer-reveal,1)}
+ .site-footer[data-scroll-reveal] .footer-inner{transform:translateY(calc((1 - var(--footer-reveal,1)) * 12px))}
+ .site-footer[data-scroll-reveal]:focus-within{opacity:1}
+ .site-footer[data-scroll-reveal]:focus-within .footer-inner{transform:none}
+}
 .site-footer .footer-pill:is(:active,:focus-visible,.is-pressed){color:var(--red);border-color:var(--red)}
 .site-footer .footer-pill:is(:active,:focus-visible,.is-pressed)>span{transform:translate(3px,-3px)}
 @media(hover:hover) and (pointer:fine){
@@ -694,9 +700,49 @@ function setupDesignCarousels(items,tr) {
     },{passive:true});
     image.addEventListener('touchcancel',()=>{touch=null;},{passive:true});
   }
-  const thanksButton=document.querySelector('[data-footer-thanks-cycle]');
+  const footer=document.getElementById('portfolio-footer');
+  if(footer){
+    const footerMotion=matchMedia('(prefers-reduced-motion: reduce)');
+    let revealFrame=0;
+    let nearFooter=true;
+    let previousProgress;
+
+    const updateFooterReveal=()=>{
+      revealFrame=0;
+      if(footerMotion.matches||document.body.classList.contains('modal-open'))return;
+      const bounds=footer.getBoundingClientRect();
+      // A compact footer must still reach full opacity at the document bottom.
+      const distance=Math.max(1,Math.min(280,innerHeight*.35,bounds.height*.85));
+      const progress=Math.max(0,Math.min(1,(innerHeight-bounds.top)/distance));
+      const eased=progress*progress*(3-2*progress);
+      const opacity=eased.toFixed(4);
+      if(opacity!==previousProgress){
+        footer.style.setProperty('--footer-reveal',opacity);
+        previousProgress=opacity;
+      }
+    };
+    const scheduleFooterReveal=()=>{
+      if(!revealFrame)revealFrame=requestAnimationFrame(updateFooterReveal);
+    };
+    updateFooterReveal();
+    footer.setAttribute('data-scroll-reveal','');
+
+    if('IntersectionObserver' in window){
+      const observer=new IntersectionObserver(([entry])=>{
+        nearFooter=entry.isIntersecting;
+        scheduleFooterReveal();
+      },{rootMargin:'160px'});
+      observer.observe(footer);
+    }
+    if('ResizeObserver' in window)new ResizeObserver(scheduleFooterReveal).observe(footer);
+    window.addEventListener('scroll',()=>{if(nearFooter)scheduleFooterReveal();},{passive:true});
+    window.addEventListener('resize',scheduleFooterReveal);
+    window.addEventListener('pageshow',scheduleFooterReveal);
+    footerMotion.addEventListener('change',scheduleFooterReveal);
+  }
+  const thanksButton=footer?.querySelector('[data-footer-thanks-cycle]');
   if(thanksButton){
-    const stage=thanksButton.closest('[data-footer-message]'),footer=stage.closest('.site-footer');
+    const stage=thanksButton.closest('[data-footer-message]');
     let pulseTimer,nearFrame=0,pointer=null,footerVisible=false;
     const clearPulse=()=>{clearTimeout(pulseTimer);stage.classList.remove('is-engaged');};
     const pulse=()=>{clearTimeout(pulseTimer);stage.classList.add('is-engaged');pulseTimer=setTimeout(clearPulse,1100);};
