@@ -114,10 +114,10 @@ html:lang(zh-Hant) .site-footer .footer-thanks-tagline{font-size:20px;letter-spa
 .site-footer.footer-compact .footer-thanks{grid-column:2;grid-row:1;max-width:320px;justify-self:end;margin:8px 0 0}
 .site-footer.footer-compact .footer-bottom{grid-column:1/-1;grid-row:2;margin-top:12px}
 @media(prefers-reduced-motion:no-preference){
- .site-footer[data-scroll-reveal]{overflow:hidden;overflow:clip;opacity:var(--footer-reveal,1)}
- .site-footer[data-scroll-reveal] .footer-inner{transform:translateY(calc((1 - var(--footer-reveal,1)) * clamp(28px,5vh,44px)))}
- .site-footer[data-scroll-reveal]:focus-within{opacity:1}
- .site-footer[data-scroll-reveal]:focus-within .footer-inner{transform:none}
+ .site-footer[data-scroll-reveal]{--footer-reveal-settle:260ms ease-out;overflow:hidden;overflow:clip;opacity:var(--footer-reveal,1);transition:opacity var(--footer-reveal-settle)}
+ .site-footer[data-scroll-reveal] .footer-inner{transform:translateY(calc((1 - var(--footer-reveal,1)) * clamp(28px,5vh,44px)));transition:transform var(--footer-reveal-settle)}
+ .site-footer[data-scroll-reveal]:focus-within{opacity:1;transition:none}
+ .site-footer[data-scroll-reveal]:focus-within .footer-inner{transform:none;transition:none}
 }
 .site-footer .footer-pill:is(:active,:focus-visible,.is-pressed){color:var(--red);border-color:var(--red)}
 .site-footer .footer-pill:is(:active,:focus-visible,.is-pressed)>span{transform:translate(3px,-3px)}
@@ -664,10 +664,12 @@ html:lang(zh-Hant) .site-footer .footer-thanks-tagline{font-style:normal;letter-
       revealFrame=0;
       if(footerMotion.matches||document.body.classList.contains('modal-open'))return;
       const bounds=footer.getBoundingClientRect();
-      // Use the footer's entry into the viewport, including on compact pages.
-      const distance=Math.max(1,Math.min(bounds.height,innerHeight*.8));
-      const progress=Math.max(0,Math.min(1,(innerHeight-bounds.top)/distance));
-      const eased=progress**3*(10+progress*(6*progress-15));
+      // Let part of the footer enter the viewport before revealing its content.
+      const end=Math.max(1,Math.min(bounds.height,innerHeight*.9));
+      const start=Math.min(120,end*.35);
+      const entered=innerHeight-bounds.top;
+      const progress=Math.max(0,Math.min(1,(entered-start)/(end-start)));
+      const eased=progress*progress*(3-2*progress);
       const opacity=eased.toFixed(4);
       if(opacity!==previousProgress){
         footer.style.setProperty('--footer-reveal',opacity);
