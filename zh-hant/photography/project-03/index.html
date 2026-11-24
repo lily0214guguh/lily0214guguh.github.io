@@ -188,6 +188,9 @@ html:not(.has-photo-js) .page-photography .gallery-controls{display:none}
     --photo-view-limit: max(132px, calc(100svh - var(--nav-height) - 128px));
   }
 }
+.photo-browse-options{display:flex;flex-wrap:wrap;align-items:center;gap:12px 32px;margin-top:28px}
+.photo-browse-options .text-link{min-height:44px;font-size:14px}
+#photo-projects{scroll-margin-top:calc(var(--nav-height) + 16px)}
 /* Project-only accordion: supplied defaultIndex=2, expandRatio=.52, hover. */
 .accordion-stage{--accordion-gap:10px;--accordion-height:min(62svh,580px);--accordion-duration:600ms}
 .accordion-stage .photo-track{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--accordion-gap);position:relative}
